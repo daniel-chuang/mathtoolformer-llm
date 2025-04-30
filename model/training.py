@@ -1,6 +1,7 @@
 # Import necessary libraries
 from transformers import Trainer, TrainingArguments
 from transformers import DataCollatorForLanguageModeling
+from datetime import datetime
 
 def preprocess_for_training(examples, tokenizer, max_length=2048):
     """Tokenize the examples for training"""
@@ -22,7 +23,7 @@ def preprocess_for_training(examples, tokenizer, max_length=2048):
     
     return result
 
-def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="toolformer_model"):
+def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="toolformer_model", num_epochs=3, previous_metadata=None):
     """Fine-tune the model on prepared datasets
     
     Args:
@@ -31,6 +32,11 @@ def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="
         train_dataset: Training dataset
         eval_dataset: Evaluation dataset (optional)
         output_dir: Directory to save the model
+        num_epochs: Number of epochs for this training session
+        previous_metadata: Previous model metadata if continuing training
+    
+    Returns:
+        tuple: (model, tokenizer, metadata) - The trained model, tokenizer and updated metadata
     """
     # Tokenize datasets
     train_dataset = train_dataset.map(
@@ -54,7 +60,7 @@ def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="
         gradient_accumulation_steps=4,
         learning_rate=2e-4,
         weight_decay=0.01,
-        num_train_epochs=3,
+        num_train_epochs=num_epochs,  # Use the parameter value
         lr_scheduler_type="cosine",
         warmup_ratio=0.1,
         logging_dir="./logs",
@@ -82,11 +88,63 @@ def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="
         data_collator=data_collator,
     )
     
+    # Record training start time
+    training_start_time = datetime.now()
+    
     # Start training
-    trainer.train()
+    train_result = trainer.train()
+    
+    # Record training end time
+    training_end_time = datetime.now()
+    training_duration = (training_end_time - training_start_time).total_seconds() / 60  # in minutes
     
     # Save the fine-tuned model
     trainer.save_model(output_dir)
     tokenizer.save_pretrained(output_dir)
     
-    return model, tokenizer
+    # Create or update metadata
+    if previous_metadata is None:
+        previous_metadata = {
+            "base_model": getattr(model.config, "model_name_or_path", "unknown"),
+            "creation_date": datetime.now().isoformat(),
+            "total_epochs": 0,
+            "training_history": []
+        }
+    
+    # Calculate total epochs
+    total_epochs = previous_metadata.get("total_epochs", 0) + num_epochs
+    
+    # Create training session info
+    training_session = {
+        "date": datetime.now().isoformat(),
+        "epochs": num_epochs,
+        "examples": len(train_dataset),
+        "training_duration_minutes": training_duration,
+        "loss": train_result.training_loss,
+        "dataset_stats": {
+            "train_size": len(train_dataset),
+            "eval_size": len(eval_dataset) if eval_dataset else 0
+        }
+    }
+    
+    # Add evaluation metrics if available
+    if hasattr(train_result, "metrics") and eval_dataset:
+        training_session["eval_metrics"] = train_result.metrics
+    
+    # Update metadata
+    training_history = previous_metadata.get("training_history", [])
+    training_history.append(training_session)
+    
+    metadata = {
+        **previous_metadata,
+        "total_epochs": total_epochs,
+        "last_training_date": datetime.now().isoformat(),
+        "training_history": training_history
+    }
+    
+    # Save metadata to file
+    metadata_path = os.path.join(output_dir, "training_metadata.json")
+    with open(metadata_path, "w") as f:
+        json.dump(metadata, f, indent=2)
+    
+    return model, tokenizer, metadata

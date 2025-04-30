@@ -17,12 +17,12 @@ def main():
     print_section("Loading Model")
     # Try to load from saved path first, if it fails, download from HF
     try:
-        tokenizer, model = load_model(os.path.join(CHECKPOINTS, "primaries", INITIAL_SAVE_PATH))
+        tokenizer, model, metadata = load_model(os.path.join(CHECKPOINTS, "pretrained", INITIAL_SAVE_PATH))
         print("Loaded model from saved path")
     except FileNotFoundError:
         print(f"Initial model not found. Setting up from {MODEL_NAME}")
-        tokenizer, model = setup_model(MODEL_NAME)
-        save_model(model, tokenizer, os.path.join(CHECKPOINTS, "primaries", INITIAL_SAVE_PATH))
+        tokenizer, model, metadata = setup_model(MODEL_NAME)
+        save_model(model, tokenizer, os.path.join(CHECKPOINTS, "pretrained", INITIAL_SAVE_PATH))
 
     # Ask if the user wants to load data
     wantToTestPretrained = inputc(f"Do you want to evaluate the pretrained {MODEL_NAME} model? (y/n)").strip().lower()
@@ -102,10 +102,23 @@ def main():
 
     # FINE TUNING TRAINING
     if isYes(wantToTrain):
-        print_section("Fine Tuning Training")        
+        print_section("Fine Tuning Training")
+        
+        # Prepare the training data based on dataset type
+        if DATASET == "arithmetic":
+            # For arithmetic datasets, combine all datasets into one
+            print("Combining arithmetic datasets for training...")
+            combined_train_dataset = []
+            for key, dataset in train_datasets.items():
+                combined_train_dataset.extend(dataset)
+            
+            from datasets import Dataset
+            train_dataset = Dataset.from_list(combined_train_dataset)
+            print(f"Combined {len(train_dataset)} examples for training")
+        
         # Load previous model if it exists
         try:
-            previous_path = os.path.join(CHECKPOINTS, "primaries", MATH_FINETUNED_SAVE_PATH)
+            previous_path = os.path.join(CHECKPOINTS, "finetuned", MATH_FINETUNED_SAVE_PATH)
             tokenizer, model, metadata = load_model(previous_path)
             
             # Get total epochs from metadata
@@ -117,28 +130,18 @@ def main():
             print(f"Starting fresh training for {current_epochs} epochs")
         
         # Train the model
-        model, tokenizer = train_model(model, tokenizer, train_dataset, num_epochs=current_epochs)
+        model, tokenizer, metadata = train_model(model, tokenizer, train_dataset, num_epochs=current_epochs)
         
         # Save with updated epoch count
         saved_path = save_model(
             model, 
             tokenizer, 
-            os.path.join(CHECKPOINTS, "primaries", MATH_FINETUNED_SAVE_PATH),
+            os.path.join(CHECKPOINTS, "finetuned", MATH_FINETUNED_SAVE_PATH),
             epochs=current_epochs,
             total_epochs=total_epochs
         )
         print(f"Saved fine-tuned model to {saved_path} (Total epochs: {total_epochs})")
-    
-    # POST FT EVALUATION
-    if isYes(wantToTestFineTuned):
-        print_section("Post Fine Tuning Evaluation")
-        after_math_eval_results = evaluate_math_performance(model, tokenizer, test_dataset)
-        print("Math Evaluation Results:", after_math_eval_results)
 
-        # Evaluate tool usage
-        tool_eval_results = evaluate_tool_usage(model, tokenizer, test_dataset)
-        print("Tool Usage Evaluation Results:", tool_eval_results)
-
-
+    print_section("Done")
 if __name__ == "__main__":
     main()

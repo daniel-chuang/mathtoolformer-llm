@@ -14,7 +14,7 @@ def setup_model(model_name="mistralai/Mistral-7B-v0.1", use_4bit=False):
         use_4bit: Whether to use 4-bit quantization (recommended for larger models)
     
     Returns:
-        tokenizer, model: The loaded tokenizer and model
+        tuple: (tokenizer, model, metadata) - The loaded tokenizer, model and initial metadata
     """
     # Configure quantization if needed
     if use_4bit:
@@ -42,7 +42,16 @@ def setup_model(model_name="mistralai/Mistral-7B-v0.1", use_4bit=False):
         device_map="auto"
     )
     
-    return tokenizer, model
+    # Create initial metadata
+    metadata = {
+        "base_model": model_name,
+        "creation_date": datetime.now().isoformat(),
+        "quantization": "4-bit" if use_4bit else "none",
+        "total_epochs": 0,
+        "training_history": []
+    }
+    
+    return tokenizer, model, metadata
 
 def save_model(model, tokenizer, path, epochs=None, include_timestamp=False):
     """
