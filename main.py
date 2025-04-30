@@ -11,18 +11,18 @@ from data.arithmetic import prepare_arithmetic_datasets
 from evaluation.math_evaluation import evaluate_math_performance
 from evaluation.tool_usage_evaluation import evaluate_tool_usage
 from inference.pipeline import generate_with_tools
-from constants import MODEL_NAME, INITIAL_SAVE_PATH, MATH_FINETUNED_SAVE_PATH, DATASET
+from constants import MODEL_NAME, INITIAL_SAVE_PATH, MATH_FINETUNED_SAVE_PATH, DATASET, CHECKPOINTS
 
 def main():
 
     # Try to load from saved path first, if it fails, download from HF
     try:
-        tokenizer, model = load_model(INITIAL_SAVE_PATH)
+        tokenizer, model = load_model(os.path.join(CHECKPOINTS, INITIAL_SAVE_PATH))
         print("Loaded model from saved path")
     except FileNotFoundError:
         print(f"Initial model not found. Setting up from {MODEL_NAME}")
         tokenizer, model = setup_model(MODEL_NAME)
-        save_model(model, tokenizer, INITIAL_SAVE_PATH)
+        save_model(model, tokenizer, os.path.join(CHECKPOINTS, INITIAL_SAVE_PATH))
 
 
     # Ask if the user wants to load data

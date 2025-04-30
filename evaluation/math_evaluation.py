@@ -1,5 +1,6 @@
 import re
 from utils.logging_utils import ResultsLogger
+import torch
 
 def evaluate_math_performance(model, tokenizer, test_dataset, dataset_name=None, model_name=None):
     """
@@ -62,7 +63,8 @@ def evaluate_math_performance(model, tokenizer, test_dataset, dataset_name=None,
 
         total += 1
         print(f"Expected: {expected_answer}\nModel: {model_answer if model_answer else 'No valid number found'}")
-        
+        print(f"Correct: {correct}, Total: {total}\n\n")
+
         # Log individual question result
         logger.log_question_result(
             question=question, 
