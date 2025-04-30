@@ -1,0 +1,1420 @@
+{
+  "timestamp": "20250430_173804",
+  "model_name": "Qwen2.5-Math-1.5B",
+  "dataset_name": "arithmetic_arithmetic_4ds",
+  "aggregated_metrics": {
+    "accuracy": 0.795,
+    "correct": 159,
+    "total": 200
+  },
+  "question_results": [
+    {
+      "question": "Question: What is 6001 minus 8852?\nAnswer:",
+      "expected_answer": "-2851",
+      "model_answer": "-2851",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 7052 minus 5398?\nAnswer:",
+      "expected_answer": "1654",
+      "model_answer": "1654",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 5540 minus 7542?\nAnswer:",
+      "expected_answer": "-2002",
+      "model_answer": "-2002",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 1652 minus 4876?\nAnswer:",
+      "expected_answer": "-3224",
+      "model_answer": "-3224",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 2456 minus 8584?\nAnswer:",
+      "expected_answer": "-6128",
+      "model_answer": "-6128",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 6684 minus 3599?\nAnswer:",
+      "expected_answer": "3085",
+      "model_answer": "2985",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 1553 minus 6945?\nAnswer:",
+      "expected_answer": "-5392",
+      "model_answer": "-5492",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 5262 minus 7247?\nAnswer:",
+      "expected_answer": "-1985",
+      "model_answer": "-2085",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 237 minus 7999?\nAnswer:",
+      "expected_answer": "-7762",
+      "model_answer": "-7762",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 6740 minus 3733?\nAnswer:",
+      "expected_answer": "3007",
+      "model_answer": "3007",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 6625 minus 8435?\nAnswer:",
+      "expected_answer": "-1810",
+      "model_answer": "-1810",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 8541 minus 102?\nAnswer:",
+      "expected_answer": "8439",
+      "model_answer": "8449",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 6909 minus 2697?\nAnswer:",
+      "expected_answer": "4212",
+      "model_answer": "4212",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 363 minus 2493?\nAnswer:",
+      "expected_answer": "-2130",
+      "model_answer": "-2120",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 6196 minus 8103?\nAnswer:",
+      "expected_answer": "-1907",
+      "model_answer": "-1907",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 168 minus 3778?\nAnswer:",
+      "expected_answer": "-3610",
+      "model_answer": "-3600",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 7367 minus 4615?\nAnswer:",
+      "expected_answer": "2752",
+      "model_answer": "2752",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 5446 minus 3896?\nAnswer:",
+      "expected_answer": "1550",
+      "model_answer": "850",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9909 minus 7680?\nAnswer:",
+      "expected_answer": "2229",
+      "model_answer": "2229",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 7430 minus 7566?\nAnswer:",
+      "expected_answer": "-136",
+      "model_answer": "-136",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 3451 minus 9825?\nAnswer:",
+      "expected_answer": "-6374",
+      "model_answer": "-6374",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 4053 minus 433?\nAnswer:",
+      "expected_answer": "3620",
+      "model_answer": "3620",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 7948 minus 5262?\nAnswer:",
+      "expected_answer": "2686",
+      "model_answer": "2686",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 4277 minus 827?\nAnswer:",
+      "expected_answer": "3450",
+      "model_answer": "3450",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 3058 minus 768?\nAnswer:",
+      "expected_answer": "2290",
+      "model_answer": "2290",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 193 minus 1045?\nAnswer:",
+      "expected_answer": "-852",
+      "model_answer": "-852",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 967 minus 2747?\nAnswer:",
+      "expected_answer": "-1780",
+      "model_answer": "-1780",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 9172 minus 3761?\nAnswer:",
+      "expected_answer": "5411",
+      "model_answer": "5411",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 8189 minus 6633?\nAnswer:",
+      "expected_answer": "1556",
+      "model_answer": "1556",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 9054 minus 61?\nAnswer:",
+      "expected_answer": "8993",
+      "model_answer": "8993",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 4865 minus 670?\nAnswer:",
+      "expected_answer": "4195",
+      "model_answer": "4295",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 290 minus 9392?\nAnswer:",
+      "expected_answer": "-9102",
+      "model_answer": "-9102",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 5486 minus 8700?\nAnswer:",
+      "expected_answer": "-3214",
+      "model_answer": "-3214",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 4181 minus 1213?\nAnswer:",
+      "expected_answer": "2968",
+      "model_answer": "2968",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 5706 minus 2127?\nAnswer:",
+      "expected_answer": "3579",
+      "model_answer": "3579",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 326 minus 2732?\nAnswer:",
+      "expected_answer": "-2406",
+      "model_answer": "-2396",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 2055 minus 2380?\nAnswer:",
+      "expected_answer": "-325",
+      "model_answer": "-325",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 3357 minus 761?\nAnswer:",
+      "expected_answer": "2596",
+      "model_answer": "2596",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 6560 minus 517?\nAnswer:",
+      "expected_answer": "6043",
+      "model_answer": "6043",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 548 minus 9946?\nAnswer:",
+      "expected_answer": "-9398",
+      "model_answer": "-9408",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 8624 minus 611?\nAnswer:",
+      "expected_answer": "8013",
+      "model_answer": "8013",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 1932 minus 6598?\nAnswer:",
+      "expected_answer": "-4666",
+      "model_answer": "-4666",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 4413 minus 5712?\nAnswer:",
+      "expected_answer": "-1299",
+      "model_answer": "-1299",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 4611 minus 8985?\nAnswer:",
+      "expected_answer": "-4374",
+      "model_answer": "-4374",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 6332 minus 6699?\nAnswer:",
+      "expected_answer": "-367",
+      "model_answer": "-367",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 9940 minus 7572?\nAnswer:",
+      "expected_answer": "2368",
+      "model_answer": "2368",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 9449 minus 6896?\nAnswer:",
+      "expected_answer": "2553",
+      "model_answer": "2553",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 2673 minus 3604?\nAnswer:",
+      "expected_answer": "-931",
+      "model_answer": "-931",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 3516 minus 2533?\nAnswer:",
+      "expected_answer": "983",
+      "model_answer": "983",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 2805 minus 6612?\nAnswer:",
+      "expected_answer": "-3807",
+      "model_answer": "-3707",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3222 minus 4563?\nAnswer:",
+      "expected_answer": "-1341",
+      "model_answer": "-1341",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 4168 minus 1711?\nAnswer:",
+      "expected_answer": "2457",
+      "model_answer": "2457",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 5948 minus 712?\nAnswer:",
+      "expected_answer": "5236",
+      "model_answer": "5236",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 9163 minus 7648?\nAnswer:",
+      "expected_answer": "1515",
+      "model_answer": "1515",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 7699 minus 6480?\nAnswer:",
+      "expected_answer": "1219",
+      "model_answer": "1219",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 5153 minus 8842?\nAnswer:",
+      "expected_answer": "-3689",
+      "model_answer": "-3689",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 7996 minus 1989?\nAnswer:",
+      "expected_answer": "6007",
+      "model_answer": "6007",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 3000 minus 1501?\nAnswer:",
+      "expected_answer": "1499",
+      "model_answer": "1499",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 3596 minus 8229?\nAnswer:",
+      "expected_answer": "-4633",
+      "model_answer": "-4633",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 9190 minus 6591?\nAnswer:",
+      "expected_answer": "2599",
+      "model_answer": "2699",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 6632 minus 2285?\nAnswer:",
+      "expected_answer": "4347",
+      "model_answer": "4347",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 8451 minus 4983?\nAnswer:",
+      "expected_answer": "3468",
+      "model_answer": "3468",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 7063 minus 9502?\nAnswer:",
+      "expected_answer": "-2439",
+      "model_answer": "-2439",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 5211 minus 259?\nAnswer:",
+      "expected_answer": "4952",
+      "model_answer": "4952",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 775 minus 4555?\nAnswer:",
+      "expected_answer": "-3780",
+      "model_answer": "-3870",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 743 minus 6414?\nAnswer:",
+      "expected_answer": "-5671",
+      "model_answer": "-5671",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 9840 minus 7953?\nAnswer:",
+      "expected_answer": "1887",
+      "model_answer": "8887",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 5143 minus 7286?\nAnswer:",
+      "expected_answer": "-2143",
+      "model_answer": "-2143",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 4912 minus 7480?\nAnswer:",
+      "expected_answer": "-2568",
+      "model_answer": "-2568",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 8845 minus 7558?\nAnswer:",
+      "expected_answer": "1287",
+      "model_answer": "2287",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 8821 minus 4062?\nAnswer:",
+      "expected_answer": "4759",
+      "model_answer": "4759",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 7106 minus 5345?\nAnswer:",
+      "expected_answer": "1761",
+      "model_answer": "1761",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 9611 minus 3418?\nAnswer:",
+      "expected_answer": "6193",
+      "model_answer": "6293",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 1263 minus 3155?\nAnswer:",
+      "expected_answer": "-1892",
+      "model_answer": "-1992",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9910 minus 5888?\nAnswer:",
+      "expected_answer": "4022",
+      "model_answer": "4022",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 4419 minus 9762?\nAnswer:",
+      "expected_answer": "-5343",
+      "model_answer": "-5343",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 7387 minus 3808?\nAnswer:",
+      "expected_answer": "3579",
+      "model_answer": "3589",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 7320 minus 4769?\nAnswer:",
+      "expected_answer": "2551",
+      "model_answer": "2551",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 8069 minus 7831?\nAnswer:",
+      "expected_answer": "238",
+      "model_answer": "238",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 7139 minus 3288?\nAnswer:",
+      "expected_answer": "3851",
+      "model_answer": "3851",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 9826 minus 2327?\nAnswer:",
+      "expected_answer": "7499",
+      "model_answer": "7499",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 6976 minus 9165?\nAnswer:",
+      "expected_answer": "-2189",
+      "model_answer": "-2189",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 1865 minus 6456?\nAnswer:",
+      "expected_answer": "-4591",
+      "model_answer": "-4591",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 8075 minus 7393?\nAnswer:",
+      "expected_answer": "682",
+      "model_answer": "682",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 4233 minus 9079?\nAnswer:",
+      "expected_answer": "-4846",
+      "model_answer": "-4846",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 6411 minus 5548?\nAnswer:",
+      "expected_answer": "863",
+      "model_answer": "863",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 387 minus 6707?\nAnswer:",
+      "expected_answer": "-6320",
+      "model_answer": "-6310",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9016 minus 6632?\nAnswer:",
+      "expected_answer": "2384",
+      "model_answer": "2384",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 1305 minus 1572?\nAnswer:",
+      "expected_answer": "-267",
+      "model_answer": "-367",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 4254 minus 7074?\nAnswer:",
+      "expected_answer": "-2820",
+      "model_answer": "-2818",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 7319 minus 7056?\nAnswer:",
+      "expected_answer": "263",
+      "model_answer": "263",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 1643 minus 5400?\nAnswer:",
+      "expected_answer": "-3757",
+      "model_answer": "-3757",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 6556 minus 2799?\nAnswer:",
+      "expected_answer": "3757",
+      "model_answer": "3757",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 3632 minus 2466?\nAnswer:",
+      "expected_answer": "1166",
+      "model_answer": "1166",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 9472 minus 3287?\nAnswer:",
+      "expected_answer": "6185",
+      "model_answer": "6185",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 2959 minus 7912?\nAnswer:",
+      "expected_answer": "-4953",
+      "model_answer": "-5953",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3151 minus 6715?\nAnswer:",
+      "expected_answer": "-3564",
+      "model_answer": "-3564",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 2056 minus 9446?\nAnswer:",
+      "expected_answer": "-7390",
+      "model_answer": "-7390",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 4891 minus 4344?\nAnswer:",
+      "expected_answer": "547",
+      "model_answer": "547",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 9101 minus 6491?\nAnswer:",
+      "expected_answer": "2610",
+      "model_answer": "2610",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 5928 minus 8722?\nAnswer:",
+      "expected_answer": "-2794",
+      "model_answer": "-2794",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 2001 minus 3976?\nAnswer:",
+      "expected_answer": "-1975",
+      "model_answer": "-975",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 8311 minus 7807?\nAnswer:",
+      "expected_answer": "504",
+      "model_answer": "504",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 9207 minus 5492?\nAnswer:",
+      "expected_answer": "3715",
+      "model_answer": "3715",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 2431 minus 1763?\nAnswer:",
+      "expected_answer": "668",
+      "model_answer": "668",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 8601 minus 7407?\nAnswer:",
+      "expected_answer": "1194",
+      "model_answer": "1194",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 2360 minus 2595?\nAnswer:",
+      "expected_answer": "-235",
+      "model_answer": "-235",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 1297 minus 8860?\nAnswer:",
+      "expected_answer": "-7563",
+      "model_answer": "-7563",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 3444 minus 1886?\nAnswer:",
+      "expected_answer": "1558",
+      "model_answer": "1558",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 4825 minus 4852?\nAnswer:",
+      "expected_answer": "-27",
+      "model_answer": "-37",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3432 minus 5672?\nAnswer:",
+      "expected_answer": "-2240",
+      "model_answer": "-2230",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 7189 minus 8649?\nAnswer:",
+      "expected_answer": "-1460",
+      "model_answer": "-1460",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 7112 minus 1766?\nAnswer:",
+      "expected_answer": "5346",
+      "model_answer": "5346",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 5760 minus 6709?\nAnswer:",
+      "expected_answer": "-949",
+      "model_answer": "-949",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 7050 minus 4336?\nAnswer:",
+      "expected_answer": "2714",
+      "model_answer": "2714",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 8441 minus 2927?\nAnswer:",
+      "expected_answer": "5514",
+      "model_answer": "5514",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 2786 minus 5591?\nAnswer:",
+      "expected_answer": "-2805",
+      "model_answer": "-2805",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 5539 minus 5521?\nAnswer:",
+      "expected_answer": "18",
+      "model_answer": "8",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 6467 minus 113?\nAnswer:",
+      "expected_answer": "6354",
+      "model_answer": "6354",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 5971 minus 6409?\nAnswer:",
+      "expected_answer": "-438",
+      "model_answer": "-438",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 9813 minus 7933?\nAnswer:",
+      "expected_answer": "1880",
+      "model_answer": "1880",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 3196 minus 2914?\nAnswer:",
+      "expected_answer": "282",
+      "model_answer": "282",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 412 minus 6493?\nAnswer:",
+      "expected_answer": "-6081",
+      "model_answer": "-6081",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 7781 minus 5166?\nAnswer:",
+      "expected_answer": "2615",
+      "model_answer": "2615",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 8647 minus 6828?\nAnswer:",
+      "expected_answer": "1819",
+      "model_answer": "1829",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 4509 minus 9801?\nAnswer:",
+      "expected_answer": "-5292",
+      "model_answer": "-5292",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 3889 minus 1606?\nAnswer:",
+      "expected_answer": "2283",
+      "model_answer": "2283",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 8654 minus 5002?\nAnswer:",
+      "expected_answer": "3652",
+      "model_answer": "3652",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 5217 minus 306?\nAnswer:",
+      "expected_answer": "4911",
+      "model_answer": "4911",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 8021 minus 1275?\nAnswer:",
+      "expected_answer": "6746",
+      "model_answer": "6746",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 9251 minus 5414?\nAnswer:",
+      "expected_answer": "3837",
+      "model_answer": "3837",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 8547 minus 2096?\nAnswer:",
+      "expected_answer": "6451",
+      "model_answer": "6451",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 2259 minus 5944?\nAnswer:",
+      "expected_answer": "-3685",
+      "model_answer": "-3685",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 7528 minus 4450?\nAnswer:",
+      "expected_answer": "3078",
+      "model_answer": "3078",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 1274 minus 9662?\nAnswer:",
+      "expected_answer": "-8388",
+      "model_answer": "-8388",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 7199 minus 2805?\nAnswer:",
+      "expected_answer": "4394",
+      "model_answer": "4394",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 5761 minus 6883?\nAnswer:",
+      "expected_answer": "-1122",
+      "model_answer": "-1122",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 6147 minus 565?\nAnswer:",
+      "expected_answer": "5582",
+      "model_answer": "5582",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 7245 minus 1048?\nAnswer:",
+      "expected_answer": "6197",
+      "model_answer": "6197",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 1857 minus 7087?\nAnswer:",
+      "expected_answer": "-5230",
+      "model_answer": "-5220",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9764 minus 4156?\nAnswer:",
+      "expected_answer": "5608",
+      "model_answer": "5608",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 3865 minus 3985?\nAnswer:",
+      "expected_answer": "-120",
+      "model_answer": "-120",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 916 minus 6095?\nAnswer:",
+      "expected_answer": "-5179",
+      "model_answer": "-5179",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 6382 minus 164?\nAnswer:",
+      "expected_answer": "6218",
+      "model_answer": "6218",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 5314 minus 1551?\nAnswer:",
+      "expected_answer": "3763",
+      "model_answer": "3763",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 5137 minus 1435?\nAnswer:",
+      "expected_answer": "3702",
+      "model_answer": "2",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 7062 minus 3226?\nAnswer:",
+      "expected_answer": "3836",
+      "model_answer": "3836",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 8683 minus 6371?\nAnswer:",
+      "expected_answer": "2312",
+      "model_answer": "2312",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 684 minus 7000?\nAnswer:",
+      "expected_answer": "-6316",
+      "model_answer": "-6316",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 7624 minus 8759?\nAnswer:",
+      "expected_answer": "-1135",
+      "model_answer": "-1135",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 9626 minus 5234?\nAnswer:",
+      "expected_answer": "4392",
+      "model_answer": "4392",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 7037 minus 3833?\nAnswer:",
+      "expected_answer": "3204",
+      "model_answer": "3204",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 3703 minus 3784?\nAnswer:",
+      "expected_answer": "-81",
+      "model_answer": "-81",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 8616 minus 9772?\nAnswer:",
+      "expected_answer": "-1156",
+      "model_answer": "-1156",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 9659 minus 8669?\nAnswer:",
+      "expected_answer": "990",
+      "model_answer": "1090",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3649 minus 1700?\nAnswer:",
+      "expected_answer": "1949",
+      "model_answer": "949",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 1871 minus 3498?\nAnswer:",
+      "expected_answer": "-1627",
+      "model_answer": "-1617",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 1680 minus 8727?\nAnswer:",
+      "expected_answer": "-7047",
+      "model_answer": "-7047",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 3601 minus 5720?\nAnswer:",
+      "expected_answer": "-2119",
+      "model_answer": "-2119",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 7080 minus 2783?\nAnswer:",
+      "expected_answer": "4297",
+      "model_answer": "4297",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 6851 minus 4016?\nAnswer:",
+      "expected_answer": "2835",
+      "model_answer": "2835",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 5142 minus 1459?\nAnswer:",
+      "expected_answer": "3683",
+      "model_answer": "3683",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 5112 minus 4335?\nAnswer:",
+      "expected_answer": "777",
+      "model_answer": "777",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 6410 minus 5303?\nAnswer:",
+      "expected_answer": "1107",
+      "model_answer": "1107",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 9302 minus 1233?\nAnswer:",
+      "expected_answer": "8069",
+      "model_answer": "7969",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 7665 minus 4438?\nAnswer:",
+      "expected_answer": "3227",
+      "model_answer": "3227",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 5018 minus 990?\nAnswer:",
+      "expected_answer": "4028",
+      "model_answer": "5018",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 4453 minus 315?\nAnswer:",
+      "expected_answer": "4138",
+      "model_answer": "4138",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 8195 minus 3616?\nAnswer:",
+      "expected_answer": "4579",
+      "model_answer": "4579",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 6781 minus 3849?\nAnswer:",
+      "expected_answer": "2932",
+      "model_answer": "2932",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 4884 minus 2517?\nAnswer:",
+      "expected_answer": "2367",
+      "model_answer": "2367",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 2019 minus 1389?\nAnswer:",
+      "expected_answer": "630",
+      "model_answer": "620",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 2048 minus 3662?\nAnswer:",
+      "expected_answer": "-1614",
+      "model_answer": "-1614",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 2505 minus 5613?\nAnswer:",
+      "expected_answer": "-3108",
+      "model_answer": "-3008",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 4488 minus 8697?\nAnswer:",
+      "expected_answer": "-4209",
+      "model_answer": "-4209",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 2851 minus 6209?\nAnswer:",
+      "expected_answer": "-3358",
+      "model_answer": "-3358",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 9 minus 9067?\nAnswer:",
+      "expected_answer": "-9058",
+      "model_answer": "-9058",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 2698 minus 8511?\nAnswer:",
+      "expected_answer": "-5813",
+      "model_answer": "-5813",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 9040 minus 5061?\nAnswer:",
+      "expected_answer": "3979",
+      "model_answer": "4079",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 8656 minus 3846?\nAnswer:",
+      "expected_answer": "4810",
+      "model_answer": "4810",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 1731 minus 532?\nAnswer:",
+      "expected_answer": "1199",
+      "model_answer": "1209",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9419 minus 1531?\nAnswer:",
+      "expected_answer": "7888",
+      "model_answer": "7888",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 592 minus 4262?\nAnswer:",
+      "expected_answer": "-3670",
+      "model_answer": "-3670",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 1281 minus 6475?\nAnswer:",
+      "expected_answer": "-5194",
+      "model_answer": "-5194",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 2286 minus 755?\nAnswer:",
+      "expected_answer": "1531",
+      "model_answer": "1531",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 3288 minus 691?\nAnswer:",
+      "expected_answer": "2597",
+      "model_answer": "2697",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 5752 minus 9026?\nAnswer:",
+      "expected_answer": "-3274",
+      "model_answer": "-3274",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 6266 minus 503?\nAnswer:",
+      "expected_answer": "5763",
+      "model_answer": "5763",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 9599 minus 8385?\nAnswer:",
+      "expected_answer": "1214",
+      "model_answer": "1214",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 1592 minus 1034?\nAnswer:",
+      "expected_answer": "558",
+      "model_answer": "558",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 6198 minus 5798?\nAnswer:",
+      "expected_answer": "400",
+      "model_answer": "400",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 2814 minus 4261?\nAnswer:",
+      "expected_answer": "-1447",
+      "model_answer": "-1447",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 8800 minus 38?\nAnswer:",
+      "expected_answer": "8762",
+      "model_answer": "8762",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 5916 minus 910?\nAnswer:",
+      "expected_answer": "5006",
+      "model_answer": "4906",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 6301 minus 8980?\nAnswer:",
+      "expected_answer": "-2679",
+      "model_answer": "-2679",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 8846 minus 7655?\nAnswer:",
+      "expected_answer": "1191",
+      "model_answer": "1291",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 5191 minus 7373?\nAnswer:",
+      "expected_answer": "-2182",
+      "model_answer": "-2182",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 3143 minus 4294?\nAnswer:",
+      "expected_answer": "-1151",
+      "model_answer": "-1151",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 1432 minus 806?\nAnswer:",
+      "expected_answer": "626",
+      "model_answer": "626",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 2485 minus 8591?\nAnswer:",
+      "expected_answer": "-6106",
+      "model_answer": "-6106",
+      "question_type": null,
+      "correct": true
+    }
+  ],
+  "type_statistics": {
+    "null": {
+      "total": 200,
+      "correct": 159,
+      "incorrect": 41,
+      "accuracy": 0.795
+    }
+  }
+}

@@ -37,7 +37,7 @@ def extract_and_execute_tools(text):
     
     return result_text
 
-def generate_with_tools(model, tokenizer, prompt, max_new_tokens=512):
+def inference(model, tokenizer, prompt, max_new_tokens=512, use_tool=True):
     """Generate a response with tool use capability.
 
     Args:
@@ -63,6 +63,9 @@ def generate_with_tools(model, tokenizer, prompt, max_new_tokens=512):
 
     # Get the generated text
     generated_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
+
+    if not use_tool:
+        return generated_text
 
     # Process any tool calls in the generated text
     response_with_tool_results = extract_and_execute_tools(generated_text)
