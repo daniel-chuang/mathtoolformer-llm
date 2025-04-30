@@ -44,34 +44,45 @@ def setup_model(model_name="mistralai/Mistral-7B-v0.1", use_4bit=False):
     
     return tokenizer, model
 
-def save_model(model, tokenizer, save_path):
+def save_model(model, tokenizer, path, epochs=None, include_timestamp=False):
     """
-    Save model and tokenizer to the specified path
+    Save model and tokenizer to the specified path.
     
     Args:
         model: The model to save
         tokenizer: The tokenizer to save
-        save_path: Directory path to save to
+        path: The path to save the model to
+        epochs: Number of training epochs (optional)
+        include_timestamp: Whether to include a timestamp in the saved path
+    
+    Returns:
+        The actual path where the model was saved
     """
+    # Extract the directory and filename components
+    directory = os.path.dirname(path)
+    filename = os.path.basename(path)
+    
+    # Start with the base path
+    save_path = path
+    
+    # Add epochs to the path if provided
+    if epochs is not None:
+        save_path = f"{path}_epochs{epochs}"
+    
+    # Add timestamp if requested
+    if include_timestamp:
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        save_path = f"{save_path}_{timestamp}"
+    
     # Create directory if it doesn't exist
-    os.makedirs(save_path, exist_ok=True)
+    os.makedirs(os.path.dirname(save_path), exist_ok=True)
     
-    # Save model state
+    # Save the model and tokenizer
+    print(f"Saving model to {save_path}...")
     model.save_pretrained(save_path)
-    
-    # Save tokenizer
     tokenizer.save_pretrained(save_path)
     
-    # Save metadata (like original model name, quantization status, etc.)
-    metadata = {
-        "save_date": datetime.now().strftime("%Y-%m-%d_%H-%M-%S"),
-        "quantized": hasattr(model, "quantization_config") and model.quantization_config is not None
-    }
-    
-    with open(os.path.join(save_path, "metadata.json"), "w") as f:
-        json.dump(metadata, f)
-    
-    print(f"Model saved to {save_path}")
+    return save_path
 
 def load_model(model_path, device_map="auto", use_4bit=False):
     """
@@ -83,18 +94,22 @@ def load_model(model_path, device_map="auto", use_4bit=False):
         use_4bit: Whether to use 4-bit quantization when loading
         
     Returns:
-        tuple: (tokenizer, model)
+        tuple: (tokenizer, model, metadata)
     """
     # Check if this is a local path that exists
     if os.path.exists(model_path) and os.path.isdir(model_path):
         print(f"Loading model from local path: {model_path}")
         
-        # Check if metadata exists to determine quantization
-        metadata_path = os.path.join(model_path, "metadata.json")
-        metadata_exists = os.path.exists(metadata_path)
+        # Load metadata if it exists
+        metadata_path = os.path.join(model_path, "training_metadata.json")
+        metadata = {}
+        if os.path.exists(metadata_path):
+            with open(metadata_path, "r") as f:
+                metadata = json.load(f)
+                print(f"Model training history: {metadata.get('total_epochs', 'unknown')} total epochs")
         
-        # Configure quantization based on parameter or metadata
-        if use_4bit or (metadata_exists and json.load(open(metadata_path)).get("quantized", False)):
+        # Configure quantization based on parameter
+        if use_4bit:
             quantization_config = BitsAndBytesConfig(
                 load_in_4bit=True,
                 bnb_4bit_compute_dtype=torch.float16,
@@ -116,6 +131,6 @@ def load_model(model_path, device_map="auto", use_4bit=False):
             device_map=device_map
         )
         
-        return tokenizer, model
+        return tokenizer, model, metadata
     else:
         raise FileNotFoundError(f"Model not found at path: {model_path}")

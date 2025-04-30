@@ -17,17 +17,22 @@ def main():
     print_section("Loading Model")
     # Try to load from saved path first, if it fails, download from HF
     try:
-        tokenizer, model = load_model(os.path.join(CHECKPOINTS, INITIAL_SAVE_PATH))
+        tokenizer, model = load_model(os.path.join(CHECKPOINTS, "primaries", INITIAL_SAVE_PATH))
         print("Loaded model from saved path")
     except FileNotFoundError:
         print(f"Initial model not found. Setting up from {MODEL_NAME}")
         tokenizer, model = setup_model(MODEL_NAME)
-        save_model(model, tokenizer, os.path.join(CHECKPOINTS, INITIAL_SAVE_PATH))
+        save_model(model, tokenizer, os.path.join(CHECKPOINTS, "primaries", INITIAL_SAVE_PATH))
 
     # Ask if the user wants to load data
     wantToTestPretrained = inputc(f"Do you want to evaluate the pretrained {MODEL_NAME} model? (y/n)").strip().lower()
     wantToTrain = inputc("Do you want to train the model? (y/n)").strip().lower()
+    if wantToTrain == "y":
+        # Ask for the number of epochs
+        current_epochs = int(inputc("How many epochs do you want to train for? (default: 3)"))
+        printc(f"Training for {current_epochs} epochs")
     wantToTestFineTuned = inputc("Do you want to evaluate the fine-tuned model? (y/n)").strip().lower()
+    inputc("Are you ready to start? (y/n)").strip().lower()
 
     # LOAD DATA
     print_section("Loading Data")
@@ -96,14 +101,34 @@ def main():
 
 
     # FINE TUNING TRAINING
-
     if isYes(wantToTrain):
-        print_section("Fine Tuning Training")
+        print_section("Fine Tuning Training")        
+        # Load previous model if it exists
+        try:
+            previous_path = os.path.join(CHECKPOINTS, "primaries", MATH_FINETUNED_SAVE_PATH)
+            tokenizer, model, metadata = load_model(previous_path)
+            
+            # Get total epochs from metadata
+            total_epochs = metadata.get("total_epochs", 0) + current_epochs
+            print(f"Continuing training from {metadata.get('total_epochs', 0)} epochs to {total_epochs} epochs")
+        except FileNotFoundError:
+            # Start fresh training
+            total_epochs = current_epochs
+            print(f"Starting fresh training for {current_epochs} epochs")
+        
         # Train the model
-        model, tokenizer = train_model(model, tokenizer, train_dataset)
-        save_model(model, tokenizer, MATH_FINETUNED_SAVE_PATH)
-        print(f"Saved fine-tuned model to {MATH_FINETUNED_SAVE_PATH}")
-
+        model, tokenizer = train_model(model, tokenizer, train_dataset, num_epochs=current_epochs)
+        
+        # Save with updated epoch count
+        saved_path = save_model(
+            model, 
+            tokenizer, 
+            os.path.join(CHECKPOINTS, "primaries", MATH_FINETUNED_SAVE_PATH),
+            epochs=current_epochs,
+            total_epochs=total_epochs
+        )
+        print(f"Saved fine-tuned model to {saved_path} (Total epochs: {total_epochs})")
+    
     # POST FT EVALUATION
     if isYes(wantToTestFineTuned):
         print_section("Post Fine Tuning Evaluation")
