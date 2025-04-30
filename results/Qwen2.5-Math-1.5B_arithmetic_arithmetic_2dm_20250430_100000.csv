@@ -1,0 +1,801 @@
+question,expected_answer,model_answer,question_type,correct
+"Question: What is 11 times 82?
+Answer:",902,8,,False
+"Question: What is 20 times 10?
+Answer:",200,200,,True
+"Question: What is 30 times 74?
+Answer:",2220,2220,,True
+"Question: What is 2 times 6?
+Answer:",12,12,,True
+"Question: What is 61 times 19?
+Answer:",1159,1149,,False
+"Question: What is 35 times 8?
+Answer:",280,280,,True
+"Question: What is 70 times 89?
+Answer:",6230,6230,,True
+"Question: What is 77 times 23?
+Answer:",1771,1771,,True
+"Question: What is 46 times 52?
+Answer:",2392,2372,,False
+"Question: What is 18 times 27?
+Answer:",486,462,,False
+"Question: What is 24 times 97?
+Answer:",2328,18,,False
+"Question: What is 87 times 13?
+Answer:",1131,1131,,True
+"Question: What is 33 times 96?
+Answer:",3168,3498,,False
+"Question: What is 18 times 46?
+Answer:",828,333333333333333,,False
+"Question: What is 58 times 36?
+Answer:",2088,2,,False
+"Question: What is 34 times 32?
+Answer:",1088,3,,False
+"Question: What is 19 times 83?
+Answer:",1577,1557,,False
+"Question: What is 8 times 44?
+Answer:",352,7,,False
+"Question: What is 21 times 57?
+Answer:",1197,3,,False
+"Question: What is 92 times 51?
+Answer:",4692,92,,False
+"Question: What is 38 times 98?
+Answer:",3724,4092,,False
+"Question: What is 78 times 22?
+Answer:",1716,1936,,False
+"Question: What is 59 times 63?
+Answer:",3717,3817,,False
+"Question: What is 59 times 40?
+Answer:",2360,2360,,True
+"Question: What is 69 times 78?
+Answer:",5382,5142,,False
+"Question: What is 90 times 82?
+Answer:",7380,7560,,False
+"Question: What is 6 times 84?
+Answer:",504,504,,True
+"Question: What is 98 times 21?
+Answer:",2058,2188,,False
+"Question: What is 56 times 26?
+Answer:",1456,1396,,False
+"Question: What is 97 times 52?
+Answer:",5044,4974,,False
+"Question: What is 58 times 1?
+Answer:",58,58,,True
+"Question: What is 51 times 8?
+Answer:",408,408,,True
+"Question: What is 38 times 13?
+Answer:",494,4,,False
+"Question: What is 65 times 18?
+Answer:",1170,1170,,True
+"Question: What is 90 times 45?
+Answer:",4050,4500,,False
+"Question: What is 47 times 72?
+Answer:",3384,2,,False
+"Question: What is 77 times 71?
+Answer:",5467,5407,,False
+"Question: What is 15 times 7?
+Answer:",105,105,,True
+"Question: What is 72 times 97?
+Answer:",6984,7004,,False
+"Question: What is 9 times 85?
+Answer:",765,765,,True
+"Question: What is 89 times 3?
+Answer:",267,267,,True
+"Question: What is 11 times 81?
+Answer:",891,909,,False
+"Question: What is 45 times 74?
+Answer:",3330,3510,,False
+"Question: What is 30 times 21?
+Answer:",630,630,,True
+"Question: What is 25 times 48?
+Answer:",1200,3,,False
+"Question: What is 22 times 32?
+Answer:",704,684,,False
+"Question: What is 54 times 1?
+Answer:",54,54,,True
+"Question: What is 71 times 60?
+Answer:",4260,4260,,True
+"Question: What is 91 times 78?
+Answer:",7098,91,,False
+"Question: What is 44 times 47?
+Answer:",2068,2018,,False
+"Question: What is 71 times 24?
+Answer:",1704,1684,,False
+"Question: What is 35 times 40?
+Answer:",1400,1400,,True
+"Question: What is 57 times 9?
+Answer:",513,550,,False
+"Question: What is 31 times 79?
+Answer:",2449,2589,,False
+"Question: What is 45 times 8?
+Answer:",360,360,,True
+"Question: What is 86 times 53?
+Answer:",4558,4648,,False
+"Question: What is 66 times 52?
+Answer:",3432,3392,,False
+"Question: What is 95 times 30?
+Answer:",2850,2945,,False
+"Question: What is 34 times 11?
+Answer:",374,34,,False
+"Question: What is 79 times 30?
+Answer:",2370,2370,,True
+"Question: What is 69 times 57?
+Answer:",3933,3843,,False
+"Question: What is 97 times 82?
+Answer:",7954,7914,,False
+"Question: What is 40 times 0?
+Answer:",0,0,,True
+"Question: What is 49 times 22?
+Answer:",1078,1038,,False
+"Question: What is 39 times 19?
+Answer:",741,681,,False
+"Question: What is 49 times 48?
+Answer:",2352,2312,,False
+"Question: What is 52 times 83?
+Answer:",4316,4466,,False
+"Question: What is 53 times 12?
+Answer:",636,624,,False
+"Question: What is 68 times 27?
+Answer:",1836,1746,,False
+"Question: What is 97 times 62?
+Answer:",6014,6634,,False
+"Question: What is 85 times 21?
+Answer:",1785,1735,,False
+"Question: What is 40 times 36?
+Answer:",1440,1440,,True
+"Question: What is 15 times 23?
+Answer:",345,345,,True
+"Question: What is 5 times 13?
+Answer:",65,65,,True
+"Question: What is 38 times 54?
+Answer:",2052,89,,False
+"Question: What is 42 times 0?
+Answer:",0,0,,True
+"Question: What is 96 times 8?
+Answer:",768,832,,False
+"Question: What is 39 times 7?
+Answer:",273,273,,True
+"Question: What is 14 times 39?
+Answer:",546,526,,False
+"Question: What is 85 times 24?
+Answer:",2040,2040,,True
+"Question: What is 99 times 95?
+Answer:",9405,9405,,True
+"Question: What is 3 times 8?
+Answer:",24,24,,True
+"Question: What is 85 times 20?
+Answer:",1700,1700,,True
+"Question: What is 54 times 96?
+Answer:",5184,5724,,False
+"Question: What is 23 times 59?
+Answer:",1357,3,,False
+"Question: What is 87 times 1?
+Answer:",87,87,,True
+"Question: What is 97 times 56?
+Answer:",5432,6092,,False
+"Question: What is 25 times 0?
+Answer:",0,0,,True
+"Question: What is 82 times 32?
+Answer:",2624,2736,,False
+"Question: What is 34 times 9?
+Answer:",306,306,,True
+"Question: What is 26 times 57?
+Answer:",1482,3,,False
+"Question: What is 63 times 79?
+Answer:",4977,5007,,False
+"Question: What is 48 times 47?
+Answer:",2256,2396,,False
+"Question: What is 15 times 71?
+Answer:",1065,1065,,True
+"Question: What is 87 times 48?
+Answer:",4176,4404,,False
+"Question: What is 75 times 12?
+Answer:",900,900,,True
+"Question: What is 81 times 90?
+Answer:",7290,7290,,True
+"Question: What is 88 times 92?
+Answer:",8096,8976,,False
+"Question: What is 97 times 32?
+Answer:",3104,3296,,False
+"Question: What is 62 times 40?
+Answer:",2480,2480,,True
+"Question: What is 88 times 90?
+Answer:",7920,7920,,True
+"Question: What is 21 times 52?
+Answer:",1092,3,,False
+"Question: What is 64 times 85?
+Answer:",5440,369680,,False
+"Question: What is 3 times 69?
+Answer:",207,197,,False
+"Question: What is 57 times 8?
+Answer:",456,456,,True
+"Question: What is 2 times 0?
+Answer:",0,0,,True
+"Question: What is 70 times 80?
+Answer:",5600,5600,,True
+"Question: What is 78 times 23?
+Answer:",1794,1954,,False
+"Question: What is 39 times 8?
+Answer:",312,312,,True
+"Question: What is 30 times 72?
+Answer:",2160,2160,,True
+"Question: What is 74 times 32?
+Answer:",2368,2368,,True
+"Question: What is 63 times 43?
+Answer:",2709,2609,,False
+"Question: What is 27 times 90?
+Answer:",2430,2430,,True
+"Question: What is 95 times 5?
+Answer:",475,950,,False
+"Question: What is 82 times 85?
+Answer:",6970,6940,,False
+"Question: What is 3 times 5?
+Answer:",15,15,,True
+"Question: What is 14 times 10?
+Answer:",140,140,,True
+"Question: What is 82 times 86?
+Answer:",7052,7452,,False
+"Question: What is 48 times 88?
+Answer:",4224,4224,,True
+"Question: What is 81 times 61?
+Answer:",4941,4941,,True
+"Question: What is 10 times 33?
+Answer:",330,330,,True
+"Question: What is 0 times 67?
+Answer:",0,0,,True
+"Question: What is 94 times 30?
+Answer:",2820,2820,,True
+"Question: What is 70 times 71?
+Answer:",4970,4970,,True
+"Question: What is 47 times 71?
+Answer:",3337,3307,,False
+"Question: What is 85 times 96?
+Answer:",8160,7680,,False
+"Question: What is 3 times 85?
+Answer:",255,255,,True
+"Question: What is 52 times 12?
+Answer:",624,624,,True
+"Question: What is 44 times 98?
+Answer:",4312,4272,,False
+"Question: What is 64 times 56?
+Answer:",3584,3384,,False
+"Question: What is 61 times 4?
+Answer:",244,244,,True
+"Question: What is 21 times 66?
+Answer:",1386,4,,False
+"Question: What is 86 times 37?
+Answer:",3182,3102,,False
+"Question: What is 49 times 62?
+Answer:",3038,3148,,False
+"Question: What is 83 times 12?
+Answer:",996,984,,False
+"Question: What is 0 times 26?
+Answer:",0,0,,True
+"Question: What is 71 times 30?
+Answer:",2130,2130,,True
+"Question: What is 84 times 42?
+Answer:",3528,3468,,False
+"Question: What is 83 times 84?
+Answer:",6972,7352,,False
+"Question: What is 90 times 7?
+Answer:",630,630,,True
+"Question: What is 54 times 47?
+Answer:",2538,2518,,False
+"Question: What is 82 times 71?
+Answer:",5822,5722,,False
+"Question: What is 8 times 95?
+Answer:",760,14,,False
+"Question: What is 48 times 89?
+Answer:",4272,4372,,False
+"Question: What is 73 times 69?
+Answer:",5037,4907,,False
+"Question: What is 89 times 57?
+Answer:",5073,5333,,False
+"Question: What is 98 times 40?
+Answer:",3920,4680,,False
+"Question: What is 0 times 38?
+Answer:",0,0,,True
+"Question: What is 38 times 93?
+Answer:",3534,3914,,False
+"Question: What is 89 times 80?
+Answer:",7120,7820,,False
+"Question: What is 6 times 91?
+Answer:",546,17,,False
+"Question: What is 44 times 6?
+Answer:",264,264,,True
+"Question: What is 5 times 82?
+Answer:",410,410,,True
+"Question: What is 27 times 63?
+Answer:",1701,3,,False
+"Question: What is 54 times 67?
+Answer:",3618,3648,,False
+"Question: What is 12 times 88?
+Answer:",1056,2112,,False
+"Question: What is 82 times 58?
+Answer:",4756,4776,,False
+"Question: What is 81 times 78?
+Answer:",6318,5882,,False
+"Question: What is 24 times 41?
+Answer:",984,964,,False
+"Question: What is 82 times 49?
+Answer:",4018,4118,,False
+"Question: What is 96 times 13?
+Answer:",1248,1248,,True
+"Question: What is 4 times 72?
+Answer:",288,288,,True
+"Question: What is 58 times 31?
+Answer:",1798,1998,,False
+"Question: What is 36 times 41?
+Answer:",1476,1456,,False
+"Question: What is 40 times 66?
+Answer:",2640,2640,,True
+"Question: What is 86 times 12?
+Answer:",1032,1008,,False
+"Question: What is 54 times 26?
+Answer:",1404,1364,,False
+"Question: What is 21 times 22?
+Answer:",462,482,,False
+"Question: What is 30 times 97?
+Answer:",2910,2910,,True
+"Question: What is 29 times 36?
+Answer:",1044,1104,,False
+"Question: What is 60 times 86?
+Answer:",5160,5160,,True
+"Question: What is 88 times 73?
+Answer:",6424,6424,,True
+"Question: What is 87 times 43?
+Answer:",3741,4031,,False
+"Question: What is 86 times 34?
+Answer:",2924,3044,,False
+"Question: What is 87 times 90?
+Answer:",7830,8700,,False
+"Question: What is 35 times 26?
+Answer:",910,890,,False
+"Question: What is 64 times 2?
+Answer:",128,128,,True
+"Question: What is 83 times 87?
+Answer:",7221,7531,,False
+"Question: What is 27 times 24?
+Answer:",648,648,,True
+"Question: What is 4 times 33?
+Answer:",132,132,,True
+"Question: What is 5 times 18?
+Answer:",90,90,,True
+"Question: What is 87 times 37?
+Answer:",3219,3239,,False
+"Question: What is 14 times 62?
+Answer:",868,76,,False
+"Question: What is 81 times 47?
+Answer:",3807,4009,,False
+"Question: What is 76 times 97?
+Answer:",7372,8132,,False
+"Question: What is 28 times 57?
+Answer:",1596,1666666666666665,,False
+"Question: What is 83 times 34?
+Answer:",2822,2952,,False
+"Question: What is 11 times 19?
+Answer:",209,199,,False
+"Question: What is 68 times 77?
+Answer:",5236,5416,,False
+"Question: What is 91 times 91?
+Answer:",8281,16802,,False
+"Question: What is 59 times 66?
+Answer:",3894,4024,,False
+"Question: What is 25 times 40?
+Answer:",1000,1000,,True
+"Question: What is 68 times 83?
+Answer:",5644,5744,,False
+"Question: What is 98 times 83?
+Answer:",8134,10584,,False
+"Question: What is 54 times 85?
+Answer:",4590,4710,,False
+"Question: What is 47 times 93?
+Answer:",4371,4441,,False
+"Question: What is 15 times 37?
+Answer:",555,525,,False
+"Question: What is 58 times 7?
+Answer:",406,406,,True
+"Question: What is 67 times 68?
+Answer:",4556,4646,,False
+"Question: What is 64 times 45?
+Answer:",2880,2880,,True
+"Question: What is 3 times 50?
+Answer:",150,150,,True
+"Question: What is 52 times 17?
+Answer:",884,2,,False
+"Question: What is 54 times 16?
+Answer:",864,864,,True
+"Question: What is 50 times 69?
+Answer:",3450,3450,,True
+"Question: What is 72 times 24?
+Answer:",1728,1728,,True
+"Question: What is 37 times 95?
+Answer:",3515,3885,,False
+"Question: What is 16 times 8?
+Answer:",128,128,,True
+"Question: What is 80 times 6?
+Answer:",480,480,,True
+"Question: What is 59 times 14?
+Answer:",826,796,,False
+"Question: What is 60 times 3?
+Answer:",180,180,,True
+"Question: What is 22 times 60?
+Answer:",1320,1320,,True
+"Question: What is 43 times 25?
+Answer:",1075,1035,,False
+"Question: What is 53 times 17?
+Answer:",901,861,,False
+"Question: What is 37 times 74?
+Answer:",2738,3848,,False
+"Question: What is 66 times 0?
+Answer:",0,0,,True
+"Question: What is 12 times 4?
+Answer:",48,48,,True
+"Question: What is 2 times 54?
+Answer:",108,108,,True
+"Question: What is 3 times 94?
+Answer:",282,282,,True
+"Question: What is 10 times 40?
+Answer:",400,400,,True
+"Question: What is 35 times 90?
+Answer:",3150,3150,,True
+"Question: What is 7 times 18?
+Answer:",126,4,,False
+"Question: What is 37 times 63?
+Answer:",2331,2231,,False
+"Question: What is 65 times 95?
+Answer:",6175,160,,False
+"Question: What is 1 times 20?
+Answer:",20,20,,True
+"Question: What is 85 times 50?
+Answer:",4250,4250,,True
+"Question: What is 54 times 72?
+Answer:",3888,2,,False
+"Question: What is 94 times 47?
+Answer:",4418,4708,,False
+"Question: What is 54 times 7?
+Answer:",378,378,,True
+"Question: What is 38 times 86?
+Answer:",3268,33,,False
+"Question: What is 69 times 11?
+Answer:",759,709,,False
+"Question: What is 81 times 17?
+Answer:",1377,1367,,False
+"Question: What is 71 times 7?
+Answer:",497,497,,True
+"Question: What is 66 times 27?
+Answer:",1782,1702,,False
+"Question: What is 6 times 15?
+Answer:",90,90,,True
+"Question: What is 18 times 64?
+Answer:",1152,1104,,False
+"Question: What is 68 times 20?
+Answer:",1360,1360,,True
+"Question: What is 76 times 46?
+Answer:",3496,3616,,False
+"Question: What is 44 times 23?
+Answer:",1012,932,,False
+"Question: What is 10 times 83?
+Answer:",830,830,,True
+"Question: What is 6 times 18?
+Answer:",108,108,,True
+"Question: What is 27 times 54?
+Answer:",1458,3,,False
+"Question: What is 2 times 73?
+Answer:",146,146,,True
+"Question: What is 53 times 90?
+Answer:",4770,4870,,False
+"Question: What is 1 times 10?
+Answer:",10,10,,True
+"Question: What is 56 times 0?
+Answer:",0,0,,True
+"Question: What is 17 times 8?
+Answer:",136,136,,True
+"Question: What is 71 times 0?
+Answer:",0,0,,True
+"Question: What is 87 times 18?
+Answer:",1566,1516,,False
+"Question: What is 78 times 8?
+Answer:",624,624,,True
+"Question: What is 18 times 32?
+Answer:",576,576,,True
+"Question: What is 82 times 20?
+Answer:",1640,1640,,True
+"Question: What is 29 times 20?
+Answer:",580,580,,True
+"Question: What is 80 times 49?
+Answer:",3920,3,,False
+"Question: What is 33 times 77?
+Answer:",2541,2531,,False
+"Question: What is 73 times 87?
+Answer:",6351,6131,,False
+"Question: What is 69 times 39?
+Answer:",2691,2581,,False
+"Question: What is 84 times 91?
+Answer:",7644,7514,,False
+"Question: What is 36 times 53?
+Answer:",1908,1938,,False
+"Question: What is 1 times 39?
+Answer:",39,39,,True
+"Question: What is 74 times 71?
+Answer:",5254,5254,,True
+"Question: What is 14 times 88?
+Answer:",1232,7,,False
+"Question: What is 21 times 49?
+Answer:",1029,3,,False
+"Question: What is 36 times 13?
+Answer:",468,468,,True
+"Question: What is 78 times 36?
+Answer:",2808,2728,,False
+"Question: What is 62 times 74?
+Answer:",4588,2,,False
+"Question: What is 33 times 76?
+Answer:",2508,2528,,False
+"Question: What is 17 times 86?
+Answer:",1462,6,,False
+"Question: What is 87 times 17?
+Answer:",1479,1539,,False
+"Question: What is 66 times 72?
+Answer:",4752,4632,,False
+"Question: What is 60 times 93?
+Answer:",5580,5580,,True
+"Question: What is 79 times 28?
+Answer:",2212,2212,,True
+"Question: What is 93 times 41?
+Answer:",3813,4003,,False
+"Question: What is 76 times 18?
+Answer:",1368,1536,,False
+"Question: What is 67 times 96?
+Answer:",6432,7102,,False
+"Question: What is 14 times 15?
+Answer:",210,210,,True
+"Question: What is 32 times 20?
+Answer:",640,640,,True
+"Question: What is 16 times 29?
+Answer:",464,404,,False
+"Question: What is 70 times 75?
+Answer:",5250,5250,,True
+"Question: What is 70 times 68?
+Answer:",4760,4760,,True
+"Question: What is 90 times 69?
+Answer:",6210,6009,,False
+"Question: What is 67 times 9?
+Answer:",603,603,,True
+"Question: What is 59 times 0?
+Answer:",0,0,,True
+"Question: What is 20 times 36?
+Answer:",720,720,,True
+"Question: What is 27 times 55?
+Answer:",1485,3,,False
+"Question: What is 20 times 60?
+Answer:",1200,1200,,True
+"Question: What is 7 times 91?
+Answer:",637,14,,False
+"Question: What is 27 times 44?
+Answer:",1188,1112,,False
+"Question: What is 28 times 17?
+Answer:",476,476,,True
+"Question: What is 49 times 64?
+Answer:",3136,3236,,False
+"Question: What is 54 times 62?
+Answer:",3348,3438,,False
+"Question: What is 59 times 27?
+Answer:",1593,1543,,False
+"Question: What is 66 times 37?
+Answer:",2442,2402,,False
+"Question: What is 7 times 93?
+Answer:",651,14,,False
+"Question: What is 31 times 64?
+Answer:",1984,1924,,False
+"Question: What is 62 times 31?
+Answer:",1922,1902,,False
+"Question: What is 49 times 15?
+Answer:",735,735,,True
+"Question: What is 87 times 71?
+Answer:",6177,6007,,False
+"Question: What is 67 times 23?
+Answer:",1541,1631,,False
+"Question: What is 47 times 30?
+Answer:",1410,1410,,True
+"Question: What is 36 times 20?
+Answer:",720,720,,True
+"Question: What is 60 times 96?
+Answer:",5760,5760,,True
+"Question: What is 82 times 42?
+Answer:",3444,3304,,False
+"Question: What is 30 times 6?
+Answer:",180,180,,True
+"Question: What is 56 times 55?
+Answer:",3080,3040,,False
+"Question: What is 66 times 60?
+Answer:",3960,3960,,True
+"Question: What is 75 times 9?
+Answer:",675,675,,True
+"Question: What is 2 times 11?
+Answer:",22,22,,True
+"Question: What is 4 times 79?
+Answer:",316,316,,True
+"Question: What is 9 times 88?
+Answer:",792,1514,,False
+"Question: What is 15 times 17?
+Answer:",255,255,,True
+"Question: What is 48 times 19?
+Answer:",912,952,,False
+"Question: What is 5 times 90?
+Answer:",450,450,,True
+"Question: What is 69 times 99?
+Answer:",6831,6831,,True
+"Question: What is 67 times 81?
+Answer:",5427,5777,,False
+"Question: What is 22 times 57?
+Answer:",1254,1174,,False
+"Question: What is 72 times 6?
+Answer:",432,432,,True
+"Question: What is 22 times 93?
+Answer:",2046,115,,False
+"Question: What is 1 times 5?
+Answer:",5,5,,True
+"Question: What is 86 times 85?
+Answer:",7310,7590,,False
+"Question: What is 43 times 97?
+Answer:",4171,4271,,False
+"Question: What is 31 times 80?
+Answer:",2480,2480,,True
+"Question: What is 78 times 55?
+Answer:",4290,3930,,False
+"Question: What is 60 times 46?
+Answer:",2760,2760,,True
+"Question: What is 44 times 89?
+Answer:",3916,3956,,False
+"Question: What is 65 times 72?
+Answer:",4680,4640,,False
+"Question: What is 6 times 76?
+Answer:",456,456,,True
+"Question: What is 24 times 83?
+Answer:",1992,26,,False
+"Question: What is 97 times 14?
+Answer:",1358,1378,,False
+"Question: What is 88 times 29?
+Answer:",2552,2552,,True
+"Question: What is 41 times 58?
+Answer:",2378,2268,,False
+"Question: What is 23 times 55?
+Answer:",1265,3,,False
+"Question: What is 91 times 6?
+Answer:",546,637,,False
+"Question: What is 38 times 23?
+Answer:",874,2,,False
+"Question: What is 24 times 36?
+Answer:",864,864,,True
+"Question: What is 99 times 45?
+Answer:",4455,4835,,False
+"Question: What is 15 times 52?
+Answer:",780,780,,True
+"Question: What is 78 times 89?
+Answer:",6942,6942,,True
+"Question: What is 32 times 11?
+Answer:",352,352,,True
+"Question: What is 27 times 47?
+Answer:",1269,2,,False
+"Question: What is 56 times 77?
+Answer:",4312,4004,,False
+"Question: What is 49 times 81?
+Answer:",3969,4039,,False
+"Question: What is 40 times 35?
+Answer:",1400,1400,,True
+"Question: What is 12 times 8?
+Answer:",96,96,,True
+"Question: What is 16 times 97?
+Answer:",1552,1712,,False
+"Question: What is 22 times 26?
+Answer:",572,572,,True
+"Question: What is 31 times 85?
+Answer:",2635,2705,,False
+"Question: What is 42 times 35?
+Answer:",1470,1430,,False
+"Question: What is 73 times 56?
+Answer:",4088,4008,,False
+"Question: What is 25 times 13?
+Answer:",325,3,,False
+"Question: What is 41 times 24?
+Answer:",984,984,,True
+"Question: What is 21 times 97?
+Answer:",2037,5,,False
+"Question: What is 66 times 1?
+Answer:",66,66,,True
+"Question: What is 33 times 38?
+Answer:",1254,1214,,False
+"Question: What is 10 times 13?
+Answer:",130,130,,True
+"Question: What is 17 times 12?
+Answer:",204,204,,True
+"Question: What is 14 times 98?
+Answer:",1372,1512,,False
+"Question: What is 14 times 47?
+Answer:",658,4,,False
+"Question: What is 70 times 81?
+Answer:",5670,5670,,True
+"Question: What is 72 times 71?
+Answer:",5112,5004,,False
+"Question: What is 30 times 10?
+Answer:",300,300,,True
+"Question: What is 10 times 52?
+Answer:",520,520,,True
+"Question: What is 45 times 34?
+Answer:",1530,1410,,False
+"Question: What is 12 times 6?
+Answer:",72,72,,True
+"Question: What is 36 times 58?
+Answer:",2088,5,,False
+"Question: What is 18 times 86?
+Answer:",1548,5,,False
+"Question: What is 34 times 82?
+Answer:",2788,33,,False
+"Question: What is 36 times 26?
+Answer:",936,936,,True
+"Question: What is 61 times 24?
+Answer:",1464,364,,False
+"Question: What is 67 times 21?
+Answer:",1407,1107,,False
+"Question: What is 57 times 60?
+Answer:",3420,510,,False
+"Question: What is 41 times 44?
+Answer:",1804,1784,,False
+"Question: What is 24 times 72?
+Answer:",1728,1728,,True
+"Question: What is 10 times 30?
+Answer:",300,300,,True
+"Question: What is 17 times 34?
+Answer:",578,598,,False
+"Question: What is 87 times 78?
+Answer:",6786,6794,,False
+"Question: What is 36 times 79?
+Answer:",2844,1666666666666665,,False
+"Question: What is 2 times 99?
+Answer:",198,297,,False
+"Question: What is 75 times 25?
+Answer:",1875,1875,,True
+"Question: What is 90 times 39?
+Answer:",3510,3610,,False
+"Question: What is 85 times 67?
+Answer:",5695,7035,,False
+"Question: What is 69 times 36?
+Answer:",2484,2414,,False
+"Question: What is 78 times 10?
+Answer:",780,780,,True
+"Question: What is 34 times 6?
+Answer:",204,204,,True
+"Question: What is 1 times 76?
+Answer:",76,76,,True
+"Question: What is 43 times 87?
+Answer:",3741,3931,,False
+"Question: What is 69 times 52?
+Answer:",3588,3598,,False
+"Question: What is 16 times 27?
+Answer:",432,432,,True
+"Question: What is 49 times 32?
+Answer:",1568,1548,,False
+"Question: What is 28 times 63?
+Answer:",1764,3,,False
+"Question: What is 70 times 21?
+Answer:",1470,1470,,True
+"Question: What is 6 times 51?
+Answer:",306,306,,True
+"Question: What is 86 times 22?
+Answer:",1892,1992,,False
+"Question: What is 22 times 35?
+Answer:",770,3,,False
+"Question: What is 11 times 7?
+Answer:",77,77,,True
+"Question: What is 1 times 1?
+Answer:",1,1,,True
+"Question: What is 45 times 49?
+Answer:",2205,2205,,True
+"Question: What is 79 times 29?
+Answer:",2291,2271,,False
+"Question: What is 0 times 35?
+Answer:",0,0,,True
+"Question: What is 26 times 39?
+Answer:",1014,3,,False
+"Question: What is 1 times 55?
+Answer:",55,55,,True

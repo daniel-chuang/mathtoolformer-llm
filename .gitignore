@@ -9,10 +9,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Logs and outputs
-*.log
-*.txt
-
 # OS specific files
 .DS_Store
 Thumbs.db
