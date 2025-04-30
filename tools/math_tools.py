@@ -1,5 +1,7 @@
 import sympy as sp
+import tools
 
+@tools.register("calculator")
 def calculator(expression):
     """
     Basic calculator for arithmetic expressions.

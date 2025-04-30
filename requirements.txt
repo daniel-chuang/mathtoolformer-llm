@@ -12,6 +12,5 @@ RateMyProfessorAPI
 numpy
 pandas
 requests
-re
 dotenv
 huggingface_hub

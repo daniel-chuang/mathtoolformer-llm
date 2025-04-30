@@ -16,7 +16,7 @@ SPLIT = 0.9  # Proportion of data to use for training (default: 0.8)
 DATASET = "arithmetic"  # Options: "arithmetic", "svamp", "gsm8k"
 
 # QWEN Qwen2.5-Math-1.5B
-MODEL_NAME = "Qwen2.5-Math-1.5B"
+MODEL_NAME = "Qwen/Qwen2.5-Math-1.5B"
 INITIAL_SAVE_PATH = "qwen-initial"
 MATH_FINETUNED_SAVE_PATH = "qwen-math-finetuned"
 

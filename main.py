@@ -10,7 +10,6 @@ from data.svamp import prepare_svamp_dataset
 from data.arithmetic import prepare_arithmetic_datasets
 from evaluation.math_evaluation import evaluate_math_performance
 from evaluation.tool_usage_evaluation import evaluate_tool_usage
-from inference.tool_execution import generate_with_tools
 from constants import MODEL_NAME, INITIAL_SAVE_PATH, MATH_FINETUNED_SAVE_PATH, DATASET, CHECKPOINTS
 
 def main():
