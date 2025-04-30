@@ -1,7 +1,8 @@
 from datasets import load_dataset, Dataset
 import numpy as np
+from constants import SEED, SPLIT
 
-def prepare_arithmetic_datasets(train_split=0.8):
+def prepare_arithmetic_datasets(train_split=SPLIT, random_seed=SEED):
     """
     Prepare arithmetic datasets for all configurations.
     
@@ -11,11 +12,21 @@ def prepare_arithmetic_datasets(train_split=0.8):
     Returns:
         tuple: (train_dict, test_dict) where each is a dictionary mapping config names to datasets
     """
+    # Setting random seed for reproducibility
+    np.random.seed(random_seed)
+
     # List of available configurations
     configs = [
-        'arithmetic_1dc', 'arithmetic_2da', 'arithmetic_2dm', 'arithmetic_2ds',
-        'arithmetic_3da', 'arithmetic_3ds', 'arithmetic_4da', 'arithmetic_4ds',
-        'arithmetic_5da', 'arithmetic_5ds'
+        'arithmetic_1dc',
+        'arithmetic_2da',
+        'arithmetic_2dm',
+        'arithmetic_2ds',
+        'arithmetic_3da',
+        'arithmetic_3ds',
+        'arithmetic_4da',
+        'arithmetic_4ds',
+        'arithmetic_5da',
+        'arithmetic_5ds'
     ]
     
     train_dict = {}

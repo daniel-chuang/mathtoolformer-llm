@@ -53,7 +53,7 @@ def evaluate_math_performance(model, tokenizer, test_dataset, dataset_name=None,
         print(response + "\n\n")
 
         # Extract the last number mentioned in the response
-        numbers = re.findall(r'\d+', response)  # Find all numbers in the response
+        numbers = re.findall(r'-?\d+', response)  # Find all numbers in the response (with optional minus sign)
         model_answer = numbers[-1] if numbers else None  # Take the last number, or None if no numbers found
 
         # Check correctness

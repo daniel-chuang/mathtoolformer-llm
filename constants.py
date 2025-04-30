@@ -9,6 +9,8 @@ load_dotenv()
 TOOL_PATTERN = r'<tool:(\w+)>(.*?)</tool>'
 HUGGINGFACE_TOKEN = os.getenv("HUGGINGFACE_TOKEN")
 CHECKPOINTS = "./checkpoints"
+SEED = 183
+SPLIT = 0.9  # Proportion of data to use for training (default: 0.8)
 
 # DATASET
 DATASET = "arithmetic"  # Options: "arithmetic", "svamp", "gsm8k"
