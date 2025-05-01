@@ -83,15 +83,15 @@ def prepare_arithmetic_datasets(train_split=SPLIT, random_seed=SEED):
             # Process examples to have consistent format (original version)
             def process_example(example):
                 return {
-                    "context": example["context"],
-                    "completion": example["completion"].strip()
+                    "question": example["context"],
+                    "final_answer": example["completion"].strip()
                 }
             
             # Process examples for transformed version
             def process_example_transformed(example):
                 return {
-                    "context": example["context"],
-                    "completion": transform_question(example["context"])
+                    "question": example["context"],
+                    "final_answer": transform_question(example["context"])
                 }
             
             # Create both original and transformed datasets
@@ -140,8 +140,8 @@ def combine_and_tokenize(datasets, tokenizer, path=TOOL_TRAIN_DATASET_PATH):
     Returns:
         Combined dataset
     """
-    if os.path.exists(TOOL_TRAIN_DATASET_PATH):
-        train_dataset = Dataset.load_from_disk(TOOL_TRAIN_DATASET_PATH)
+    if os.path.exists(path):
+        train_dataset = Dataset.load_from_disk(path)
     else:
         # For arithmetic datasets, combine all datasets into one
         print("Combining arithmetic datasets for training...")
@@ -155,6 +155,6 @@ def combine_and_tokenize(datasets, tokenizer, path=TOOL_TRAIN_DATASET_PATH):
             batched=True,
             remove_columns=train_dataset.column_names
         )   # YOU NEED TO DELETE THE FOLDER "data/preprocessed_train_dataset" IF YOU SWITCH MODELS
-        Dataset.save_to_disk(train_dataset,TOOL_TRAIN_DATASET_PATH)
+        Dataset.save_to_disk(train_dataset,path)
         print(f"Saved {len(train_dataset)} examples to data")
     return train_dataset

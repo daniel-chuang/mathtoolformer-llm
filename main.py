@@ -26,19 +26,19 @@ def main():
 
     # Ask if the user wants to load data
     wantToTestPretrained = inputc(f"Do you want to evaluate the pretrained {MODEL_NAME} model? (y/n)").strip().lower()
-    wantToTrainTool = inputc("Do you want to train the model? (y/n)").strip().lower()
+    wantToTrainTool = inputc("Do you want to train the toolformer model? (y/n)").strip().lower()
     if wantToTrainTool == "y":
         # Ask for the number of epochs
-        current_epochs_tool = int(inputc("How many epochs do you want to train for? (default: 3)"))
+        current_epochs_tool = int(inputc("How many epochs do you want to train the tool FT for? (default: 3)"))
         printc(f"Training for {current_epochs_tool} epochs")
-        wantToTestToolFineTuned = inputc("Do you want to evaluate the fine-tuned model? (y/n)").strip().lower()
+        wantToTestToolFineTuned = inputc("Do you want to evaluate the tool fine-tuned model? (y/n)").strip().lower()
     
-    wantToTrainPure = inputc("Do you want to train the model? (y/n)").strip().lower()
+    wantToTrainPure = inputc("Do you want to train the pure fine tuning model? (y/n)").strip().lower()
     if wantToTrainPure == "y":
         # Ask for the number of epochs
-        current_epochs_pure = int(inputc("How many epochs do you want to train for? (default: 3)"))
+        current_epochs_pure = int(inputc("How many epochs do you want to train the pure FT for? (default: 3)"))
         printc(f"Training for {current_epochs_pure} epochs")
-        wantToTestPureFineTuned = inputc("Do you want to evaluate the fine-tuned model? (y/n)").strip().lower()
+        wantToTestPureFineTuned = inputc("Do you want to evaluate the pure fine-tuned model? (y/n)").strip().lower()
     
     inputc("Are you ready to start? (y/n)").strip().lower()
 
@@ -52,6 +52,8 @@ def main():
         if wantToTrainTool == "y":
             train_transformed_datasets = dataset["train_transformed_dict"]
             test_transformed_datasets = dataset["test_transformed_dict"]
+            print(train_transformed_datasets['arithmetic_1dc'][3])
+            print(test_transformed_datasets['arithmetic_1dc'][3])
 
     else:
         if DATASET == "svamp": # Single Datasetse

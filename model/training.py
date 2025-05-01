@@ -9,7 +9,7 @@ def preprocess_for_training(examples, tokenizer, max_length=2048):
     """Tokenize the examples for training"""
     # Tokenize input context
     result = tokenizer(
-        examples["context"],
+        examples["question"],
         truncation=True,
         max_length=max_length,
         padding="max_length"
@@ -23,7 +23,7 @@ def preprocess_for_training(examples, tokenizer, max_length=2048):
     
     # Tokenize completions with the same tokenizer
     completion_encodings = tokenizer(
-        examples["completion"],
+        examples["final_answer"],
         truncation=True,
         max_length=max_length,
         padding="max_length"
