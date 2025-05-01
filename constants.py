@@ -14,18 +14,21 @@ SPLIT = 0.9  # Proportion of data to use for training (default: 0.8)
 
 # DATASET
 DATASET = "arithmetic"  # Options: "arithmetic", "svamp", "gsm8k"
+TOOL_TRAIN_DATASET_PATH = "./data/preprocessed_train_dataset"
+PURE_TRAIN_DATASET_PATH = "./data/preprocessed_pure_train_dataset"
 
-# QWEN Qwen2.5-Math-1.5B
-MODEL_NAME = "Qwen/Qwen2.5-Math-1.5B"
-INITIAL_SAVE_PATH = "qwen-initial"
-MATH_FINETUNED_SAVE_PATH = "qwen-math-finetuned"
+# SMOLLM
+MODEL_NAME = "HuggingFaceTB/SmolLM2-135M"
+INITIAL_SAVE_PATH = "SmolLM2-initial"
+TOOL_FINETUNED_SAVE_PATH = "SmolLM2-tool-finetuned"
+PURE_FINETUNED_SAVE_PATH = "SmolLM2-pure-finetuned"
 
 # GPT 2 - Does poorly
 # MODEL_NAME = "gpt2"
 # INITIAL_SAVE_PATH = "/gpt2-initial"
-# MATH_FINETUNED_SAVE_PATH = "/gpt2-math-finetuned"
+# TOOL_FINETUNED_SAVE_PATH = "/gpt2-math-finetuned"
 
 # Microsoft Phi 3 - Does really well but slow
 # MODEL_NAME = "microsoft/phi-3-mini-4k-instruct"
 # INITIAL_SAVE_PATH = "phi3-mini-initial"
-# MATH_FINETUNED_SAVE_PATH = "phi3-mini-math-finetuned"
+# TOOL_FINETUNED_SAVE_PATH = "phi3-mini-math-finetuned"

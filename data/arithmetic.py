@@ -1,7 +1,10 @@
 from datasets import load_dataset
 import numpy as np
 import re
-from constants import SEED, SPLIT
+from constants import SEED, SPLIT, TOOL_TRAIN_DATASET_PATH
+from datasets import Dataset
+import os
+from model.training import preprocess_for_training
 
 def transform_question(input_text):
     """
@@ -126,3 +129,32 @@ def prepare_arithmetic_datasets(train_split=SPLIT, random_seed=SEED):
         "train_transformed_dict": train_transformed_dict,
         "test_transformed_dict": test_transformed_dict
     }
+
+def combine_and_tokenize(datasets, tokenizer, path=TOOL_TRAIN_DATASET_PATH):
+    """
+    Combine multiple datasets into a single dataset, tokenized.
+    
+    Args:
+        datasets: List of datasets to combine
+    
+    Returns:
+        Combined dataset
+    """
+    if os.path.exists(TOOL_TRAIN_DATASET_PATH):
+        train_dataset = Dataset.load_from_disk(TOOL_TRAIN_DATASET_PATH)
+    else:
+        # For arithmetic datasets, combine all datasets into one
+        print("Combining arithmetic datasets for training...")
+        combined_train_dataset = []
+        for key, dataset in datasets.items():
+            combined_train_dataset.extend(dataset)
+        train_dataset = Dataset.from_list(combined_train_dataset)
+        print(f"Combined {len(train_dataset)} examples for training")
+        train_dataset = train_dataset.map(
+            lambda examples: preprocess_for_training(examples, tokenizer),
+            batched=True,
+            remove_columns=train_dataset.column_names
+        )   # YOU NEED TO DELETE THE FOLDER "data/preprocessed_train_dataset" IF YOU SWITCH MODELS
+        Dataset.save_to_disk(train_dataset,TOOL_TRAIN_DATASET_PATH)
+        print(f"Saved {len(train_dataset)} examples to data")
+    return train_dataset

@@ -2,11 +2,14 @@
 from transformers import Trainer, TrainingArguments
 from transformers import DataCollatorForLanguageModeling
 from datetime import datetime
+import os
+import json
 
 def preprocess_for_training(examples, tokenizer, max_length=2048):
     """Tokenize the examples for training"""
+    # Tokenize input context
     result = tokenizer(
-        examples["text"],
+        examples["context"],
         truncation=True,
         max_length=max_length,
         padding="max_length"
@@ -18,8 +21,16 @@ def preprocess_for_training(examples, tokenizer, max_length=2048):
         for tokens in result["input_ids"]
     ]
     
-    # Set labels same as input_ids for causal language modeling
-    result["labels"] = result["input_ids"].copy()
+    # Tokenize completions with the same tokenizer
+    completion_encodings = tokenizer(
+        examples["completion"],
+        truncation=True,
+        max_length=max_length,
+        padding="max_length"
+    )
+    
+    # Set labels to the tokenized completion
+    result["labels"] = completion_encodings["input_ids"]
     
     return result
 
@@ -38,12 +49,6 @@ def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="
     Returns:
         tuple: (model, tokenizer, metadata) - The trained model, tokenizer and updated metadata
     """
-    # Tokenize datasets
-    train_dataset = train_dataset.map(
-        lambda examples: preprocess_for_training(examples, tokenizer),
-        batched=True,
-        remove_columns=train_dataset.column_names
-    )
     
     if eval_dataset:
         eval_dataset = eval_dataset.map(

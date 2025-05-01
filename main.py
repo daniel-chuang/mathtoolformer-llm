@@ -10,7 +10,8 @@ from data.svamp import prepare_svamp_dataset
 from data.arithmetic import prepare_arithmetic_datasets
 from evaluation.math_evaluation import evaluate_math_performance
 from evaluation.tool_usage_evaluation import evaluate_tool_usage
-from constants import MODEL_NAME, INITIAL_SAVE_PATH, MATH_FINETUNED_SAVE_PATH, DATASET, CHECKPOINTS
+from constants import MODEL_NAME, INITIAL_SAVE_PATH, TOOL_FINETUNED_SAVE_PATH, DATASET, CHECKPOINTS, TOOL_TRAIN_DATASET_PATH, PURE_TRAIN_DATASET_PATH
+from data.arithmetic import combine_and_tokenize
 
 def main():
     print_section("Loading Model")
@@ -25,12 +26,20 @@ def main():
 
     # Ask if the user wants to load data
     wantToTestPretrained = inputc(f"Do you want to evaluate the pretrained {MODEL_NAME} model? (y/n)").strip().lower()
-    wantToTrain = inputc("Do you want to train the model? (y/n)").strip().lower()
-    if wantToTrain == "y":
+    wantToTrainTool = inputc("Do you want to train the model? (y/n)").strip().lower()
+    if wantToTrainTool == "y":
         # Ask for the number of epochs
-        current_epochs = int(inputc("How many epochs do you want to train for? (default: 3)"))
-        printc(f"Training for {current_epochs} epochs")
-    wantToTestFineTuned = inputc("Do you want to evaluate the fine-tuned model? (y/n)").strip().lower()
+        current_epochs_tool = int(inputc("How many epochs do you want to train for? (default: 3)"))
+        printc(f"Training for {current_epochs_tool} epochs")
+        wantToTestToolFineTuned = inputc("Do you want to evaluate the fine-tuned model? (y/n)").strip().lower()
+    
+    wantToTrainPure = inputc("Do you want to train the model? (y/n)").strip().lower()
+    if wantToTrainPure == "y":
+        # Ask for the number of epochs
+        current_epochs_pure = int(inputc("How many epochs do you want to train for? (default: 3)"))
+        printc(f"Training for {current_epochs_pure} epochs")
+        wantToTestPureFineTuned = inputc("Do you want to evaluate the fine-tuned model? (y/n)").strip().lower()
+    
     inputc("Are you ready to start? (y/n)").strip().lower()
 
     # LOAD DATA
@@ -40,12 +49,10 @@ def main():
         dataset = prepare_arithmetic_datasets()
         train_datasets = dataset["train_dict"]
         test_datasets = dataset["test_dict"]
-        if wantToTrain == "y":
+        if wantToTrainTool == "y":
             train_transformed_datasets = dataset["train_transformed_dict"]
             test_transformed_datasets = dataset["test_transformed_dict"]
-            print(train_datasets["arithmetic_1dc"][3])
-            print(train_transformed_datasets["arithmetic_1dc"][3])
-            print(test_transformed_datasets["arithmetic_1dc"][22])
+
     else:
         if DATASET == "svamp": # Single Datasetse
             train_dataset, test_dataset = prepare_svamp_dataset()
@@ -107,44 +114,71 @@ def main():
             print("Math Evaluation Results:", results['metrics'])
 
 
-    # FINE TUNING TRAINING
-    if isYes(wantToTrain):
-        print_section("Fine Tuning Training")
+    # TOOLFORMER FINE TUNING TRAINING
+    if isYes(wantToTrainTool):
+        print_section("Toolformer Fine Tuning Training")
         
         # Prepare the training data based on dataset type
         if DATASET == "arithmetic":
-            # For arithmetic datasets, combine all datasets into one
-            print("Combining arithmetic datasets for training...")
-            combined_train_dataset = []
-            for key, dataset in train_datasets.items():
-                combined_train_dataset.extend(dataset)
-            
-            from datasets import Dataset
-            train_dataset = Dataset.from_list(combined_train_dataset)
-            print(f"Combined {len(train_dataset)} examples for training")
-        
+            train_dataset = combine_and_tokenize(train_transformed_datasets, tokenizer, path=TOOL_TRAIN_DATASET_PATH)
         # Load previous model if it exists
         try:
-            previous_path = os.path.join(CHECKPOINTS, "finetuned", MATH_FINETUNED_SAVE_PATH)
+            previous_path = os.path.join(CHECKPOINTS, "finetuned", TOOL_FINETUNED_SAVE_PATH)
             tokenizer, model, metadata = load_model(previous_path)
             
             # Get total epochs from metadata
-            total_epochs = metadata.get("total_epochs", 0) + current_epochs
+            total_epochs = metadata.get("total_epochs", 0) + current_epochs_tool
             print(f"Continuing training from {metadata.get('total_epochs', 0)} epochs to {total_epochs} epochs")
         except FileNotFoundError:
             # Start fresh training
-            total_epochs = current_epochs
-            print(f"Starting fresh training for {current_epochs} epochs")
+            total_epochs = current_epochs_tool
+            print(f"Starting fresh training for {current_epochs_tool} epochs")
         
         # Train the model
-        model, tokenizer, metadata = train_model(model, tokenizer, train_dataset, num_epochs=current_epochs)
+        model, tokenizer, metadata = train_model(model, tokenizer, train_dataset, num_epochs=current_epochs_tool)
         
         # Save with updated epoch count
         saved_path = save_model(
             model, 
             tokenizer, 
-            os.path.join(CHECKPOINTS, "finetuned", MATH_FINETUNED_SAVE_PATH),
-            epochs=current_epochs,
+            os.path.join(CHECKPOINTS, "finetuned", TOOL_FINETUNED_SAVE_PATH),
+            epochs=current_epochs_tool,
+            total_epochs=total_epochs
+        )
+        print(f"Saved fine-tuned model to {saved_path} (Total epochs: {total_epochs})")
+
+    # PURE FINE TUNING TRAINING
+    if isYes(wantToTrainPure):
+        print_section("Pure Fine Tuning Training")
+        
+        # Prepare the training data based on dataset type
+        if DATASET == "arithmetic":
+            train_dataset = combine_and_tokenize(train_datasets, tokenizer, path=PURE_TRAIN_DATASET_PATH)
+        else:
+            train_dataset = train_dataset.map(preprocess_for_training, batched=True)
+        
+        # Load previous model if it exists
+        try:
+            previous_path = os.path.join(CHECKPOINTS, "finetuned", TOOL_FINETUNED_SAVE_PATH)
+            tokenizer, model, metadata = load_model(previous_path)
+            
+            # Get total epochs from metadata
+            total_epochs = metadata.get("total_epochs", 0) + current_epochs_pure
+            print(f"Continuing training from {metadata.get('total_epochs', 0)} epochs to {total_epochs} epochs")
+        except FileNotFoundError:
+            # Start fresh training
+            total_epochs = current_epochs_pure
+            print(f"Starting fresh training for {current_epochs_pure} epochs")
+        
+        # Train the model
+        model, tokenizer, metadata = train_model(model, tokenizer, train_dataset, num_epochs=current_epochs_pure)
+        
+        # Save with updated epoch count
+        saved_path = save_model(
+            model, 
+            tokenizer, 
+            os.path.join(CHECKPOINTS, "finetuned", TOOL_FINETUNED_SAVE_PATH),
+            epochs=current_epochs_pure,
             total_epochs=total_epochs
         )
         print(f"Saved fine-tuned model to {saved_path} (Total epochs: {total_epochs})")
