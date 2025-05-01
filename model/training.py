@@ -2,11 +2,15 @@
 from transformers import Trainer, TrainingArguments
 from transformers import DataCollatorForLanguageModeling
 from datetime import datetime
+import torch
 
 def preprocess_for_training(examples, tokenizer, max_length=2048):
     """Tokenize the examples for training"""
+    # input = base_prompt.format(system_prompt = "You are a helpful assistant that wants to help the user using the best tool possible",
+    #                            user_prompt = "INSERT QUERY HERE",
+    #                            assistant_response="INSERT RESPONSE HERE")
     result = tokenizer(
-        examples["text"],
+        examples["context"] + examples["question"],
         truncation=True,
         max_length=max_length,
         padding="max_length"
@@ -23,7 +27,7 @@ def preprocess_for_training(examples, tokenizer, max_length=2048):
     
     return result
 
-def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="toolformer_model", num_epochs=3, previous_metadata=None):
+def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="toolformer_model", num_epochs=3, previous_metadata=None, device='cpu'):
     """Fine-tune the model on prepared datasets
     
     Args:
@@ -39,33 +43,39 @@ def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="
         tuple: (model, tokenizer, metadata) - The trained model, tokenizer and updated metadata
     """
     # Tokenize datasets
+    model.to(device)
+    print("CUDA available:", torch.cuda.is_available())
+    print("Current device:",next(model.parameters()).device)
     train_dataset = train_dataset.map(
         lambda examples: preprocess_for_training(examples, tokenizer),
         batched=True,
-        remove_columns=train_dataset.column_names
+        remove_columns=train_dataset.column_names,
+        load_from_cache_file=True
     )
     
     if eval_dataset:
         eval_dataset = eval_dataset.map(
             lambda examples: preprocess_for_training(examples, tokenizer),
             batched=True,
-            remove_columns=eval_dataset.column_names
+            remove_columns=eval_dataset.column_names,
+            load_from_cache_file=True
         )
     
     # Define training arguments
     training_args = TrainingArguments(
         output_dir=output_dir,
-        per_device_train_batch_size=4,
-        per_device_eval_batch_size=4,
-        gradient_accumulation_steps=4,
+        per_device_train_batch_size=1,
+        per_device_eval_batch_size=1,
+        gradient_accumulation_steps=8,
+        dataloader_num_workers=4,
         learning_rate=2e-4,
         weight_decay=0.01,
         num_train_epochs=num_epochs,  # Use the parameter value
-        lr_scheduler_type="cosine",
+        lr_scheduler_type="cosine", 
         warmup_ratio=0.1,
         logging_dir="./logs",
-        logging_steps=10,
-        save_strategy="steps",  # Save checkpoints every few steps
+        logging_steps=5000,
+        save_strategy="no",  # Save checkpoints every few steps
         save_steps=500,         # Adjust based on your dataset size
         eval_strategy="epoch" if eval_dataset else "no",
         fp16=True,
@@ -78,7 +88,7 @@ def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="
         tokenizer=tokenizer,
         mlm=False  # We're not using masked language modeling
     )
-    
+    model.gradient_checkpointing_enable()  # Enable gradient checkpointing for memory efficiency
     # Initialize trainer
     trainer = Trainer(
         model=model,

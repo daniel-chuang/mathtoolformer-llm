@@ -2,7 +2,7 @@ import re
 from utils.logging_utils import ResultsLogger
 import torch
 
-def evaluate_math_performance(model, tokenizer, test_dataset, dataset_name=None, model_name=None):
+def evaluate_math_performance(model, tokenizer, test_dataset, dataset_name=None, model_name=None, device='device'):
     """
     Evaluate model performance on math problems.
 
@@ -23,7 +23,7 @@ def evaluate_math_performance(model, tokenizer, test_dataset, dataset_name=None,
     # Initialize logger
     logger = ResultsLogger()
     logger.log_model_info(model_name or "unknown_model", dataset_name or "unknown_dataset")
-
+    model.to(device)
     for (i, example) in enumerate(test_dataset):
         # Extract question and expected answer from the example
         question = example["question"]

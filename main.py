@@ -11,16 +11,29 @@ from data.arithmetic import prepare_arithmetic_datasets
 from evaluation.math_evaluation import evaluate_math_performance
 from evaluation.tool_usage_evaluation import evaluate_tool_usage
 from constants import MODEL_NAME, INITIAL_SAVE_PATH, MATH_FINETUNED_SAVE_PATH, DATASET, CHECKPOINTS
-
+from model.lora_config import setup_lora_config
+from peft import LoraConfig, get_peft_model
+ 
 def main():
     print_section("Loading Model")
+    # Check if GPU is available and set device accordingly
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    print("device:" , device)
+    if device.type == "cuda":
+        torch.cuda.empty_cache()
+        torch.cuda.ipc_collect()
     # Try to load from saved path first, if it fails, download from HF
     try:
-        tokenizer, model, metadata = load_model(os.path.join(CHECKPOINTS, "pretrained", INITIAL_SAVE_PATH))
+        tokenizer, model, metadata = load_model(os.path.join(CHECKPOINTS, "pretrained", INITIAL_SAVE_PATH), device=device)
         print("Loaded model from saved path")
+        lora_config = setup_lora_config()
+        model=get_peft_model(model, lora_config)
+        model.print_trainable_parameters()
+
+        print("Converted to LORA model")
     except FileNotFoundError:
         print(f"Initial model not found. Setting up from {MODEL_NAME}")
-        tokenizer, model, metadata = setup_model(MODEL_NAME)
+        tokenizer, model, metadata = setup_model(MODEL_NAME, use_4bit=True, device=device)
         save_model(model, tokenizer, os.path.join(CHECKPOINTS, "pretrained", INITIAL_SAVE_PATH))
 
     # Ask if the user wants to load data
@@ -60,7 +73,8 @@ def main():
                     tokenizer, 
                     test_dataset, 
                     dataset_name=f"arithmetic_{key}", 
-                    model_name=MODEL_NAME
+                    model_name=MODEL_NAME,
+                    device=device
                 )
                 print(f"Math Evaluation Results for {key}:", results['metrics'])
                 
@@ -114,6 +128,7 @@ def main():
             from datasets import Dataset
             train_dataset = Dataset.from_list(combined_train_dataset)
             print(f"Combined {len(train_dataset)} examples for training")
+            print(train_dataset)
         
         # Load previous model if it exists
         try:
@@ -129,8 +144,9 @@ def main():
             print(f"Starting fresh training for {current_epochs} epochs")
         
         # Train the model
-        model, tokenizer, metadata = train_model(model, tokenizer, train_dataset, num_epochs=current_epochs)
-        
+        model, tokenizer, metadata = train_model(model, tokenizer, train_dataset, num_epochs=current_epochs, device='cuda')
+        model = get_peft_model(model, lora_cfg)
+
         # Save with updated epoch count
         saved_path = save_model(
             model, 

@@ -9,5 +9,6 @@ def setup_lora_config():
         bias="none",
         task_type="CAUSAL_LM",
         target_modules=["q_proj", "k_proj", "v_proj", "o_proj"]  # Adjust based on model architecture
+        #target_modules=["q_proj", "v_proj"]  # Adjust based on model architecture
     )
     return lora_config

@@ -5,7 +5,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 from constants import HUGGINGFACE_TOKEN
 from datetime import datetime
 
-def setup_model(model_name="mistralai/Mistral-7B-v0.1", use_4bit=False):
+def setup_model(model_name="mistralai/Mistral-7B-v0.1", use_4bit=False, device='cpu'):
     """
     Load and prepare the base model with quantization if needed
     
@@ -50,7 +50,7 @@ def setup_model(model_name="mistralai/Mistral-7B-v0.1", use_4bit=False):
         "total_epochs": 0,
         "training_history": []
     }
-    
+    model.to(device)
     return tokenizer, model, metadata
 
 def save_model(model, tokenizer, path, epochs=None, include_timestamp=False):
@@ -93,7 +93,7 @@ def save_model(model, tokenizer, path, epochs=None, include_timestamp=False):
     
     return save_path
 
-def load_model(model_path, device_map="auto", use_4bit=False):
+def load_model(model_path, device_map="auto", use_4bit=False, device='cpu'):
     """
     Load a model and tokenizer from a local path if it exists.
     
@@ -140,6 +140,7 @@ def load_model(model_path, device_map="auto", use_4bit=False):
             device_map=device_map
         )
         
+        model.to(device)
         return tokenizer, model, metadata
     else:
         raise FileNotFoundError(f"Model not found at path: {model_path}")
