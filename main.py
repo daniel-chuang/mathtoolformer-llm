@@ -153,7 +153,7 @@ def main():
         
         # Train the model
         model, tokenizer, metadata = train_model(model, tokenizer, train_dataset, num_epochs=current_epochs, device='cuda')
-        model = get_peft_model(model, lora_cfg)
+        model = get_peft_model(model, lora_config)
 
         # Save with updated epoch count
         saved_path = save_model(
@@ -164,7 +164,60 @@ def main():
             total_epochs=total_epochs
         )
         print(f"Saved fine-tuned model to {saved_path} (Total epochs: {total_epochs})")
-
+    if isYes(wantToTestFineTuned):
+        if DATASET == "arithmetic":
+            # Evaluate math performance
+            combined_results = {'metrics': {'correct': 0, 'total': 0}, 'type_statistics': {}}
+            for key, test_dataset in test_datasets.items():
+                print(f"Evaluating math performance on dataset {key}")
+                results = evaluate_math_performance(
+                    model, 
+                    tokenizer, 
+                    test_dataset, 
+                    dataset_name=f"arithmetic_{key}", 
+                    model_name=MODEL_NAME,
+                    device=device
+                )
+                print(f"Math Evaluation Results for {key}:", results['metrics'])
+                
+                # Aggregate results
+                combined_results['metrics']['correct'] += results['metrics']['correct']
+                combined_results['metrics']['total'] += results['metrics']['total']
+                
+                # Merge type statistics
+                for q_type, stats in results['type_statistics'].items():
+                    if q_type not in combined_results['type_statistics']:
+                        combined_results['type_statistics'][q_type] = stats.copy()
+                    else:
+                        for k in ['total', 'correct', 'incorrect']:
+                            combined_results['type_statistics'][q_type][k] += stats[k]
+            
+            # Calculate combined accuracy
+            if combined_results['metrics']['total'] > 0:
+                combined_results['metrics']['accuracy'] = combined_results['metrics']['correct'] / combined_results['metrics']['total']
+                
+            # Update accuracy for each type
+            for q_type in combined_results['type_statistics']:
+                total = combined_results['type_statistics'][q_type]['total']
+                if total > 0:
+                    combined_results['type_statistics'][q_type]['accuracy'] = combined_results['type_statistics'][q_type]['correct'] / total
+                    
+            print("Combined Math Evaluation Results:", combined_results['metrics'])
+        else:
+            # Evaluate math performance on a single dataset
+            results = evaluate_math_performance(
+                model, 
+                tokenizer, 
+                test_dataset, 
+                dataset_name=DATASET, 
+                model_name=MODEL_NAME
+            )
+            print("Math Evaluation Results:", results['metrics'])
+        
+        # results_json = json.dumps(combined_results, indent=4)
+        
+        # with open("sample.json", "w") as outfile:
+        #     outfile.write(results_json)
     print_section("Done")
 if __name__ == "__main__":
     main()
