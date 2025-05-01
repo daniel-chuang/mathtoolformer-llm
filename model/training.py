@@ -46,12 +46,12 @@ def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="
     model.to(device)
     print("CUDA available:", torch.cuda.is_available())
     print("Current device:",next(model.parameters()).device)
-    train_dataset = train_dataset.map(
-        lambda examples: preprocess_for_training(examples, tokenizer),
-        batched=True,
-        remove_columns=train_dataset.column_names,
-        load_from_cache_file=True
-    )
+    # train_dataset = train_dataset.map(
+    #     lambda examples: preprocess_for_training(examples, tokenizer),
+    #     batched=True,
+    #     remove_columns=train_dataset.column_names,
+    #     load_from_cache_file=True
+    # )
     
     if eval_dataset:
         eval_dataset = eval_dataset.map(
@@ -64,9 +64,9 @@ def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="
     # Define training arguments
     training_args = TrainingArguments(
         output_dir=output_dir,
-        per_device_train_batch_size=1,
-        per_device_eval_batch_size=1,
-        gradient_accumulation_steps=8,
+        per_device_train_batch_size=6,
+        per_device_eval_batch_size=2,
+        gradient_accumulation_steps=12,
         dataloader_num_workers=4,
         learning_rate=2e-4,
         weight_decay=0.01,
@@ -74,9 +74,9 @@ def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="
         lr_scheduler_type="cosine", 
         warmup_ratio=0.1,
         logging_dir="./logs",
-        logging_steps=5000,
-        save_strategy="no",  # Save checkpoints every few steps
-        save_steps=500,         # Adjust based on your dataset size
+        logging_steps=5,
+        save_strategy="steps",  # Save checkpoints every few steps
+        save_steps=100,         # Adjust based on your dataset size
         eval_strategy="epoch" if eval_dataset else "no",
         fp16=True,
         load_best_model_at_end=True if eval_dataset else False,
@@ -88,7 +88,8 @@ def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="
         tokenizer=tokenizer,
         mlm=False  # We're not using masked language modeling
     )
-    model.gradient_checkpointing_enable()  # Enable gradient checkpointing for memory efficiency
+    #model.gradient_checkpointing_enable()  # Enable gradient checkpointing for memory efficiency
+    model.gradient_checkpointing_disable()  # Disable gradient checkpointing for this example
     # Initialize trainer
     trainer = Trainer(
         model=model,

@@ -13,7 +13,8 @@ from evaluation.tool_usage_evaluation import evaluate_tool_usage
 from constants import MODEL_NAME, INITIAL_SAVE_PATH, MATH_FINETUNED_SAVE_PATH, DATASET, CHECKPOINTS
 from model.lora_config import setup_lora_config
 from peft import LoraConfig, get_peft_model
- 
+from datasets import Dataset
+
 def main():
     print_section("Loading Model")
     # Check if GPU is available and set device accordingly
@@ -24,7 +25,7 @@ def main():
         torch.cuda.ipc_collect()
     # Try to load from saved path first, if it fails, download from HF
     try:
-        tokenizer, model, metadata = load_model(os.path.join(CHECKPOINTS, "pretrained", INITIAL_SAVE_PATH), device=device)
+        tokenizer, model, metadata = load_model(os.path.join(CHECKPOINTS, "pretrained", INITIAL_SAVE_PATH), use_4bit=True, device=device)
         print("Loaded model from saved path")
         lora_config = setup_lora_config()
         model=get_peft_model(model, lora_config)
@@ -119,16 +120,23 @@ def main():
         
         # Prepare the training data based on dataset type
         if DATASET == "arithmetic":
-            # For arithmetic datasets, combine all datasets into one
-            print("Combining arithmetic datasets for training...")
-            combined_train_dataset = []
-            for key, dataset in train_datasets.items():
-                combined_train_dataset.extend(dataset)
-            
-            from datasets import Dataset
-            train_dataset = Dataset.from_list(combined_train_dataset)
-            print(f"Combined {len(train_dataset)} examples for training")
-            print(train_dataset)
+            if os.path.exists("data/preprocessed_train_dataset"):
+                train_dataset = Dataset.load_from_disk("data/preprocessed_train_dataset")
+            else:
+                # For arithmetic datasets, combine all datasets into one
+                print("Combining arithmetic datasets for training...")
+                combined_train_dataset = []
+                for key, dataset in train_datasets.items():
+                    combined_train_dataset.extend(dataset)
+                train_dataset = Dataset.from_list(combined_train_dataset)
+                print(f"Combined {len(train_dataset)} examples for training")
+                train_dataset = train_dataset.map(
+                    lambda examples: preprocess_for_training(examples, tokenizer),
+                    batched=True,
+                    remove_columns=train_dataset.column_names
+                )   # YOU NEED TO DELETE THE FOLDER "data/preprocessed_train_dataset" IF YOU SWITCH MODELS
+                Dataset.save_to_disk(train_dataset,"data/preprocessed_train_dataset")
+                print(f"Saved {len(train_dataset)} examples to data")
         
         # Load previous model if it exists
         try:

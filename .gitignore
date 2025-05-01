@@ -3,6 +3,8 @@
 
 # Checkpoints directory
 checkpoints/
+toolformer_model/
+data/
 
 # Python cache files
 __pycache__/
