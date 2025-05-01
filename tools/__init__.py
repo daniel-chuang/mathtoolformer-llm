@@ -1,19 +1,13 @@
-def __init__(self):
-    self.tools = {}
-    
-def register(self, name):
-    """Decorator to register a tool function"""
-    def decorator(func):
-        self.tools[name] = func
-        return func
-    return decorator
+from .registry import ToolRegistry
 
-def execute_tool(self, tool_name, args):
-    """Execute a registered tool with given arguments"""
-    if tool_name not in self.tools:
-        return f"Error: Tool '{tool_name}' not found"
-    
-    try:
-        return self.tools[tool_name](args)
-    except Exception as e:
-        return f"Error executing {tool_name}: {str(e)}"
+# Create a singleton instance
+tools = ToolRegistry()
+
+# Now import the tools after creating the registry
+from . import math_tools
+from . import wolfram_alpha  # If you want to register this too
+
+print(f"Available tools: {list(tools.tools.keys())}")
+
+# Make tools available when importing the package
+__all__ = ['tools']

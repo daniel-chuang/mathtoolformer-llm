@@ -1,6 +1,7 @@
 import re
 from utils.logging_utils import ResultsLogger
 import torch
+from inference.tool_execution import inference
 
 def evaluate_math_performance(model, tokenizer, test_dataset, dataset_name=None, model_name=None):
     """
@@ -37,19 +38,9 @@ def evaluate_math_performance(model, tokenizer, test_dataset, dataset_name=None,
 
         # Generate model's response
         prompt = f'Question: {question}\n\n. Do not use any tools. Answer the question directly with arithmetic.\n\n'
-        inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
         
-        with torch.no_grad():
-            outputs = model.generate(
-                **inputs,
-                max_new_tokens=256,
-                temperature=0.0,
-                num_beams=2,
-                top_p=1.0,
-                do_sample=False
-            )
+        response = inference(model, tokenizer, prompt, max_new_tokens=256, use_tool=False)
 
-        response = tokenizer.decode(outputs[0], skip_special_tokens=True)
         print(response + "\n\n")
 
         # Extract the last number mentioned in the response

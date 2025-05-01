@@ -37,7 +37,15 @@ def main():
     print_section("Loading Data")
     # Prepare datasets
     if DATASET == "arithmetic": # Multiple Datasets
-        train_datasets, test_datasets = prepare_arithmetic_datasets()
+        dataset = prepare_arithmetic_datasets()
+        train_datasets = dataset["train_dict"]
+        test_datasets = dataset["test_dict"]
+        if wantToTrain == "y":
+            train_transformed_datasets = dataset["train_transformed_dict"]
+            test_transformed_datasets = dataset["test_transformed_dict"]
+            print(train_datasets["arithmetic_1dc"][3])
+            print(train_transformed_datasets["arithmetic_1dc"][3])
+            print(test_transformed_datasets["arithmetic_1dc"][22])
     else:
         if DATASET == "svamp": # Single Datasetse
             train_dataset, test_dataset = prepare_svamp_dataset()

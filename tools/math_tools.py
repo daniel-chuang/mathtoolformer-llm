@@ -1,5 +1,7 @@
 import sympy as sp
-import tools
+from sympy.parsing.sympy_parser import parse_expr
+from .registry import ToolRegistry
+from tools import tools  # Import the singleton instance
 
 @tools.register("calculator")
 def calculator(expression):
@@ -21,7 +23,7 @@ def calculator(expression):
     except Exception as e:
         return f"Error in calculation: {str(e)}"
 
-
+@tools.register("solve_equation")
 def solve_equation(equation):
     """
     Solve algebraic equations using SymPy.
