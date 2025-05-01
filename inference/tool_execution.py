@@ -2,6 +2,38 @@ import re
 import torch
 from constants import TOOL_PATTERN
 from tools import tools
+from transformers import StoppingCriteria, StoppingCriteriaList
+
+
+class StopOnTokens(StoppingCriteria):
+    def __init__(self, stop_sequences, tokenizer, device):
+        self.tokenizer = tokenizer
+        self.stop_sequence_ids = []
+        self.device = device
+        
+        for seq in stop_sequences:
+            try:
+                ids = tokenizer(seq, return_tensors='pt')['input_ids'].squeeze()
+                if ids.dim() > 0:  # Check if it's not a 0-d tensor
+                    # Move to the correct device
+                    self.stop_sequence_ids.append(ids.to(device))
+                    # print(f"Added stop sequence: {seq} -> {ids}")
+                else:
+                    print(f"Skipping 0-d tensor for: {seq}")
+            except Exception as e:
+                print(f"Error processing stop sequence '{seq}': {e}")
+        
+    def __call__(self, input_ids, scores, **kwargs):
+        try:
+            for stop_sequence in self.stop_sequence_ids:
+                if stop_sequence.shape[0] > 0 and input_ids.shape[1] >= stop_sequence.shape[0]:
+                    if torch.all(input_ids[0, -stop_sequence.shape[0]:] == stop_sequence):
+                        return True
+            return False
+        except Exception as e:
+            print(f"Error in stop criteria: {e}")
+            # Default to not stopping in case of error
+            return False
 
 def extract_and_execute_tools(text):
     """
@@ -43,7 +75,7 @@ def extract_and_execute_tools(text):
     
     return result_text
 
-def inference(model, tokenizer, prompt, max_new_tokens=512, use_tool=True):
+def inference(model, tokenizer, prompt, max_new_tokens=150, use_tool=True):
     """Generate a response with tool use capability.
 
     Args:
@@ -55,6 +87,11 @@ def inference(model, tokenizer, prompt, max_new_tokens=512, use_tool=True):
     Returns:
         Generated response with tool outputs.
     """
+    stop_sequences = ["Question:", "\n\n", "Answer:"]  # Patterns that indicate the end of an answer
+    stopping_criteria = StoppingCriteriaList([
+        StopOnTokens(stop_sequences, tokenizer, model.device)
+    ])
+
     # Initial generation
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
 
@@ -62,9 +99,11 @@ def inference(model, tokenizer, prompt, max_new_tokens=512, use_tool=True):
         outputs = model.generate(
             **inputs,
             max_new_tokens=max_new_tokens,
-            temperature=0.05,
+            temperature=0.0,
             top_p=0.95,
-            do_sample=True
+            # do_sample=True,
+            eos_token_id=tokenizer.eos_token_id,
+            stopping_criteria=stopping_criteria
         )
 
     # Get the generated text
@@ -87,7 +126,8 @@ def inference(model, tokenizer, prompt, max_new_tokens=512, use_tool=True):
                 max_new_tokens=max_new_tokens,
                 temperature=0.7,
                 top_p=0.95,
-                do_sample=True
+                do_sample=True,
+                eos_token_id=tokenizer.eos_token_id
             )
 
         final_response = tokenizer.decode(follow_up_outputs[0], skip_special_tokens=True)

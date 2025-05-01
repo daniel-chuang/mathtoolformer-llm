@@ -53,16 +53,16 @@ def prepare_arithmetic_datasets(train_split=SPLIT, random_seed=SEED):
 
     # List of available configurations
     configs = [
-        'arithmetic_1dc',
+        # 'arithmetic_1dc',
         'arithmetic_2da',
-        'arithmetic_2dm',
-        'arithmetic_2ds',
-        'arithmetic_3da',
-        'arithmetic_3ds',
-        'arithmetic_4da',
-        'arithmetic_4ds',
-        'arithmetic_5da',
-        'arithmetic_5ds'
+        # 'arithmetic_2dm',
+        # 'arithmetic_2ds',
+        # 'arithmetic_3da',
+        # 'arithmetic_3ds',
+        # 'arithmetic_4da',
+        # 'arithmetic_4ds',
+        # 'arithmetic_5da',
+        # 'arithmetic_5ds'
     ]
     
     train_dict = {}
@@ -95,9 +95,15 @@ def prepare_arithmetic_datasets(train_split=SPLIT, random_seed=SEED):
                 }
             
             # Create both original and transformed datasets
-            processed_data = validation_data.map(process_example)
-            processed_data_transformed = validation_data.map(process_example_transformed)
-            
+            processed_data = validation_data.map(
+                process_example,
+                remove_columns=["context", "completion"]  # Remove original columns
+            )
+            processed_data_transformed = validation_data.map(
+                process_example_transformed,
+                remove_columns=["context", "completion"]  # Remove original columns
+            )
+
             # Create train/test split manually - use same indices for both datasets
             num_examples = len(processed_data)
             indices = np.random.permutation(num_examples)

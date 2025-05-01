@@ -3,7 +3,7 @@ from utils.logging_utils import ResultsLogger
 import torch
 from inference.tool_execution import inference
 
-def evaluate_math_performance(model, tokenizer, test_dataset, dataset_name=None, model_name=None):
+def evaluate_math_performance(model, tokenizer, test_dataset, use_tool, dataset_name=None, model_name=None):
     """
     Evaluate model performance on math problems.
 
@@ -37,9 +37,9 @@ def evaluate_math_performance(model, tokenizer, test_dataset, dataset_name=None,
             continue
 
         # Generate model's response
-        prompt = f'Question: {question}\n\n. Do not use any tools. Answer the question directly with arithmetic.\n\n'
+        prompt = f'{question}'
         
-        response = inference(model, tokenizer, prompt, max_new_tokens=256, use_tool=False)
+        response = inference(model, tokenizer, prompt, max_new_tokens=256, use_tool=use_tool)
 
         print(response + "\n\n")
 

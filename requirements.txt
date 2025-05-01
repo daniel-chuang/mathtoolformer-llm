@@ -14,3 +14,4 @@ pandas
 requests
 dotenv
 huggingface_hub
+wandb

@@ -14,8 +14,9 @@ SPLIT = 0.9  # Proportion of data to use for training (default: 0.8)
 
 # DATASET
 DATASET = "arithmetic"  # Options: "arithmetic", "svamp", "gsm8k"
-TOOL_TRAIN_DATASET_PATH = "./data/preprocessed_train_dataset"
-PURE_TRAIN_DATASET_PATH = "./data/preprocessed_pure_train_dataset"
+TOOL_TRAIN_DATASET_PATH = ".preprocessed/preprocessed_train_dataset"
+PURE_TRAIN_DATASET_PATH = ".preprocessed/preprocessed_pure_train_dataset"
+EVAL_DATASET_PATH = ".preprocessed/preprocessed_eval_dataset"
 
 # SMOLLM
 MODEL_NAME = "HuggingFaceTB/SmolLM2-135M"

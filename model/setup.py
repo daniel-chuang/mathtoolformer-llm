@@ -93,18 +93,19 @@ def save_model(model, tokenizer, path, epochs=None, include_timestamp=False):
     
     return save_path
 
+def load_tokenizer(model_path, device_map="auto", use_4bit=False):
+    # Check if this is a local path that exists
+    if os.path.exists(model_path) and os.path.isdir(model_path):
+        # Load tokenizer
+        tokenizer = AutoTokenizer.from_pretrained(model_path)
+        if tokenizer.pad_token is None:
+            tokenizer.pad_token = tokenizer.eos_token
+        return tokenizer
+    else:
+        raise FileNotFoundError(f"Tokenizer not found at path: {model_path}")
+
+
 def load_model(model_path, device_map="auto", use_4bit=False):
-    """
-    Load a model and tokenizer from a local path if it exists.
-    
-    Args:
-        model_path: Local directory path where model is saved
-        device_map: Device mapping strategy
-        use_4bit: Whether to use 4-bit quantization when loading
-        
-    Returns:
-        tuple: (tokenizer, model, metadata)
-    """
     # Check if this is a local path that exists
     if os.path.exists(model_path) and os.path.isdir(model_path):
         print(f"Loading model from local path: {model_path}")
@@ -128,11 +129,6 @@ def load_model(model_path, device_map="auto", use_4bit=False):
         else:
             quantization_config = None
         
-        # Load tokenizer
-        tokenizer = AutoTokenizer.from_pretrained(model_path)
-        if tokenizer.pad_token is None:
-            tokenizer.pad_token = tokenizer.eos_token
-        
         # Load model
         model = AutoModelForCausalLM.from_pretrained(
             model_path,
@@ -140,6 +136,6 @@ def load_model(model_path, device_map="auto", use_4bit=False):
             device_map=device_map
         )
         
-        return tokenizer, model, metadata
+        return model, metadata
     else:
         raise FileNotFoundError(f"Model not found at path: {model_path}")

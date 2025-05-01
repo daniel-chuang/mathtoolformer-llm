@@ -2,7 +2,7 @@ import os
 import json
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
-from model.setup import setup_model, save_model, load_model
+from model.setup import setup_model, save_model, load_model, load_tokenizer
 from utils.console import isYes, printc, inputc, print_section
 from model.training import preprocess_for_training, train_model
 from data.gsm8k import prepare_gsm8k_dataset
@@ -10,14 +10,20 @@ from data.svamp import prepare_svamp_dataset
 from data.arithmetic import prepare_arithmetic_datasets
 from evaluation.math_evaluation import evaluate_math_performance
 from evaluation.tool_usage_evaluation import evaluate_tool_usage
-from constants import MODEL_NAME, INITIAL_SAVE_PATH, TOOL_FINETUNED_SAVE_PATH, DATASET, CHECKPOINTS, TOOL_TRAIN_DATASET_PATH, PURE_TRAIN_DATASET_PATH
+from evaluation.eval_pipeline import eval_model
+from constants import MODEL_NAME, INITIAL_SAVE_PATH, TOOL_FINETUNED_SAVE_PATH, DATASET, CHECKPOINTS, TOOL_TRAIN_DATASET_PATH, PURE_TRAIN_DATASET_PATH, EVAL_DATASET_PATH
 from data.arithmetic import combine_and_tokenize
+import wandb
+from datasets import Dataset
+
+wandb.init(project="toolformer")
 
 def main():
     print_section("Loading Model")
     # Try to load from saved path first, if it fails, download from HF
     try:
-        tokenizer, model, metadata = load_model(os.path.join(CHECKPOINTS, "pretrained", INITIAL_SAVE_PATH))
+        model, metadata = load_model(os.path.join(CHECKPOINTS, "pretrained", INITIAL_SAVE_PATH))
+        tokenizer = load_tokenizer(os.path.join(CHECKPOINTS, "pretrained", INITIAL_SAVE_PATH))
         print("Loaded model from saved path")
     except FileNotFoundError:
         print(f"Initial model not found. Setting up from {MODEL_NAME}")
@@ -40,81 +46,40 @@ def main():
         printc(f"Training for {current_epochs_pure} epochs")
         wantToTestPureFineTuned = inputc("Do you want to evaluate the pure fine-tuned model? (y/n)").strip().lower()
     
-    inputc("Are you ready to start? (y/n)").strip().lower()
+    # Add this after the other evaluation sections
+    wantToEvalLatest = inputc("Do you want to evaluate the latest checkpoints? (y/n)").strip().lower()
+
+    wantToStart = inputc("Are you ready to start? (y/n)").strip().lower()
+    if wantToStart != "y":
+        print("Exiting...")
+        return
 
     # LOAD DATA
     print_section("Loading Data")
     # Prepare datasets
     if DATASET == "arithmetic": # Multiple Datasets
         dataset = prepare_arithmetic_datasets()
-        train_datasets = dataset["train_dict"]
-        test_datasets = dataset["test_dict"]
+        train_data = dataset["train_dict"]
+        test_data = dataset["test_dict"]
         if wantToTrainTool == "y":
-            train_transformed_datasets = dataset["train_transformed_dict"]
-            test_transformed_datasets = dataset["test_transformed_dict"]
-            print(train_transformed_datasets['arithmetic_1dc'][3])
-            print(test_transformed_datasets['arithmetic_1dc'][3])
-
+            train_transformed_data = dataset["train_transformed_dict"]
+            test_transformed_data = dataset["test_transformed_dict"]
+            print(train_transformed_data['arithmetic_1dc'][3])
+            print(test_transformed_data['arithmetic_1dc'][3])
+            print(train_transformed_data['arithmetic_4da'][-1])
+            print(train_transformed_data['arithmetic_2dm'][-1])
     else:
         if DATASET == "svamp": # Single Datasetse
-            train_dataset, test_dataset = prepare_svamp_dataset()
+            train_data, test_data = prepare_svamp_dataset()
         elif DATASET == "gsm8k":
-            train_dataset, test_dataset = prepare_gsm8k_dataset()
+            train_data, test_data = prepare_gsm8k_dataset()
         else:
             raise ValueError(f"Unknown dataset: {DATASET}")
 
     # PRETAINED MODEL EVALUATION
     if isYes(wantToTestPretrained):
         print_section("Pretrained Model Evaluation")
-        # Update the arithmetic datasets evaluation part:
-        if DATASET == "arithmetic":
-            # Evaluate math performance
-            combined_results = {'metrics': {'correct': 0, 'total': 0}, 'type_statistics': {}}
-            for key, test_dataset in test_datasets.items():
-                print(f"Evaluating math performance on dataset {key}")
-                results = evaluate_math_performance(
-                    model, 
-                    tokenizer, 
-                    test_dataset, 
-                    dataset_name=f"arithmetic_{key}", 
-                    model_name=MODEL_NAME
-                )
-                print(f"Math Evaluation Results for {key}:", results['metrics'])
-                
-                # Aggregate results
-                combined_results['metrics']['correct'] += results['metrics']['correct']
-                combined_results['metrics']['total'] += results['metrics']['total']
-                
-                # Merge type statistics
-                for q_type, stats in results['type_statistics'].items():
-                    if q_type not in combined_results['type_statistics']:
-                        combined_results['type_statistics'][q_type] = stats.copy()
-                    else:
-                        for k in ['total', 'correct', 'incorrect']:
-                            combined_results['type_statistics'][q_type][k] += stats[k]
-            
-            # Calculate combined accuracy
-            if combined_results['metrics']['total'] > 0:
-                combined_results['metrics']['accuracy'] = combined_results['metrics']['correct'] / combined_results['metrics']['total']
-                
-            # Update accuracy for each type
-            for q_type in combined_results['type_statistics']:
-                total = combined_results['type_statistics'][q_type]['total']
-                if total > 0:
-                    combined_results['type_statistics'][q_type]['accuracy'] = combined_results['type_statistics'][q_type]['correct'] / total
-                    
-            print("Combined Math Evaluation Results:", combined_results['metrics'])
-        else:
-            # Evaluate math performance on a single dataset
-            results = evaluate_math_performance(
-                model, 
-                tokenizer, 
-                test_dataset, 
-                dataset_name=DATASET, 
-                model_name=MODEL_NAME
-            )
-            print("Math Evaluation Results:", results['metrics'])
-
+        eval_model(MODEL_NAME, DATASET, test_data, model, tokenizer, use_tool=False)
 
     # TOOLFORMER FINE TUNING TRAINING
     if isYes(wantToTrainTool):
@@ -122,7 +87,25 @@ def main():
         
         # Prepare the training data based on dataset type
         if DATASET == "arithmetic":
-            train_dataset = combine_and_tokenize(train_transformed_datasets, tokenizer, path=TOOL_TRAIN_DATASET_PATH)
+            train_dataset = combine_and_tokenize(train_transformed_data, tokenizer, path=TOOL_TRAIN_DATASET_PATH)
+            
+            # Create a small evaluation dataset directly instead of using combine_and_tokenize
+            eval_examples = []
+            for config_name, config_dataset in test_transformed_data.items():
+                # Take at most 5 examples from each configuration
+                sample_size = 1
+                for i in range(sample_size):
+                    if isinstance(config_dataset[i], dict):
+                        eval_examples.append({
+                            "question": config_dataset[i]["question"],
+                            "final_answer": config_dataset[i]["final_answer"]
+                        })
+            
+            # Create the evaluation dataset directly
+            eval_dataset = Dataset.from_list(eval_examples)
+        
+        print(f"Created evaluation dataset with {len(eval_dataset)} examples for monitoring")
+
         # Load previous model if it exists
         try:
             previous_path = os.path.join(CHECKPOINTS, "finetuned", TOOL_FINETUNED_SAVE_PATH)
@@ -137,7 +120,7 @@ def main():
             print(f"Starting fresh training for {current_epochs_tool} epochs")
         
         # Train the model
-        model, tokenizer, metadata = train_model(model, tokenizer, train_dataset, num_epochs=current_epochs_tool)
+        model, tokenizer, metadata = train_model(model, tokenizer, train_dataset, num_epochs=current_epochs_tool, eval_dataset=eval_dataset)
         
         # Save with updated epoch count
         saved_path = save_model(
@@ -155,7 +138,7 @@ def main():
         
         # Prepare the training data based on dataset type
         if DATASET == "arithmetic":
-            train_dataset = combine_and_tokenize(train_datasets, tokenizer, path=PURE_TRAIN_DATASET_PATH)
+            train_dataset = combine_and_tokenize(train_data, tokenizer, path=PURE_TRAIN_DATASET_PATH)
         else:
             train_dataset = train_dataset.map(preprocess_for_training, batched=True)
         
@@ -184,6 +167,12 @@ def main():
             total_epochs=total_epochs
         )
         print(f"Saved fine-tuned model to {saved_path} (Total epochs: {total_epochs})")
+
+    if isYes(wantToEvalLatest):
+        print_section("Latest Checkpoint Evaluation")
+        model, metadata = load_model(os.path.join(os.curdir, "toolformer_model", "checkpoint-500"))
+        print_section("Most recent training Model Evaluation")
+        eval_model(MODEL_NAME, DATASET, test_data, model, tokenizer, use_tool=True)
 
     print_section("Done")
 if __name__ == "__main__":

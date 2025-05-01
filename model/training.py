@@ -4,6 +4,8 @@ from transformers import DataCollatorForLanguageModeling
 from datetime import datetime
 import os
 import json
+from utils.wandb_callback import WandbPredictionCallback
+
 
 def preprocess_for_training(examples, tokenizer, max_length=2048):
     """Tokenize the examples for training"""
@@ -69,10 +71,11 @@ def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="
         lr_scheduler_type="cosine",
         warmup_ratio=0.1,
         logging_dir="./logs",
+        report_to="wandb",     # Enable Weights & Biases logging
         logging_steps=10,
         save_strategy="steps",  # Save checkpoints every few steps
-        save_steps=500,         # Adjust based on your dataset size
-        eval_strategy="epoch" if eval_dataset else "no",
+        save_steps=100,         # Adjust based on your dataset size
+        eval_strategy="steps" if eval_dataset else "no",
         fp16=True,
         load_best_model_at_end=True if eval_dataset else False,
         resume_from_checkpoint=True,  # Allow resuming from checkpoints
@@ -83,14 +86,27 @@ def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="
         tokenizer=tokenizer,
         mlm=False  # We're not using masked language modeling
     )
+
+    callbacks = []
     
-    # Initialize trainer
+    # Add WandB prediction visualization if we have an eval dataset
+    if eval_dataset and training_args.report_to == "wandb":
+        pred_callback = WandbPredictionCallback(
+            tokenizer=tokenizer,
+            eval_dataset=eval_dataset,
+            num_examples=5,  # Number of examples to track
+            steps=100        # Log every 100 steps
+        )
+        callbacks.append(pred_callback)
+    
+    # Initialize trainer with callbacks
     trainer = Trainer(
         model=model,
         args=training_args,
         train_dataset=train_dataset,
         eval_dataset=eval_dataset,
         data_collator=data_collator,
+        # callbacks=callbacks  # Add our callbacks
     )
     
     # Record training start time

@@ -3,6 +3,10 @@
 
 # Checkpoints directory
 checkpoints/
+wandb/
+toolformer_model/
+toolformer_model_failed/
+preprocessed/
 
 # Python cache files
 __pycache__/
