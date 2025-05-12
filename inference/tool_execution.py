@@ -104,6 +104,7 @@ def inference(model, tokenizer, prompt, max_new_tokens=150, use_tool=True):
         return generated_text
 
     print("USING TOOLS, PRE-TOOL TEXT:", generated_text)
+    print("end")
 
     # Process any tool calls in the generated text
     response_with_tool_results = extract_and_execute_tools(generated_text)

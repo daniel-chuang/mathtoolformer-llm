@@ -15,3 +15,4 @@ requests
 dotenv
 huggingface_hub
 wandb
+ipykernel
