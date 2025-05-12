@@ -41,7 +41,6 @@ def setup_model(model_name="mistralai/Mistral-7B-v0.1", use_4bit=False):
         quantization_config=quantization_config,
         device_map="auto"
     )
-    
     # Create initial metadata
     metadata = {
         "base_model": model_name,

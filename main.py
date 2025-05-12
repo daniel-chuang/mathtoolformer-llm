@@ -30,6 +30,19 @@ def main():
         tokenizer, model, metadata = setup_model(MODEL_NAME)
         save_model(model, tokenizer, os.path.join(CHECKPOINTS, "pretrained", INITIAL_SAVE_PATH))
 
+    print_section("Adding Tool Tokens")
+    tool_tokens = {
+        "additional_special_tokens": [
+            "<tool:calculator>",
+            "</tool>",
+        ]
+    }
+    num_added = tokenizer.add_special_tokens(tool_tokens)
+    print(f"Added {num_added} special tokens to the tokenizer")
+    model.resize_token_embeddings(len(tokenizer))
+    print(f"Resized model embeddings to {len(tokenizer)} tokens")
+    print("Special tokens:", tokenizer.all_special_tokens)
+
     # Ask if the user wants to load data
     wantToTestPretrained = inputc(f"Do you want to evaluate the pretrained {MODEL_NAME} model? (y/n)").strip().lower()
     wantToTrainTool = inputc("Do you want to train the toolformer model? (y/n)").strip().lower()
@@ -175,7 +188,7 @@ def main():
 
     if isYes(wantToEvalLatest):
         print_section("Latest Checkpoint Evaluation")
-        model, metadata = load_model(os.path.join(os.curdir, "toolformer_model", "checkpoint-112"))
+        model, metadata = load_model(os.path.join(os.curdir, "toolformer_model", "checkpoint-225"))
         print_section("Most recent training Model Evaluation")
         eval_model(MODEL_NAME, DATASET, test_data, model, tokenizer, use_tool=True)
 

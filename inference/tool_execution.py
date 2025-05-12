@@ -103,11 +103,10 @@ def inference(model, tokenizer, prompt, max_new_tokens=150, use_tool=True):
     if not use_tool:
         return generated_text
 
-    # print("USING TOOLS, GENREATED TEXT:", generated_text)
+    print("USING TOOLS, PRE-TOOL TEXT:", generated_text)
 
     # Process any tool calls in the generated text
     response_with_tool_results = extract_and_execute_tools(generated_text)
-    print("USING TOOLS, GENREATED TEXT:", response_with_tool_results)
 
 
     # # If there were tool calls, generate a follow-up response

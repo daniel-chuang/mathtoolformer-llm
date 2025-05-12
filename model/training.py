@@ -10,7 +10,7 @@ import wandb
 from transformers import EarlyStoppingCallback
 from utils.tool_usage_callback import ToolUsageMonitor
 
-def preprocess_for_training(examples, tokenizer, max_length=2048):
+def preprocess_for_training(examples, tokenizer, max_length=256):
     """Tokenize the examples for training"""
     # Tokenize input context with padding to max_length
     result = tokenizer(
@@ -71,7 +71,7 @@ def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="
     # Define training arguments
     training_args = TrainingArguments(
         output_dir=output_dir,
-        per_device_train_batch_size=2,
+        per_device_train_batch_size=4,
         gradient_accumulation_steps=8,
         learning_rate=5e-4,
         weight_decay=0.01,

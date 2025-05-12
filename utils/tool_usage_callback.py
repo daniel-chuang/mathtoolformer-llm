@@ -1,7 +1,7 @@
 from transformers import TrainerCallback
 import torch
 import wandb
-from inference import generate
+from inference.generate import generate
 
 class ToolUsageMonitor(TrainerCallback):
     def __init__(self, tokenizer, check_steps=50):

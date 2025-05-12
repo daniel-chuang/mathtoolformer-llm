@@ -38,20 +38,21 @@ def evaluate_math_performance(model, tokenizer, test_dataset, use_tool, dataset_
 
         # Generate model's response
         if use_tool:
-            prompt = f"""
-            You can solve math problems using tools. When you need to calculate, use <tool:calculator>expression</tool>.
+            # prompt = f"""
+            # You can solve math problems using tools. When you need to calculate, use <tool:calculator>expression</tool>.
 
-            Example:
-            Question: What is 25 + 17?
-            To solve this, I'll use a calculator.
-            <tool:calculator>25 + 17</tool>
-            Output: 42
-            The answer is 42.
+            # Example:
+            # Question: What is 25 + 17?
+            # To solve this, I'll use a calculator.
+            # <tool:calculator>25 + 17</tool>
+            # Output: 42
+            # The answer is 42.
 
-            Now solve this:
-            {question}\n\n
-            Answer:
-            """
+            # Now solve this:
+            # {question}\n\n
+            # Answer:
+            # """
+            prompt = f"{question}\n\nAnswer:"
         else:
             prompt = f"{question}\n\nAnswer:"
     
@@ -68,6 +69,7 @@ def evaluate_math_performance(model, tokenizer, test_dataset, use_tool, dataset_
             correct += 1
 
         total += 1
+        print("-" * 20)
         print(f"Expected: {expected_answer}\nModel: {model_answer if model_answer else 'No valid number found'}")
         print(f"Correct: {correct}, Total: {total}\n\n")
 
