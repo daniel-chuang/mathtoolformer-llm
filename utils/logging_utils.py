@@ -79,7 +79,7 @@ class ResultsLogger:
                 
         self.results["type_statistics"] = type_stats
         return type_stats
-    
+
     def save_results(self, format="all"):
         """
         Save results to files
@@ -91,11 +91,17 @@ class ResultsLogger:
         if "type_statistics" not in self.results:
             self.compute_type_statistics()
             
-        # Create filenames
-        base_filename = f"{self.results['model_name']}_{self.results['dataset_name']}_{self.timestamp}"
-        json_path = os.path.join(self.log_dir, f"{base_filename}.json")
-        csv_path = os.path.join(self.log_dir, f"{base_filename}.csv")
-        stats_path = os.path.join(self.log_dir, f"{base_filename}_stats.csv")
+        # Create filenames with proper directory structure
+        model_dir = self.results['model_name'].replace('/', '_')  # Replace slashes in model name
+        results_dir = os.path.join(self.log_dir, model_dir)
+        
+        # Ensure directory exists
+        os.makedirs(results_dir, exist_ok=True)
+        
+        base_filename = f"{self.results['model_name'].replace('/', '_')}_{self.results['dataset_name']}_{self.timestamp}"
+        json_path = os.path.join(results_dir, f"{base_filename}.json")
+        csv_path = os.path.join(results_dir, f"{base_filename}.csv")
+        stats_path = os.path.join(results_dir, f"{base_filename}_stats.csv")
         
         if format in ["json", "all"]:
             with open(json_path, "w") as f:

@@ -1,0 +1,401 @@
+question,expected_answer,model_answer,question_type,correct
+"Question: What is 73 minus 78?
+Answer:",-5,1,,False
+"Question: What is 4 minus 49?
+Answer:",-45,49,,False
+"Question: What is 50 minus 63?
+Answer:",-13,1,,False
+"Question: What is 73 minus 79?
+Answer:",-6,1,,False
+"Question: What is 50 minus 38?
+Answer:",12,1,,False
+"Question: What is 63 minus 45?
+Answer:",18,1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,,False
+"Question: What is 55 minus 82?
+Answer:",-27,55,,False
+"Question: What is 78 minus 57?
+Answer:",21,10,,False
+"Question: What is 77 minus 35?
+Answer:",42,1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,,False
+"Question: What is 18 minus 46?
+Answer:",-28,3,,False
+"Question: What is 88 minus 88?
+Answer:",0,1,,False
+"Question: What is 68 minus 28?
+Answer:",40,1,,False
+"Question: What is 9 minus 46?
+Answer:",-37,9,,False
+"Question: What is 45 minus 87?
+Answer:",-42,1,,False
+"Question: What is 48 minus 50?
+Answer:",-2,1,,False
+"Question: What is 46 minus 0?
+Answer:",46,46,,True
+"Question: What is 90 minus 85?
+Answer:",5,1,,False
+"Question: What is 95 minus 89?
+Answer:",6,1,,False
+"Question: What is 17 minus 51?
+Answer:",-34,99999999999999999999999999999999999999999999999999999999999999999,,False
+"Question: What is 28 minus 52?
+Answer:",-24,1,,False
+"Question: What is 88 minus 7?
+Answer:",81,11,,False
+"Question: What is 19 minus 5?
+Answer:",14,19,,False
+"Question: What is 50 minus 90?
+Answer:",-40,90,,False
+"Question: What is 67 minus 83?
+Answer:",-16,1,,False
+"Question: What is 41 minus 19?
+Answer:",22,19,,False
+"Question: What is 52 minus 39?
+Answer:",13,11,,False
+"Question: What is 43 minus 34?
+Answer:",9,1,,False
+"Question: What is 10 minus 18?
+Answer:",-8,10,,False
+"Question: What is 90 minus 55?
+Answer:",35,10,,False
+"Question: What is 75 minus 77?
+Answer:",-2,1,,False
+"Question: What is 5 minus 42?
+Answer:",-37,5,,False
+"Question: What is 89 minus 70?
+Answer:",19,1,,False
+"Question: What is 86 minus 44?
+Answer:",42,44,,False
+"Question: What is 86 minus 82?
+Answer:",4,1,,False
+"Question: What is 13 minus 8?
+Answer:",5,3,,False
+"Question: What is 51 minus 91?
+Answer:",-40,100,,False
+"Question: What is 20 minus 84?
+Answer:",-64,84,,False
+"Question: What is 42 minus 24?
+Answer:",18,10,,False
+"Question: What is 67 minus 4?
+Answer:",63,31,,False
+"Question: What is 15 minus 85?
+Answer:",-70,85,,False
+"Question: What is 67 minus 55?
+Answer:",12,1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,,False
+"Question: What is 59 minus 11?
+Answer:",48,11,,False
+"Question: What is 79 minus 51?
+Answer:",28,1,,False
+"Question: What is 67 minus 6?
+Answer:",61,11,,False
+"Question: What is 44 minus 83?
+Answer:",-39,0,,False
+"Question: What is 58 minus 71?
+Answer:",-13,1,,False
+"Question: What is 60 minus 19?
+Answer:",41,39,,False
+"Question: What is 16 minus 14?
+Answer:",2,14,,False
+"Question: What is 77 minus 76?
+Answer:",1,1,,True
+"Question: What is 34 minus 56?
+Answer:",-22,1,,False
+"Question: What is 99 minus 57?
+Answer:",42,12,,False
+"Question: What is 51 minus 73?
+Answer:",-22,73,,False
+"Question: What is 27 minus 85?
+Answer:",-58,1,,False
+"Question: What is 95 minus 43?
+Answer:",52,11,,False
+"Question: What is 54 minus 51?
+Answer:",3,1,,False
+"Question: What is 88 minus 95?
+Answer:",-7,11,,False
+"Question: What is 80 minus 17?
+Answer:",63,55,,False
+"Question: What is 77 minus 19?
+Answer:",58,23,,False
+"Question: What is 66 minus 22?
+Answer:",44,1000000,,False
+"Question: What is 3 minus 79?
+Answer:",-76,119,,False
+"Question: What is 99 minus 13?
+Answer:",86,12,,False
+"Question: What is 88 minus 25?
+Answer:",63,11,,False
+"Question: What is 3 minus 62?
+Answer:",-59,15,,False
+"Question: What is 41 minus 81?
+Answer:",-40,41,,False
+"Question: What is 17 minus 37?
+Answer:",-20,3,,False
+"Question: What is 14 minus 46?
+Answer:",-32,144,,False
+"Question: What is 74 minus 34?
+Answer:",40,38,,False
+"Question: What is 99 minus 29?
+Answer:",70,18,,False
+"Question: What is 87 minus 88?
+Answer:",-1,1,,False
+"Question: What is 64 minus 83?
+Answer:",-19,1,,False
+"Question: What is 70 minus 26?
+Answer:",44,13,,False
+"Question: What is 41 minus 87?
+Answer:",-46,87,,False
+"Question: What is 23 minus 74?
+Answer:",-51,7,,False
+"Question: What is 75 minus 72?
+Answer:",3,1,,False
+"Question: What is 84 minus 92?
+Answer:",-8,10,,False
+"Question: What is 12 minus 30?
+Answer:",-18,30,,False
+"Question: What is 12 minus 19?
+Answer:",-7,19,,False
+"Question: What is 73 minus 8?
+Answer:",65,10,,False
+"Question: What is 2 minus 28?
+Answer:",-26,1,,False
+"Question: What is 65 minus 94?
+Answer:",-29,1,,False
+"Question: What is 50 minus 55?
+Answer:",-5,1,,False
+"Question: What is 32 minus 61?
+Answer:",-29,1,,False
+"Question: What is 32 minus 37?
+Answer:",-5,1,,False
+"Question: What is 65 minus 16?
+Answer:",49,49,,True
+"Question: What is 36 minus 29?
+Answer:",7,1,,False
+"Question: What is 55 minus 31?
+Answer:",24,10,,False
+"Question: What is 9 minus 53?
+Answer:",-44,1,,False
+"Question: What is 62 minus 75?
+Answer:",-13,1,,False
+"Question: What is 42 minus 89?
+Answer:",-47,1,,False
+"Question: What is 59 minus 82?
+Answer:",-23,1,,False
+"Question: What is 60 minus 41?
+Answer:",19,1,,False
+"Question: What is 55 minus 96?
+Answer:",-41,1,,False
+"Question: What is 79 minus 90?
+Answer:",-11,1,,False
+"Question: What is 29 minus 30?
+Answer:",-1,29,,False
+"Question: What is 23 minus 18?
+Answer:",5,1,,False
+"Question: What is 83 minus 58?
+Answer:",25,83,,False
+"Question: What is 91 minus 97?
+Answer:",-6,1,,False
+"Question: What is 5 minus 74?
+Answer:",-69,10,,False
+"Question: What is 9 minus 20?
+Answer:",-11,9,,False
+"Question: What is 19 minus 62?
+Answer:",-43,62,,False
+"Question: What is 8 minus 0?
+Answer:",8,8,,True
+"Question: What is 84 minus 37?
+Answer:",47,11,,False
+"Question: What is 78 minus 95?
+Answer:",-17,10,,False
+"Question: What is 6 minus 26?
+Answer:",-20,1,,False
+"Question: What is 44 minus 20?
+Answer:",24,1000,,False
+"Question: What is 37 minus 15?
+Answer:",22,12,,False
+"Question: What is 53 minus 71?
+Answer:",-18,1,,False
+"Question: What is 66 minus 94?
+Answer:",-28,94,,False
+"Question: What is 46 minus 16?
+Answer:",30,12,,False
+"Question: What is 57 minus 34?
+Answer:",23,1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,,False
+"Question: What is 93 minus 64?
+Answer:",29,11,,False
+"Question: What is 15 minus 90?
+Answer:",-75,90,,False
+"Question: What is 62 minus 21?
+Answer:",41,10,,False
+"Question: What is 90 minus 36?
+Answer:",54,27,,False
+"Question: What is 32 minus 68?
+Answer:",-36,11,,False
+"Question: What is 11 minus 38?
+Answer:",-27,38,,False
+"Question: What is 41 minus 95?
+Answer:",-54,95,,False
+"Question: What is 54 minus 24?
+Answer:",30,11,,False
+"Question: What is 52 minus 27?
+Answer:",25,11,,False
+"Question: What is 56 minus 69?
+Answer:",-13,56,,False
+"Question: What is 97 minus 53?
+Answer:",44,11,,False
+"Question: What is 35 minus 58?
+Answer:",-23,1,,False
+"Question: What is 40 minus 72?
+Answer:",-32,1,,False
+"Question: What is 59 minus 70?
+Answer:",-11,59,,False
+"Question: What is 40 minus 69?
+Answer:",-29,1,,False
+"Question: What is 0 minus 63?
+Answer:",-63,63,,False
+"Question: What is 90 minus 42?
+Answer:",48,11,,False
+"Question: What is 15 minus 54?
+Answer:",-39,54,,False
+"Question: What is 7 minus 46?
+Answer:",-39,7,,False
+"Question: What is 2 minus 43?
+Answer:",-41,8,,False
+"Question: What is 66 minus 16?
+Answer:",50,12,,False
+"Question: What is 95 minus 25?
+Answer:",70,14,,False
+"Question: What is 44 minus 26?
+Answer:",18,10,,False
+"Question: What is 13 minus 78?
+Answer:",-65,100,,False
+"Question: What is 73 minus 96?
+Answer:",-23,1,,False
+"Question: What is 65 minus 52?
+Answer:",13,100,,False
+"Question: What is 88 minus 69?
+Answer:",19,1,,False
+"Question: What is 61 minus 20?
+Answer:",41,10,,False
+"Question: What is 23 minus 92?
+Answer:",-69,9,,False
+"Question: What is 91 minus 84?
+Answer:",7,84,,False
+"Question: What is 91 minus 68?
+Answer:",23,1,,False
+"Question: What is 63 minus 67?
+Answer:",-4,1,,False
+"Question: What is 46 minus 11?
+Answer:",35,10,,False
+"Question: What is 41 minus 23?
+Answer:",18,23,,False
+"Question: What is 78 minus 34?
+Answer:",44,42,,False
+"Question: What is 7 minus 28?
+Answer:",-21,1,,False
+"Question: What is 86 minus 69?
+Answer:",17,1,,False
+"Question: What is 69 minus 44?
+Answer:",25,1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,,False
+"Question: What is 85 minus 88?
+Answer:",-3,1,,False
+"Question: What is 19 minus 88?
+Answer:",-69,88,,False
+"Question: What is 14 minus 28?
+Answer:",-14,7,,False
+"Question: What is 57 minus 72?
+Answer:",-15,1,,False
+"Question: What is 60 minus 11?
+Answer:",49,31,,False
+"Question: What is 6 minus 4?
+Answer:",2,1,,False
+"Question: What is 53 minus 70?
+Answer:",-17,1,,False
+"Question: What is 63 minus 92?
+Answer:",-29,92,,False
+"Question: What is 41 minus 86?
+Answer:",-45,86,,False
+"Question: What is 88 minus 6?
+Answer:",82,11,,False
+"Question: What is 4 minus 97?
+Answer:",-93,4,,False
+"Question: What is 64 minus 64?
+Answer:",0,64,,False
+"Question: What is 32 minus 29?
+Answer:",3,11,,False
+"Question: What is 9 minus 1?
+Answer:",8,8,,True
+"Question: What is 12 minus 92?
+Answer:",-80,0,,False
+"Question: What is 50 minus 2?
+Answer:",48,35,,False
+"Question: What is 86 minus 12?
+Answer:",74,78,,False
+"Question: What is 84 minus 66?
+Answer:",18,11,,False
+"Question: What is 27 minus 84?
+Answer:",-57,84,,False
+"Question: What is 84 minus 29?
+Answer:",55,11,,False
+"Question: What is 27 minus 25?
+Answer:",2,1,,False
+"Question: What is 25 minus 37?
+Answer:",-12,1,,False
+"Question: What is 61 minus 51?
+Answer:",10,1,,False
+"Question: What is 60 minus 46?
+Answer:",14,1,,False
+"Question: What is 23 minus 34?
+Answer:",-11,3,,False
+"Question: What is 94 minus 12?
+Answer:",82,4,,False
+"Question: What is 85 minus 78?
+Answer:",7,1,,False
+"Question: What is 81 minus 85?
+Answer:",-4,85,,False
+"Question: What is 65 minus 1?
+Answer:",64,65,,False
+"Question: What is 89 minus 51?
+Answer:",38,101,,False
+"Question: What is 11 minus 35?
+Answer:",-24,3,,False
+"Question: What is 92 minus 75?
+Answer:",17,11,,False
+"Question: What is 54 minus 4?
+Answer:",50,30,,False
+"Question: What is 58 minus 55?
+Answer:",3,1,,False
+"Question: What is 46 minus 5?
+Answer:",41,11,,False
+"Question: What is 4 minus 0?
+Answer:",4,4,,True
+"Question: What is 37 minus 96?
+Answer:",-59,1,,False
+"Question: What is 82 minus 24?
+Answer:",58,10,,False
+"Question: What is 9 minus 90?
+Answer:",-81,90,,False
+"Question: What is 1 minus 5?
+Answer:",-4,1,,False
+"Question: What is 29 minus 37?
+Answer:",-8,1,,False
+"Question: What is 64 minus 14?
+Answer:",50,52,,False
+"Question: What is 48 minus 16?
+Answer:",32,12,,False
+"Question: What is 78 minus 51?
+Answer:",27,10,,False
+"Question: What is 30 minus 59?
+Answer:",-29,1,,False
+"Question: What is 4 minus 45?
+Answer:",-41,45,,False
+"Question: What is 1 minus 9?
+Answer:",-8,1,,False
+"Question: What is 87 minus 1?
+Answer:",86,1,,False
+"Question: What is 64 minus 93?
+Answer:",-29,1,,False
+"Question: What is 1 minus 2?
+Answer:",-1,1,,False
+"Question: What is 5 minus 68?
+Answer:",-63,10,,False
+"Question: What is 50 minus 40?
+Answer:",10,50,,False

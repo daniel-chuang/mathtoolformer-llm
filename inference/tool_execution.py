@@ -3,7 +3,7 @@ import torch
 from constants import TOOL_PATTERN
 from tools import tools
 from transformers import StoppingCriteria, StoppingCriteriaList
-
+from inference.generate import generate
 
 class StopOnTokens(StoppingCriteria):
     def __init__(self, stop_sequences, tokenizer, device):
@@ -87,24 +87,15 @@ def inference(model, tokenizer, prompt, max_new_tokens=150, use_tool=True):
     Returns:
         Generated response with tool outputs.
     """
-    stop_sequences = ["Question:", "\n\n", "Answer:"]  # Patterns that indicate the end of an answer
-    stopping_criteria = StoppingCriteriaList([
-        StopOnTokens(stop_sequences, tokenizer, model.device)
-    ])
+    # stop_sequences = ["Question:", "\n\n", "Answer:"]  # Patterns that indicate the end of an answer
+    # stopping_criteria = StoppingCriteriaList([
+    #     StopOnTokens(stop_sequences, tokenizer, model.device)
+    # ])
 
     # Initial generation
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
 
-    with torch.no_grad():
-        outputs = model.generate(
-            **inputs,
-            max_new_tokens=max_new_tokens,
-            temperature=0.0,
-            top_p=0.95,
-            # do_sample=True,
-            eos_token_id=tokenizer.eos_token_id,
-            stopping_criteria=stopping_criteria
-        )
+    outputs = generate(inputs, model, tokenizer, max_new_tokens=max_new_tokens)
 
     # Get the generated text
     generated_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
@@ -112,25 +103,30 @@ def inference(model, tokenizer, prompt, max_new_tokens=150, use_tool=True):
     if not use_tool:
         return generated_text
 
+    # print("USING TOOLS, GENREATED TEXT:", generated_text)
+
     # Process any tool calls in the generated text
     response_with_tool_results = extract_and_execute_tools(generated_text)
+    print("USING TOOLS, GENREATED TEXT:", response_with_tool_results)
 
-    # If there were tool calls, generate a follow-up response
-    if response_with_tool_results != generated_text:
-        # We need to generate again with the tool results included
-        follow_up_inputs = tokenizer(response_with_tool_results, return_tensors="pt").to(model.device)
 
-        with torch.no_grad():
-            follow_up_outputs = model.generate(
-                **follow_up_inputs,
-                max_new_tokens=max_new_tokens,
-                temperature=0.7,
-                top_p=0.95,
-                do_sample=True,
-                eos_token_id=tokenizer.eos_token_id
-            )
+    # # If there were tool calls, generate a follow-up response
+    # if response_with_tool_results != generated_text:
+    #     # We need to generate again with the tool results included
+    #     follow_up_inputs = tokenizer(response_with_tool_results, return_tensors="pt").to(model.device)
 
-        final_response = tokenizer.decode(follow_up_outputs[0], skip_special_tokens=True)
-        return final_response
+    #     with torch.no_grad():
+    #         follow_up_outputs = model.generate(
+    #             **follow_up_inputs,
+    #             max_new_tokens=max_new_tokens,
+    #             temperature=0.7,
+    #             top_p=0.95,
+    #             do_sample=True,
+    #             eos_token_id=tokenizer.eos_token_id
+    #         )
 
+    #     final_response = tokenizer.decode(follow_up_outputs[0], skip_special_tokens=True)
+    #     return final_response
+
+    # print("POST TOOLS, GENREATED TEXT:", generated_text)
     return response_with_tool_results

@@ -19,10 +19,16 @@ PURE_TRAIN_DATASET_PATH = ".preprocessed/preprocessed_pure_train_dataset"
 EVAL_DATASET_PATH = ".preprocessed/preprocessed_eval_dataset"
 
 # SMOLLM
-MODEL_NAME = "HuggingFaceTB/SmolLM2-135M"
-INITIAL_SAVE_PATH = "SmolLM2-initial"
-TOOL_FINETUNED_SAVE_PATH = "SmolLM2-tool-finetuned"
-PURE_FINETUNED_SAVE_PATH = "SmolLM2-pure-finetuned"
+MODEL_NAME = "Qwen/Qwen2.5-Math-1.5B"
+INITIAL_SAVE_PATH = "qwen-initial"
+TOOL_FINETUNED_SAVE_PATH = "qwen-tool-finetuned"
+PURE_FINETUNED_SAVE_PATH = "qwen-pure-finetuned"
+
+# QWEN
+# MODEL_NAME = "HuggingFaceTB/SmolLM2-135M"
+# INITIAL_SAVE_PATH = "SmolLM2-initial"
+# TOOL_FINETUNED_SAVE_PATH = "SmolLM2-tool-finetuned"
+# PURE_FINETUNED_SAVE_PATH = "SmolLM2-pure-finetuned"
 
 # GPT 2 - Does poorly
 # MODEL_NAME = "gpt2"

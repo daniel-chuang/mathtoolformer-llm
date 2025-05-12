@@ -9,7 +9,6 @@ from data.gsm8k import prepare_gsm8k_dataset
 from data.svamp import prepare_svamp_dataset
 from data.arithmetic import prepare_arithmetic_datasets
 from evaluation.math_evaluation import evaluate_math_performance
-from evaluation.tool_usage_evaluation import evaluate_tool_usage
 from data.arithmetic import combine_and_tokenize
 
 def eval_model(model_name, dataset_name, test_datasets, model, tokenizer, use_tool):
@@ -58,7 +57,7 @@ def eval_model(model_name, dataset_name, test_datasets, model, tokenizer, use_to
             model, 
             tokenizer, 
             test_dataset, 
-            dataset_name=dataset_type, 
+            dataset_name=dataset_name, 
             model_name=model_name
         )
         print("Math Evaluation Results:", results['metrics'])

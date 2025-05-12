@@ -4,31 +4,28 @@ from transformers import DataCollatorForLanguageModeling
 from datetime import datetime
 import os
 import json
-from utils.wandb_callback import WandbPredictionCallback
-
+from utils.wandb_callback import WandbToolformerCallback
+from peft import LoraConfig, get_peft_model, TaskType
+import wandb
+from transformers import EarlyStoppingCallback
+from utils.tool_usage_callback import ToolUsageMonitor
 
 def preprocess_for_training(examples, tokenizer, max_length=2048):
     """Tokenize the examples for training"""
-    # Tokenize input context
+    # Tokenize input context with padding to max_length
     result = tokenizer(
         examples["question"],
         truncation=True,
         max_length=max_length,
-        padding="max_length"
+        padding='max_length',
     )
     
-    # Create attention masks
-    result["attention_mask"] = [
-        [1 if token != tokenizer.pad_token_id else 0 for token in tokens]
-        for tokens in result["input_ids"]
-    ]
-    
-    # Tokenize completions with the same tokenizer
+    # Tokenize completions with the same tokenizer and padding
     completion_encodings = tokenizer(
         examples["final_answer"],
         truncation=True,
         max_length=max_length,
-        padding="max_length"
+        padding='max_length',
     )
     
     # Set labels to the tokenized completion
@@ -51,34 +48,94 @@ def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="
     Returns:
         tuple: (model, tokenizer, metadata) - The trained model, tokenizer and updated metadata
     """
+    print(f"Model Type: {model.config.model_type}")
+    print(f"Tokenizer Type: {type(tokenizer).__name__}")
+    print(tokenizer.decode(train_dataset[0]["input_ids"]))
+    print(tokenizer.decode(train_dataset[0]["labels"]))
+    print(tokenizer.decode(eval_dataset[0]["input_ids"]))
+    print(tokenizer.decode(eval_dataset[0]["labels"]))
+
+    # Enable gradient checkpointing for memory efficiency
+    model.gradient_checkpointing_enable()
     
-    if eval_dataset:
-        eval_dataset = eval_dataset.map(
-            lambda examples: preprocess_for_training(examples, tokenizer),
-            batched=True,
-            remove_columns=eval_dataset.column_names
-        )
-    
+    # Configure and Apply LoRA
+    lora_config = LoraConfig(
+        task_type=TaskType.CAUSAL_LM,
+        r=64,
+        lora_alpha=16,
+        lora_dropout=0.05,
+        target_modules=["q_proj", "k_proj", "v_proj", "o_proj"]
+    )
+    model = get_peft_model(model, lora_config)
+
     # Define training arguments
     training_args = TrainingArguments(
         output_dir=output_dir,
-        per_device_train_batch_size=4,
-        per_device_eval_batch_size=4,
-        gradient_accumulation_steps=4,
-        learning_rate=2e-4,
+        per_device_train_batch_size=2,
+        gradient_accumulation_steps=8,
+        learning_rate=5e-4,
         weight_decay=0.01,
-        num_train_epochs=num_epochs,  # Use the parameter value
+        num_train_epochs=num_epochs,
         lr_scheduler_type="cosine",
         warmup_ratio=0.1,
         logging_dir="./logs",
-        report_to="wandb",     # Enable Weights & Biases logging
-        logging_steps=10,
-        save_strategy="steps",  # Save checkpoints every few steps
-        save_steps=100,         # Adjust based on your dataset size
-        eval_strategy="steps" if eval_dataset else "no",
+        report_to="wandb",
+        logging_steps=16,
+        save_strategy="epoch",
+        eval_strategy="epoch",
         fp16=True,
         load_best_model_at_end=True if eval_dataset else False,
-        resume_from_checkpoint=True,  # Allow resuming from checkpoints
+        resume_from_checkpoint=True,
+        label_names=["labels"],
+        dataloader_num_workers=4,
+        gradient_checkpointing=True,
+        optim="adamw_torch"
+    )
+    
+    # WANDB: Create a consolidated config dictionary from the actual objects
+    config = {
+        # General configuration
+        "output_dir": output_dir,
+        "num_epochs": num_epochs,
+        
+        # Extract LoRA configuration
+        "lora": {
+            "task_type": lora_config.task_type.value if hasattr(lora_config.task_type, 'value') else str(lora_config.task_type),
+            "r": lora_config.r,
+            "lora_alpha": lora_config.lora_alpha,
+            "lora_dropout": lora_config.lora_dropout,
+            "target_modules": lora_config.target_modules
+        },
+        
+        # Extract training configuration from the training_args object
+        "training": {
+            "per_device_batch_size": training_args.per_device_train_batch_size,
+            "gradient_accumulation_steps": training_args.gradient_accumulation_steps,
+            "learning_rate": training_args.learning_rate,
+            "weight_decay": training_args.weight_decay,
+            "lr_scheduler_type": training_args.lr_scheduler_type,
+            "warmup_ratio": training_args.warmup_ratio,
+            "fp16": training_args.fp16,
+            "dataloader_num_workers": training_args.dataloader_num_workers,
+            "gradient_checkpointing": training_args.gradient_checkpointing,
+            "optim": training_args.optim
+        },
+        
+        # Extract logging configuration
+        "logging": {
+            "logging_dir": training_args.logging_dir,
+            "report_to": training_args.report_to,
+            "logging_steps": training_args.logging_steps,
+            "save_strategy": training_args.save_strategy,
+            "eval_strategy": training_args.eval_strategy
+        }
+    }
+    
+    # Initialize wandb with the extracted configuration
+    wandb.init(
+        project="toolformer",
+        config=config,
+        name=f"toolformer_training_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
     )
         
     # Data collator for language modeling
@@ -87,17 +144,22 @@ def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="
         mlm=False  # We're not using masked language modeling
     )
 
-    callbacks = []
-    
-    # Add WandB prediction visualization if we have an eval dataset
-    if eval_dataset and training_args.report_to == "wandb":
-        pred_callback = WandbPredictionCallback(
+    # Callbacks
+    callbacks = [
+        EarlyStoppingCallback(early_stopping_patience=3),
+        ToolUsageMonitor(
+            tokenizer=tokenizer,
+            check_steps=training_args.logging_steps,
+        ),
+        WandbToolformerCallback(
             tokenizer=tokenizer,
             eval_dataset=eval_dataset,
-            num_examples=5,  # Number of examples to track
-            steps=100        # Log every 100 steps
+            log_freq=training_args.logging_steps,
+            sample_size=5,  # Number of examples to track
+            log_lora_params=True,
+            log_attention=True
         )
-        callbacks.append(pred_callback)
+    ]
     
     # Initialize trainer with callbacks
     trainer = Trainer(
@@ -106,7 +168,7 @@ def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="
         train_dataset=train_dataset,
         eval_dataset=eval_dataset,
         data_collator=data_collator,
-        # callbacks=callbacks  # Add our callbacks
+        callbacks=callbacks
     )
     
     # Record training start time
@@ -135,7 +197,7 @@ def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="
     # Calculate total epochs
     total_epochs = previous_metadata.get("total_epochs", 0) + num_epochs
     
-    # Create training session info
+    # Create training session info with the extracted configuration
     training_session = {
         "date": datetime.now().isoformat(),
         "epochs": num_epochs,
@@ -145,7 +207,8 @@ def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="
         "dataset_stats": {
             "train_size": len(train_dataset),
             "eval_size": len(eval_dataset) if eval_dataset else 0
-        }
+        },
+        "config": config  # Use the extracted config for metadata
     }
     
     # Add evaluation metrics if available
@@ -168,4 +231,7 @@ def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="
     with open(metadata_path, "w") as f:
         json.dump(metadata, f, indent=2)
     
+    # Final metrics are logged by the WandbToolformerCallback
+    wandb.finish()
+
     return model, tokenizer, metadata

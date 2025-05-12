@@ -1,5 +1,6 @@
 import os
 import json
+import gc
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from model.setup import setup_model, save_model, load_model, load_tokenizer
@@ -9,17 +10,16 @@ from data.gsm8k import prepare_gsm8k_dataset
 from data.svamp import prepare_svamp_dataset
 from data.arithmetic import prepare_arithmetic_datasets
 from evaluation.math_evaluation import evaluate_math_performance
-from evaluation.tool_usage_evaluation import evaluate_tool_usage
 from evaluation.eval_pipeline import eval_model
 from constants import MODEL_NAME, INITIAL_SAVE_PATH, TOOL_FINETUNED_SAVE_PATH, DATASET, CHECKPOINTS, TOOL_TRAIN_DATASET_PATH, PURE_TRAIN_DATASET_PATH, EVAL_DATASET_PATH
 from data.arithmetic import combine_and_tokenize
 import wandb
 from datasets import Dataset
 
-wandb.init(project="toolformer")
-
 def main():
     print_section("Loading Model")
+    gc.collect()
+    torch.cuda.empty_cache()
     # Try to load from saved path first, if it fails, download from HF
     try:
         model, metadata = load_model(os.path.join(CHECKPOINTS, "pretrained", INITIAL_SAVE_PATH))
@@ -64,10 +64,10 @@ def main():
         if wantToTrainTool == "y":
             train_transformed_data = dataset["train_transformed_dict"]
             test_transformed_data = dataset["test_transformed_dict"]
-            print(train_transformed_data['arithmetic_1dc'][3])
-            print(test_transformed_data['arithmetic_1dc'][3])
-            print(train_transformed_data['arithmetic_4da'][-1])
-            print(train_transformed_data['arithmetic_2dm'][-1])
+            print(train_transformed_data['arithmetic_2da'][3])
+            print(test_transformed_data['arithmetic_2da'][3])
+            print(train_transformed_data['arithmetic_2da'][-1])
+            print(train_transformed_data['arithmetic_2da'][-1])
     else:
         if DATASET == "svamp": # Single Datasetse
             train_data, test_data = prepare_svamp_dataset()
@@ -88,7 +88,7 @@ def main():
         # Prepare the training data based on dataset type
         if DATASET == "arithmetic":
             train_dataset = combine_and_tokenize(train_transformed_data, tokenizer, path=TOOL_TRAIN_DATASET_PATH)
-            
+
             # Create a small evaluation dataset directly instead of using combine_and_tokenize
             eval_examples = []
             for config_name, config_dataset in test_transformed_data.items():
@@ -103,6 +103,11 @@ def main():
             
             # Create the evaluation dataset directly
             eval_dataset = Dataset.from_list(eval_examples)
+            eval_dataset = eval_dataset.map(
+                lambda examples: preprocess_for_training(examples, tokenizer),
+                batched=True,
+                remove_columns=eval_dataset.column_names
+            )
         
         print(f"Created evaluation dataset with {len(eval_dataset)} examples for monitoring")
 
@@ -170,7 +175,7 @@ def main():
 
     if isYes(wantToEvalLatest):
         print_section("Latest Checkpoint Evaluation")
-        model, metadata = load_model(os.path.join(os.curdir, "toolformer_model", "checkpoint-500"))
+        model, metadata = load_model(os.path.join(os.curdir, "toolformer_model", "checkpoint-112"))
         print_section("Most recent training Model Evaluation")
         eval_model(MODEL_NAME, DATASET, test_data, model, tokenizer, use_tool=True)
 

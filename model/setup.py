@@ -53,7 +53,7 @@ def setup_model(model_name="mistralai/Mistral-7B-v0.1", use_4bit=False):
     
     return tokenizer, model, metadata
 
-def save_model(model, tokenizer, path, epochs=None, include_timestamp=False):
+def save_model(model, tokenizer, path, epochs=None, total_epochs=None, include_timestamp=False):
     """
     Save model and tokenizer to the specified path.
     
@@ -78,6 +78,9 @@ def save_model(model, tokenizer, path, epochs=None, include_timestamp=False):
     if epochs is not None:
         save_path = f"{path}_epochs{epochs}"
     
+    if total_epochs is not None:
+        save_path = f"{save_path}_total_epochs{total_epochs}"
+
     # Add timestamp if requested
     if include_timestamp:
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")

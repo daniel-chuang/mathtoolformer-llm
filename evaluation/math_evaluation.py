@@ -37,11 +37,26 @@ def evaluate_math_performance(model, tokenizer, test_dataset, use_tool, dataset_
             continue
 
         # Generate model's response
-        prompt = f'{question}'
-        
-        response = inference(model, tokenizer, prompt, max_new_tokens=256, use_tool=use_tool)
+        if use_tool:
+            prompt = f"""
+            You can solve math problems using tools. When you need to calculate, use <tool:calculator>expression</tool>.
 
-        print(response + "\n\n")
+            Example:
+            Question: What is 25 + 17?
+            To solve this, I'll use a calculator.
+            <tool:calculator>25 + 17</tool>
+            Output: 42
+            The answer is 42.
+
+            Now solve this:
+            {question}\n\n
+            Answer:
+            """
+        else:
+            prompt = f"{question}\n\nAnswer:"
+    
+        print(f"------\n{question}\n------")
+        response = inference(model, tokenizer, prompt, max_new_tokens=256, use_tool=use_tool)
 
         # Extract the last number mentioned in the response
         numbers = re.findall(r'-?\d+', response)  # Find all numbers in the response (with optional minus sign)

@@ -53,7 +53,7 @@ def prepare_arithmetic_datasets(train_split=SPLIT, random_seed=SEED):
 
     # List of available configurations
     configs = [
-        # 'arithmetic_1dc',
+        'arithmetic_1dc',
         'arithmetic_2da',
         # 'arithmetic_2dm',
         # 'arithmetic_2ds',

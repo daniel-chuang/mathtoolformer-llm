@@ -1,0 +1,1420 @@
+{
+  "timestamp": "20250501_141912",
+  "model_name": "HuggingFaceTB/SmolLM2-135M",
+  "dataset_name": "arithmetic_arithmetic_4da",
+  "aggregated_metrics": {
+    "accuracy": 0.01,
+    "correct": 2,
+    "total": 200
+  },
+  "question_results": [
+    {
+      "question": "Question: What is 8785 plus 6801?\nAnswer:",
+      "expected_answer": "15586",
+      "model_answer": "68",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 4645 plus 8383?\nAnswer:",
+      "expected_answer": "13028",
+      "model_answer": "10",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 5954 plus 9641?\nAnswer:",
+      "expected_answer": "15595",
+      "model_answer": "9641",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 7213 plus 9265?\nAnswer:",
+      "expected_answer": "16478",
+      "model_answer": "60885",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3780 plus 7486?\nAnswer:",
+      "expected_answer": "11266",
+      "model_answer": "11566",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 2069 plus 7920?\nAnswer:",
+      "expected_answer": "9989",
+      "model_answer": "206900",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 4859 plus 2267?\nAnswer:",
+      "expected_answer": "7126",
+      "model_answer": "226",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 751 plus 312?\nAnswer:",
+      "expected_answer": "1063",
+      "model_answer": "1063",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 7151 plus 7385?\nAnswer:",
+      "expected_answer": "14536",
+      "model_answer": "715",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 2499 plus 8895?\nAnswer:",
+      "expected_answer": "11394",
+      "model_answer": "19885",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 1865 plus 986?\nAnswer:",
+      "expected_answer": "2851",
+      "model_answer": "1961",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 2466 plus 7482?\nAnswer:",
+      "expected_answer": "9948",
+      "model_answer": "24660",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 1908 plus 7539?\nAnswer:",
+      "expected_answer": "9447",
+      "model_answer": "190",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 2552 plus 5926?\nAnswer:",
+      "expected_answer": "8478",
+      "model_answer": "10488",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 1330 plus 8271?\nAnswer:",
+      "expected_answer": "9601",
+      "model_answer": "1330",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 879 plus 9038?\nAnswer:",
+      "expected_answer": "9917",
+      "model_answer": "3",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 7410 plus 8207?\nAnswer:",
+      "expected_answer": "15617",
+      "model_answer": "8207",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 2688 plus 5549?\nAnswer:",
+      "expected_answer": "8237",
+      "model_answer": "101",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 6349 plus 396?\nAnswer:",
+      "expected_answer": "6745",
+      "model_answer": "396",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9694 plus 6093?\nAnswer:",
+      "expected_answer": "15787",
+      "model_answer": "6093",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 8048 plus 8266?\nAnswer:",
+      "expected_answer": "16314",
+      "model_answer": "7092",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 2946 plus 2087?\nAnswer:",
+      "expected_answer": "5033",
+      "model_answer": "5911",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 8528 plus 3450?\nAnswer:",
+      "expected_answer": "11978",
+      "model_answer": "29888000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 5691 plus 9724?\nAnswer:",
+      "expected_answer": "15415",
+      "model_answer": "9724",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 8110 plus 3964?\nAnswer:",
+      "expected_answer": "12074",
+      "model_answer": "12276",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3667 plus 4835?\nAnswer:",
+      "expected_answer": "8502",
+      "model_answer": "3667",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 8776 plus 2325?\nAnswer:",
+      "expected_answer": "11101",
+      "model_answer": "11005",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 1161 plus 1550?\nAnswer:",
+      "expected_answer": "2711",
+      "model_answer": "2715",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9872 plus 9018?\nAnswer:",
+      "expected_answer": "18890",
+      "model_answer": "98720",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 6913 plus 337?\nAnswer:",
+      "expected_answer": "7250",
+      "model_answer": "0337",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 5723 plus 1113?\nAnswer:",
+      "expected_answer": "6836",
+      "model_answer": "1084",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 5589 plus 8204?\nAnswer:",
+      "expected_answer": "13793",
+      "model_answer": "1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 1854 plus 9236?\nAnswer:",
+      "expected_answer": "11090",
+      "model_answer": "18549236",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9328 plus 2947?\nAnswer:",
+      "expected_answer": "12275",
+      "model_answer": "1981",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 4887 plus 4161?\nAnswer:",
+      "expected_answer": "9048",
+      "model_answer": "9091",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 2981 plus 7601?\nAnswer:",
+      "expected_answer": "10582",
+      "model_answer": "10561",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3387 plus 2810?\nAnswer:",
+      "expected_answer": "6197",
+      "model_answer": "8110",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3917 plus 8806?\nAnswer:",
+      "expected_answer": "12723",
+      "model_answer": "3917",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 8841 plus 6158?\nAnswer:",
+      "expected_answer": "14999",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 551 plus 1213?\nAnswer:",
+      "expected_answer": "1764",
+      "model_answer": "1064",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 1326 plus 9142?\nAnswer:",
+      "expected_answer": "10468",
+      "model_answer": "3",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 5981 plus 5104?\nAnswer:",
+      "expected_answer": "11085",
+      "model_answer": "5",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 2883 plus 7974?\nAnswer:",
+      "expected_answer": "10857",
+      "model_answer": "10712",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 2426 plus 368?\nAnswer:",
+      "expected_answer": "2794",
+      "model_answer": "509",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 8394 plus 8336?\nAnswer:",
+      "expected_answer": "16730",
+      "model_answer": "83",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 1542 plus 7477?\nAnswer:",
+      "expected_answer": "9019",
+      "model_answer": "2",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 7694 plus 8784?\nAnswer:",
+      "expected_answer": "16478",
+      "model_answer": "53",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9882 plus 98?\nAnswer:",
+      "expected_answer": "9980",
+      "model_answer": "19768",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9559 plus 9726?\nAnswer:",
+      "expected_answer": "19285",
+      "model_answer": "9726",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 4821 plus 8421?\nAnswer:",
+      "expected_answer": "13242",
+      "model_answer": "100",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 7527 plus 3475?\nAnswer:",
+      "expected_answer": "11002",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 8537 plus 2003?\nAnswer:",
+      "expected_answer": "10540",
+      "model_answer": "105651",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9891 plus 2016?\nAnswer:",
+      "expected_answer": "11907",
+      "model_answer": "12786",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9582 plus 304?\nAnswer:",
+      "expected_answer": "9886",
+      "model_answer": "10114",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 5756 plus 8158?\nAnswer:",
+      "expected_answer": "13914",
+      "model_answer": "4123200",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9440 plus 2675?\nAnswer:",
+      "expected_answer": "12115",
+      "model_answer": "2675",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 498 plus 5259?\nAnswer:",
+      "expected_answer": "5757",
+      "model_answer": "22449",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 7552 plus 3886?\nAnswer:",
+      "expected_answer": "11438",
+      "model_answer": "3886",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 4055 plus 9107?\nAnswer:",
+      "expected_answer": "13162",
+      "model_answer": "9107",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3245 plus 3817?\nAnswer:",
+      "expected_answer": "7062",
+      "model_answer": "10",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 1152 plus 9115?\nAnswer:",
+      "expected_answer": "10267",
+      "model_answer": "5",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 4157 plus 338?\nAnswer:",
+      "expected_answer": "4495",
+      "model_answer": "338",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3130 plus 9365?\nAnswer:",
+      "expected_answer": "12495",
+      "model_answer": "31300",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 1766 plus 7743?\nAnswer:",
+      "expected_answer": "9509",
+      "model_answer": "17667",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 7489 plus 8892?\nAnswer:",
+      "expected_answer": "16381",
+      "model_answer": "60778",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 5533 plus 7498?\nAnswer:",
+      "expected_answer": "13031",
+      "model_answer": "5",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 5551 plus 4889?\nAnswer:",
+      "expected_answer": "10440",
+      "model_answer": "4",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 8850 plus 1228?\nAnswer:",
+      "expected_answer": "10078",
+      "model_answer": "10098",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 5601 plus 7739?\nAnswer:",
+      "expected_answer": "13340",
+      "model_answer": "7739",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3806 plus 1270?\nAnswer:",
+      "expected_answer": "5076",
+      "model_answer": "5072",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 2053 plus 4814?\nAnswer:",
+      "expected_answer": "6867",
+      "model_answer": "8775",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 6643 plus 685?\nAnswer:",
+      "expected_answer": "7328",
+      "model_answer": "6643",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 2625 plus 4474?\nAnswer:",
+      "expected_answer": "7099",
+      "model_answer": "8097",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 6440 plus 8585?\nAnswer:",
+      "expected_answer": "15025",
+      "model_answer": "5",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 16 plus 7093?\nAnswer:",
+      "expected_answer": "7109",
+      "model_answer": "16073",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 4942 plus 1418?\nAnswer:",
+      "expected_answer": "6360",
+      "model_answer": "9358",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 489 plus 2538?\nAnswer:",
+      "expected_answer": "3027",
+      "model_answer": "932",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9727 plus 2036?\nAnswer:",
+      "expected_answer": "11763",
+      "model_answer": "1909",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 8289 plus 7596?\nAnswer:",
+      "expected_answer": "15885",
+      "model_answer": "7596",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 4998 plus 4743?\nAnswer:",
+      "expected_answer": "9741",
+      "model_answer": "9621",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 8623 plus 5211?\nAnswer:",
+      "expected_answer": "13834",
+      "model_answer": "10",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3094 plus 3166?\nAnswer:",
+      "expected_answer": "6260",
+      "model_answer": "10",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 6763 plus 3262?\nAnswer:",
+      "expected_answer": "10025",
+      "model_answer": "10",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3859 plus 1346?\nAnswer:",
+      "expected_answer": "5205",
+      "model_answer": "3",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3653 plus 3386?\nAnswer:",
+      "expected_answer": "7039",
+      "model_answer": "8007",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 7663 plus 7955?\nAnswer:",
+      "expected_answer": "15618",
+      "model_answer": "766",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9493 plus 9458?\nAnswer:",
+      "expected_answer": "18951",
+      "model_answer": "9458",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 361 plus 9961?\nAnswer:",
+      "expected_answer": "10322",
+      "model_answer": "36100",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3222 plus 5899?\nAnswer:",
+      "expected_answer": "9121",
+      "model_answer": "11111",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3535 plus 3609?\nAnswer:",
+      "expected_answer": "7144",
+      "model_answer": "10063",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9373 plus 1592?\nAnswer:",
+      "expected_answer": "10965",
+      "model_answer": "31",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 7504 plus 9307?\nAnswer:",
+      "expected_answer": "16811",
+      "model_answer": "750",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 5252 plus 8832?\nAnswer:",
+      "expected_answer": "14084",
+      "model_answer": "525",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 6450 plus 4227?\nAnswer:",
+      "expected_answer": "10677",
+      "model_answer": "4227",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 2470 plus 7073?\nAnswer:",
+      "expected_answer": "9543",
+      "model_answer": "7073",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 7142 plus 6397?\nAnswer:",
+      "expected_answer": "13539",
+      "model_answer": "6397",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 7553 plus 4236?\nAnswer:",
+      "expected_answer": "11789",
+      "model_answer": "4236",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 2692 plus 1304?\nAnswer:",
+      "expected_answer": "3996",
+      "model_answer": "4096",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 4706 plus 2242?\nAnswer:",
+      "expected_answer": "6948",
+      "model_answer": "2242",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9864 plus 7068?\nAnswer:",
+      "expected_answer": "16932",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 7069 plus 9484?\nAnswer:",
+      "expected_answer": "16553",
+      "model_answer": "9484",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 6055 plus 1123?\nAnswer:",
+      "expected_answer": "7178",
+      "model_answer": "7188",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 1908 plus 2296?\nAnswer:",
+      "expected_answer": "4204",
+      "model_answer": "3296",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9412 plus 296?\nAnswer:",
+      "expected_answer": "9708",
+      "model_answer": "296",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 2544 plus 2633?\nAnswer:",
+      "expected_answer": "5177",
+      "model_answer": "5977",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 879 plus 3776?\nAnswer:",
+      "expected_answer": "4655",
+      "model_answer": "2665",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 207 plus 790?\nAnswer:",
+      "expected_answer": "997",
+      "model_answer": "1070",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3596 plus 5097?\nAnswer:",
+      "expected_answer": "8693",
+      "model_answer": "5097",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3535 plus 3755?\nAnswer:",
+      "expected_answer": "7290",
+      "model_answer": "809",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 57 plus 1776?\nAnswer:",
+      "expected_answer": "1833",
+      "model_answer": "10057",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 6739 plus 4864?\nAnswer:",
+      "expected_answer": "11603",
+      "model_answer": "2",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3931 plus 2302?\nAnswer:",
+      "expected_answer": "6233",
+      "model_answer": "39",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 4943 plus 3291?\nAnswer:",
+      "expected_answer": "8234",
+      "model_answer": "3291",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9214 plus 2151?\nAnswer:",
+      "expected_answer": "11365",
+      "model_answer": "2151",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 8778 plus 8453?\nAnswer:",
+      "expected_answer": "17231",
+      "model_answer": "87780",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3020 plus 5732?\nAnswer:",
+      "expected_answer": "8752",
+      "model_answer": "5732",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 7561 plus 4612?\nAnswer:",
+      "expected_answer": "12173",
+      "model_answer": "1000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 7195 plus 9282?\nAnswer:",
+      "expected_answer": "16477",
+      "model_answer": "9282",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 849 plus 5101?\nAnswer:",
+      "expected_answer": "5950",
+      "model_answer": "5101",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 2227 plus 6997?\nAnswer:",
+      "expected_answer": "9224",
+      "model_answer": "10241",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 5198 plus 427?\nAnswer:",
+      "expected_answer": "5625",
+      "model_answer": "427",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9393 plus 3749?\nAnswer:",
+      "expected_answer": "13142",
+      "model_answer": "12049",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 4153 plus 2431?\nAnswer:",
+      "expected_answer": "6584",
+      "model_answer": "2431",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9904 plus 6306?\nAnswer:",
+      "expected_answer": "16210",
+      "model_answer": "6306",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 7946 plus 5972?\nAnswer:",
+      "expected_answer": "13918",
+      "model_answer": "7946",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 1299 plus 1893?\nAnswer:",
+      "expected_answer": "3192",
+      "model_answer": "3121",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 176 plus 3529?\nAnswer:",
+      "expected_answer": "3705",
+      "model_answer": "5009",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 2290 plus 3819?\nAnswer:",
+      "expected_answer": "6109",
+      "model_answer": "7119",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 5188 plus 4052?\nAnswer:",
+      "expected_answer": "9240",
+      "model_answer": "4052",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9053 plus 2236?\nAnswer:",
+      "expected_answer": "11289",
+      "model_answer": "2236",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3501 plus 6976?\nAnswer:",
+      "expected_answer": "10477",
+      "model_answer": "11410",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3024 plus 9854?\nAnswer:",
+      "expected_answer": "12878",
+      "model_answer": "9854",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 665 plus 8953?\nAnswer:",
+      "expected_answer": "9618",
+      "model_answer": "8953",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 237 plus 2450?\nAnswer:",
+      "expected_answer": "2687",
+      "model_answer": "23700",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 2644 plus 1296?\nAnswer:",
+      "expected_answer": "3940",
+      "model_answer": "3912",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 813 plus 1317?\nAnswer:",
+      "expected_answer": "2130",
+      "model_answer": "4",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 7553 plus 1649?\nAnswer:",
+      "expected_answer": "9202",
+      "model_answer": "755",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 5795 plus 9126?\nAnswer:",
+      "expected_answer": "14921",
+      "model_answer": "579",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 715 plus 7353?\nAnswer:",
+      "expected_answer": "8068",
+      "model_answer": "71573",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 1965 plus 4807?\nAnswer:",
+      "expected_answer": "6772",
+      "model_answer": "9712",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3052 plus 5056?\nAnswer:",
+      "expected_answer": "8108",
+      "model_answer": "10570",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 2635 plus 3399?\nAnswer:",
+      "expected_answer": "6034",
+      "model_answer": "7023",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 4431 plus 7886?\nAnswer:",
+      "expected_answer": "12317",
+      "model_answer": "7886",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 8392 plus 7368?\nAnswer:",
+      "expected_answer": "15760",
+      "model_answer": "8392",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 2875 plus 441?\nAnswer:",
+      "expected_answer": "3316",
+      "model_answer": "5286",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 7430 plus 471?\nAnswer:",
+      "expected_answer": "7901",
+      "model_answer": "10171",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 4101 plus 2218?\nAnswer:",
+      "expected_answer": "6319",
+      "model_answer": "8338",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 5320 plus 876?\nAnswer:",
+      "expected_answer": "6196",
+      "model_answer": "1408",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 6544 plus 5181?\nAnswer:",
+      "expected_answer": "11725",
+      "model_answer": "6",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 8218 plus 6046?\nAnswer:",
+      "expected_answer": "14264",
+      "model_answer": "14420",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 8833 plus 5526?\nAnswer:",
+      "expected_answer": "14359",
+      "model_answer": "00000000000000000000000000000000000000000000000000000000000000000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 1897 plus 7152?\nAnswer:",
+      "expected_answer": "9049",
+      "model_answer": "189",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 4821 plus 3056?\nAnswer:",
+      "expected_answer": "7877",
+      "model_answer": "0",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 5693 plus 7165?\nAnswer:",
+      "expected_answer": "12858",
+      "model_answer": "7165",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3124 plus 2345?\nAnswer:",
+      "expected_answer": "5469",
+      "model_answer": "31",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3271 plus 5644?\nAnswer:",
+      "expected_answer": "8915",
+      "model_answer": "05644",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3366 plus 4869?\nAnswer:",
+      "expected_answer": "8235",
+      "model_answer": "3",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 6093 plus 6769?\nAnswer:",
+      "expected_answer": "12862",
+      "model_answer": "14769",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3895 plus 5839?\nAnswer:",
+      "expected_answer": "9734",
+      "model_answer": "5839",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 7411 plus 9941?\nAnswer:",
+      "expected_answer": "17352",
+      "model_answer": "10101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3570 plus 5767?\nAnswer:",
+      "expected_answer": "9337",
+      "model_answer": "5767",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9100 plus 6573?\nAnswer:",
+      "expected_answer": "15673",
+      "model_answer": "15873",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 5499 plus 6128?\nAnswer:",
+      "expected_answer": "11627",
+      "model_answer": "6128",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 6985 plus 9866?\nAnswer:",
+      "expected_answer": "16851",
+      "model_answer": "17858",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 8434 plus 613?\nAnswer:",
+      "expected_answer": "9047",
+      "model_answer": "84",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 4425 plus 9623?\nAnswer:",
+      "expected_answer": "14048",
+      "model_answer": "44250",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9698 plus 244?\nAnswer:",
+      "expected_answer": "9942",
+      "model_answer": "2",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 8063 plus 5211?\nAnswer:",
+      "expected_answer": "13274",
+      "model_answer": "5211",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 2322 plus 6178?\nAnswer:",
+      "expected_answer": "8500",
+      "model_answer": "10091",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3599 plus 265?\nAnswer:",
+      "expected_answer": "3864",
+      "model_answer": "4143",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 2735 plus 3152?\nAnswer:",
+      "expected_answer": "5887",
+      "model_answer": "5987",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3673 plus 1856?\nAnswer:",
+      "expected_answer": "5529",
+      "model_answer": "5529",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 5447 plus 1364?\nAnswer:",
+      "expected_answer": "6811",
+      "model_answer": "5447",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 2523 plus 2027?\nAnswer:",
+      "expected_answer": "4550",
+      "model_answer": "3550",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 8402 plus 9706?\nAnswer:",
+      "expected_answer": "18108",
+      "model_answer": "9706",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9467 plus 6107?\nAnswer:",
+      "expected_answer": "15574",
+      "model_answer": "5015",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 479 plus 5495?\nAnswer:",
+      "expected_answer": "5974",
+      "model_answer": "22445",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 1498 plus 2227?\nAnswer:",
+      "expected_answer": "3725",
+      "model_answer": "3615",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 1250 plus 4323?\nAnswer:",
+      "expected_answer": "5573",
+      "model_answer": "1785",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 7725 plus 7274?\nAnswer:",
+      "expected_answer": "14999",
+      "model_answer": "7725",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 8200 plus 988?\nAnswer:",
+      "expected_answer": "9188",
+      "model_answer": "1818",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9121 plus 9428?\nAnswer:",
+      "expected_answer": "18549",
+      "model_answer": "9",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9400 plus 9184?\nAnswer:",
+      "expected_answer": "18584",
+      "model_answer": "94000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9063 plus 9886?\nAnswer:",
+      "expected_answer": "18949",
+      "model_answer": "906",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9183 plus 870?\nAnswer:",
+      "expected_answer": "10053",
+      "model_answer": "11191",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 2248 plus 5403?\nAnswer:",
+      "expected_answer": "7651",
+      "model_answer": "10052",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9578 plus 4912?\nAnswer:",
+      "expected_answer": "14490",
+      "model_answer": "14492",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 7655 plus 2009?\nAnswer:",
+      "expected_answer": "9664",
+      "model_answer": "15",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9701 plus 6145?\nAnswer:",
+      "expected_answer": "15846",
+      "model_answer": "15815",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3472 plus 5698?\nAnswer:",
+      "expected_answer": "9170",
+      "model_answer": "10151",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 6955 plus 3445?\nAnswer:",
+      "expected_answer": "10400",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 7710 plus 7056?\nAnswer:",
+      "expected_answer": "14766",
+      "model_answer": "7710",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 1032 plus 7179?\nAnswer:",
+      "expected_answer": "8211",
+      "model_answer": "10609",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 6848 plus 958?\nAnswer:",
+      "expected_answer": "7806",
+      "model_answer": "1023",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9814 plus 3052?\nAnswer:",
+      "expected_answer": "12866",
+      "model_answer": "12356",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 7926 plus 215?\nAnswer:",
+      "expected_answer": "8141",
+      "model_answer": "1005",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 2031 plus 3579?\nAnswer:",
+      "expected_answer": "5610",
+      "model_answer": "7103",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 3574 plus 6604?\nAnswer:",
+      "expected_answer": "10178",
+      "model_answer": "10112",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 7074 plus 7978?\nAnswer:",
+      "expected_answer": "15052",
+      "model_answer": "6664",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 6204 plus 2521?\nAnswer:",
+      "expected_answer": "8725",
+      "model_answer": "25",
+      "question_type": null,
+      "correct": false
+    }
+  ],
+  "type_statistics": {
+    "null": {
+      "total": 200,
+      "correct": 2,
+      "incorrect": 198,
+      "accuracy": 0.01
+    }
+  }
+}

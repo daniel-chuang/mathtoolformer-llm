@@ -5,6 +5,7 @@
 checkpoints/
 wandb/
 toolformer_model/
+toolformer_model_smol/
 toolformer_model_failed/
 preprocessed/
 
