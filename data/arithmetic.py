@@ -4,7 +4,6 @@ import re
 from constants import SEED, SPLIT, TOOL_TRAIN_DATASET_PATH
 from datasets import Dataset
 import os
-from model.training import preprocess_for_training
 
 def transform_question(input_text):
     """
@@ -138,29 +137,116 @@ def prepare_arithmetic_datasets(train_split=SPLIT, random_seed=SEED):
 
 def combine_and_tokenize(datasets, tokenizer, path=TOOL_TRAIN_DATASET_PATH):
     """
-    Combine multiple datasets into a single dataset, tokenized.
+    Combine multiple datasets into a single dataset for SFTTrainer.
     
     Args:
-        datasets: List of datasets to combine
+        datasets: Dictionary of datasets to combine
+        tokenizer: Tokenizer to use
+        path: Path to save/load preprocessed dataset
     
     Returns:
-        Combined dataset
+        Combined dataset with proper format for SFTTrainer
     """
     if os.path.exists(path):
         train_dataset = Dataset.load_from_disk(path)
+        print(f"Loaded {len(train_dataset)} examples from {path}")
     else:
+        # System prompt to add to all conversations
+        system_prompt = """You are an AI assistant that can use tools to solve problems. When you encounter mathematical calculations, use the <tool:calculator> format to perform the calculation. For example, if asked "What is 2+3?", respond with:
+
+<tool:calculator>2+3</tool>
+
+Then provide the answer. Use tools only when necessary for calculations that require precision."""
+        
         # For arithmetic datasets, combine all datasets into one
         print("Combining arithmetic datasets for training...")
         combined_train_dataset = []
+        
         for key, dataset in datasets.items():
-            combined_train_dataset.extend(dataset)
+            for example in dataset:
+                # Format as chat messages for SFTTrainer
+                formatted_example = {
+                    "messages": [
+                        {"role": "system", "content": system_prompt},
+                        {"role": "user", "content": example["question"]},
+                        {"role": "assistant", "content": example["final_answer"]}
+                    ]
+                }
+                combined_train_dataset.append(formatted_example)
+        
+        # Create dataset
         train_dataset = Dataset.from_list(combined_train_dataset)
         print(f"Combined {len(train_dataset)} examples for training")
-        train_dataset = train_dataset.map(
-            lambda examples: preprocess_for_training(examples, tokenizer),
-            batched=True,
-            remove_columns=train_dataset.column_names
-        )   # YOU NEED TO DELETE THE FOLDER "data/preprocessed_train_dataset" IF YOU SWITCH MODELS
-        Dataset.save_to_disk(train_dataset,path)
-        print(f"Saved {len(train_dataset)} examples to data")
+        
+        # Apply chat template
+        def apply_template(example):
+            formatted = tokenizer.apply_chat_template(
+                example["messages"],
+                tokenize=False,
+                add_generation_prompt=False
+            )
+            return {"text": formatted}
+        
+        # Convert to SFT format
+        train_dataset = train_dataset.map(apply_template)
+        
+        # Save the dataset
+        Dataset.save_to_disk(train_dataset, path)
+        print(f"Saved {len(train_dataset)} examples to {path}")
+        print(f"Note: Delete folder '{path}' if you switch models")
+    
     return train_dataset
+
+def create_eval_dataset_for_sft(datasets, tokenizer, max_examples=50):
+    """
+    Create evaluation dataset for SFTTrainer.
+    
+    Args:
+        datasets: Dictionary of test datasets
+        tokenizer: Tokenizer to use
+        max_examples: Maximum examples to include
+    
+    Returns:
+        Evaluation dataset in SFT format
+    """
+    system_prompt = """You are an AI assistant that can use tools to solve problems. When you encounter mathematical calculations, use the <tool:calculator> format to perform the calculation. For example, if asked "What is 2+3?", respond with:
+
+<tool:calculator>2+3</tool>
+
+Then provide the answer. Use tools only when necessary for calculations that require precision."""
+    
+    eval_examples = []
+    examples_per_config = max(1, max_examples // len(datasets))
+    
+    for config_name, config_dataset in datasets.items():
+        # Take a sample from each configuration
+        sample_size = min(examples_per_config, len(config_dataset))
+        
+        for i in range(sample_size):
+            example = config_dataset[i]
+            formatted_example = {
+                "messages": [
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": example["question"]},
+                    {"role": "assistant", "content": example["final_answer"]}
+                ]
+            }
+            eval_examples.append(formatted_example)
+    
+    # Create dataset
+    eval_dataset = Dataset.from_list(eval_examples)
+    
+    # Apply chat template
+    def apply_template(example):
+        formatted = tokenizer.apply_chat_template(
+            example["messages"],
+            tokenize=False,
+            add_generation_prompt=False
+        )
+        return {"text": formatted}
+    
+    # Convert to SFT format
+    eval_dataset = eval_dataset.map(apply_template)
+    
+    print(f"Created evaluation dataset with {len(eval_dataset)} examples")
+    return eval_dataset

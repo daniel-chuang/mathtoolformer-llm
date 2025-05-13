@@ -345,10 +345,6 @@ def train_toolformer_model(
     trainer.save_model(output_dir)
     tokenizer.save_pretrained(output_dir)
     
-    # Create or update metadata as in your original code
-    import os
-    import json
-    
     if previous_metadata is None:
         previous_metadata = {
             "base_model": getattr(model.config, "model_name_or_path", "unknown"),
@@ -396,9 +392,9 @@ def train_toolformer_model(
     }
     
     # Save metadata to file
-    metadata_path = os.path.join(output_dir, "training_metadata.json")
-    with open(metadata_path, "w") as f:
-        json.dump(metadata, f, indent=2)
+    # metadata_path = os.path.join(output_dir, "training_metadata.json")
+    # with open(metadata_path, "w") as f:
+    #     json.dump(metadata, f, indent=2)
     
     # Final metrics are logged by the WandbToolformerCallback
     wandb.finish()
