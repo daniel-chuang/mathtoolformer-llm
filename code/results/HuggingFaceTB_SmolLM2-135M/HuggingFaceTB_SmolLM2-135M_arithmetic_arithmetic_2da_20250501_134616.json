@@ -1,0 +1,1420 @@
+{
+  "timestamp": "20250501_134616",
+  "model_name": "HuggingFaceTB/SmolLM2-135M",
+  "dataset_name": "arithmetic_arithmetic_2da",
+  "aggregated_metrics": {
+    "accuracy": 0.545,
+    "correct": 109,
+    "total": 200
+  },
+  "question_results": [
+    {
+      "question": "Question: What is 67 plus 88?\nAnswer:",
+      "expected_answer": "155",
+      "model_answer": "155",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 38 plus 98?\nAnswer:",
+      "expected_answer": "136",
+      "model_answer": "136",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 82 plus 64?\nAnswer:",
+      "expected_answer": "146",
+      "model_answer": "146",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 12 plus 63?\nAnswer:",
+      "expected_answer": "75",
+      "model_answer": "189",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 60 plus 44?\nAnswer:",
+      "expected_answer": "104",
+      "model_answer": "104",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 17 plus 99?\nAnswer:",
+      "expected_answer": "116",
+      "model_answer": "179",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 54 plus 57?\nAnswer:",
+      "expected_answer": "111",
+      "model_answer": "111",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 3 plus 27?\nAnswer:",
+      "expected_answer": "30",
+      "model_answer": "64",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 61 plus 94?\nAnswer:",
+      "expected_answer": "155",
+      "model_answer": "155",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 14 plus 30?\nAnswer:",
+      "expected_answer": "44",
+      "model_answer": "44",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 45 plus 40?\nAnswer:",
+      "expected_answer": "85",
+      "model_answer": "95",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 6 plus 39?\nAnswer:",
+      "expected_answer": "45",
+      "model_answer": "101",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 55 plus 7?\nAnswer:",
+      "expected_answer": "62",
+      "model_answer": "62",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 21 plus 74?\nAnswer:",
+      "expected_answer": "95",
+      "model_answer": "107",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 17 plus 48?\nAnswer:",
+      "expected_answer": "65",
+      "model_answer": "65",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 64 plus 29?\nAnswer:",
+      "expected_answer": "93",
+      "model_answer": "103",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 65 plus 63?\nAnswer:",
+      "expected_answer": "128",
+      "model_answer": "128",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 50 plus 6?\nAnswer:",
+      "expected_answer": "56",
+      "model_answer": "56",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 5 plus 34?\nAnswer:",
+      "expected_answer": "39",
+      "model_answer": "108",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 31 plus 94?\nAnswer:",
+      "expected_answer": "125",
+      "model_answer": "223",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 98 plus 50?\nAnswer:",
+      "expected_answer": "148",
+      "model_answer": "148",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 17 plus 71?\nAnswer:",
+      "expected_answer": "88",
+      "model_answer": "180",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 27 plus 94?\nAnswer:",
+      "expected_answer": "121",
+      "model_answer": "270",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 66 plus 99?\nAnswer:",
+      "expected_answer": "165",
+      "model_answer": "166",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 36 plus 25?\nAnswer:",
+      "expected_answer": "61",
+      "model_answer": "71",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 45 plus 10?\nAnswer:",
+      "expected_answer": "55",
+      "model_answer": "55",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 54 plus 77?\nAnswer:",
+      "expected_answer": "131",
+      "model_answer": "131",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 86 plus 40?\nAnswer:",
+      "expected_answer": "126",
+      "model_answer": "126",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 91 plus 31?\nAnswer:",
+      "expected_answer": "122",
+      "model_answer": "122",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 71 plus 49?\nAnswer:",
+      "expected_answer": "120",
+      "model_answer": "121",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 10 plus 95?\nAnswer:",
+      "expected_answer": "105",
+      "model_answer": "100",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 31 plus 38?\nAnswer:",
+      "expected_answer": "69",
+      "model_answer": "89",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 84 plus 98?\nAnswer:",
+      "expected_answer": "182",
+      "model_answer": "183",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 79 plus 2?\nAnswer:",
+      "expected_answer": "81",
+      "model_answer": "81",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 70 plus 33?\nAnswer:",
+      "expected_answer": "103",
+      "model_answer": "103",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 4 plus 36?\nAnswer:",
+      "expected_answer": "40",
+      "model_answer": "112",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 46 plus 14?\nAnswer:",
+      "expected_answer": "60",
+      "model_answer": "60",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 10 plus 69?\nAnswer:",
+      "expected_answer": "79",
+      "model_answer": "111",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 40 plus 91?\nAnswer:",
+      "expected_answer": "131",
+      "model_answer": "131",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 65 plus 59?\nAnswer:",
+      "expected_answer": "124",
+      "model_answer": "124",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 85 plus 80?\nAnswer:",
+      "expected_answer": "165",
+      "model_answer": "850",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 21 plus 32?\nAnswer:",
+      "expected_answer": "53",
+      "model_answer": "53",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 54 plus 23?\nAnswer:",
+      "expected_answer": "77",
+      "model_answer": "87",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 47 plus 43?\nAnswer:",
+      "expected_answer": "90",
+      "model_answer": "90",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 56 plus 90?\nAnswer:",
+      "expected_answer": "146",
+      "model_answer": "450",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9 plus 17?\nAnswer:",
+      "expected_answer": "26",
+      "model_answer": "19",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 53 plus 56?\nAnswer:",
+      "expected_answer": "109",
+      "model_answer": "119",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 47 plus 62?\nAnswer:",
+      "expected_answer": "109",
+      "model_answer": "119",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 58 plus 23?\nAnswer:",
+      "expected_answer": "81",
+      "model_answer": "81",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 70 plus 85?\nAnswer:",
+      "expected_answer": "155",
+      "model_answer": "155",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 90 plus 2?\nAnswer:",
+      "expected_answer": "92",
+      "model_answer": "92",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 55 plus 60?\nAnswer:",
+      "expected_answer": "115",
+      "model_answer": "115",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 34 plus 36?\nAnswer:",
+      "expected_answer": "70",
+      "model_answer": "80",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 66 plus 81?\nAnswer:",
+      "expected_answer": "147",
+      "model_answer": "157",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 66 plus 85?\nAnswer:",
+      "expected_answer": "151",
+      "model_answer": "151",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 97 plus 55?\nAnswer:",
+      "expected_answer": "152",
+      "model_answer": "142",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 83 plus 60?\nAnswer:",
+      "expected_answer": "143",
+      "model_answer": "143",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 2 plus 6?\nAnswer:",
+      "expected_answer": "8",
+      "model_answer": "8",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 95 plus 96?\nAnswer:",
+      "expected_answer": "191",
+      "model_answer": "181",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 41 plus 15?\nAnswer:",
+      "expected_answer": "56",
+      "model_answer": "56",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 53 plus 65?\nAnswer:",
+      "expected_answer": "118",
+      "model_answer": "128",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 36 plus 37?\nAnswer:",
+      "expected_answer": "73",
+      "model_answer": "84",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 62 plus 44?\nAnswer:",
+      "expected_answer": "106",
+      "model_answer": "106",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 35 plus 40?\nAnswer:",
+      "expected_answer": "75",
+      "model_answer": "75",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 69 plus 12?\nAnswer:",
+      "expected_answer": "81",
+      "model_answer": "81",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 81 plus 39?\nAnswer:",
+      "expected_answer": "120",
+      "model_answer": "122",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 96 plus 30?\nAnswer:",
+      "expected_answer": "126",
+      "model_answer": "126",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 57 plus 56?\nAnswer:",
+      "expected_answer": "113",
+      "model_answer": "113",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 67 plus 75?\nAnswer:",
+      "expected_answer": "142",
+      "model_answer": "142",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 44 plus 17?\nAnswer:",
+      "expected_answer": "61",
+      "model_answer": "61",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 75 plus 37?\nAnswer:",
+      "expected_answer": "112",
+      "model_answer": "102",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 23 plus 69?\nAnswer:",
+      "expected_answer": "92",
+      "model_answer": "102",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 85 plus 16?\nAnswer:",
+      "expected_answer": "101",
+      "model_answer": "101",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 7 plus 1?\nAnswer:",
+      "expected_answer": "8",
+      "model_answer": "8",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 33 plus 85?\nAnswer:",
+      "expected_answer": "118",
+      "model_answer": "210",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 53 plus 48?\nAnswer:",
+      "expected_answer": "101",
+      "model_answer": "111",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 20 plus 0?\nAnswer:",
+      "expected_answer": "20",
+      "model_answer": "20",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 0 plus 6?\nAnswer:",
+      "expected_answer": "6",
+      "model_answer": "6",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 95 plus 53?\nAnswer:",
+      "expected_answer": "148",
+      "model_answer": "148",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 93 plus 27?\nAnswer:",
+      "expected_answer": "120",
+      "model_answer": "110",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 29 plus 48?\nAnswer:",
+      "expected_answer": "77",
+      "model_answer": "87",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 75 plus 62?\nAnswer:",
+      "expected_answer": "137",
+      "model_answer": "147",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 24 plus 1?\nAnswer:",
+      "expected_answer": "25",
+      "model_answer": "25",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 71 plus 72?\nAnswer:",
+      "expected_answer": "143",
+      "model_answer": "143",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 29 plus 64?\nAnswer:",
+      "expected_answer": "93",
+      "model_answer": "101",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 69 plus 54?\nAnswer:",
+      "expected_answer": "123",
+      "model_answer": "123",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 94 plus 8?\nAnswer:",
+      "expected_answer": "102",
+      "model_answer": "102",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 61 plus 11?\nAnswer:",
+      "expected_answer": "72",
+      "model_answer": "72",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 98 plus 13?\nAnswer:",
+      "expected_answer": "111",
+      "model_answer": "121",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 88 plus 87?\nAnswer:",
+      "expected_answer": "175",
+      "model_answer": "175",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 92 plus 57?\nAnswer:",
+      "expected_answer": "149",
+      "model_answer": "149",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 41 plus 93?\nAnswer:",
+      "expected_answer": "134",
+      "model_answer": "4193",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 69 plus 86?\nAnswer:",
+      "expected_answer": "155",
+      "model_answer": "155",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 13 plus 10?\nAnswer:",
+      "expected_answer": "23",
+      "model_answer": "23",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 4 plus 98?\nAnswer:",
+      "expected_answer": "102",
+      "model_answer": "498",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 90 plus 54?\nAnswer:",
+      "expected_answer": "144",
+      "model_answer": "144",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 77 plus 59?\nAnswer:",
+      "expected_answer": "136",
+      "model_answer": "136",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 6 plus 31?\nAnswer:",
+      "expected_answer": "37",
+      "model_answer": "19",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 97 plus 0?\nAnswer:",
+      "expected_answer": "97",
+      "model_answer": "97",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 2 plus 31?\nAnswer:",
+      "expected_answer": "33",
+      "model_answer": "62",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 43 plus 97?\nAnswer:",
+      "expected_answer": "140",
+      "model_answer": "4397",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 85 plus 73?\nAnswer:",
+      "expected_answer": "158",
+      "model_answer": "158",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 23 plus 39?\nAnswer:",
+      "expected_answer": "62",
+      "model_answer": "72",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 14 plus 4?\nAnswer:",
+      "expected_answer": "18",
+      "model_answer": "18",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 89 plus 28?\nAnswer:",
+      "expected_answer": "117",
+      "model_answer": "117",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 31 plus 23?\nAnswer:",
+      "expected_answer": "54",
+      "model_answer": "54",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 45 plus 15?\nAnswer:",
+      "expected_answer": "60",
+      "model_answer": "60",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 79 plus 12?\nAnswer:",
+      "expected_answer": "91",
+      "model_answer": "101",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 54 plus 16?\nAnswer:",
+      "expected_answer": "70",
+      "model_answer": "60",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 7 plus 92?\nAnswer:",
+      "expected_answer": "99",
+      "model_answer": "700",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 63 plus 8?\nAnswer:",
+      "expected_answer": "71",
+      "model_answer": "71",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 57 plus 67?\nAnswer:",
+      "expected_answer": "124",
+      "model_answer": "122",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 57 plus 96?\nAnswer:",
+      "expected_answer": "153",
+      "model_answer": "440",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 93 plus 58?\nAnswer:",
+      "expected_answer": "151",
+      "model_answer": "141",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 75 plus 52?\nAnswer:",
+      "expected_answer": "127",
+      "model_answer": "127",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 17 plus 80?\nAnswer:",
+      "expected_answer": "97",
+      "model_answer": "170",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 77 plus 92?\nAnswer:",
+      "expected_answer": "169",
+      "model_answer": "161",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9 plus 92?\nAnswer:",
+      "expected_answer": "101",
+      "model_answer": "992",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 24 plus 70?\nAnswer:",
+      "expected_answer": "94",
+      "model_answer": "102",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 41 plus 31?\nAnswer:",
+      "expected_answer": "72",
+      "model_answer": "72",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 88 plus 82?\nAnswer:",
+      "expected_answer": "170",
+      "model_answer": "170",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 97 plus 89?\nAnswer:",
+      "expected_answer": "186",
+      "model_answer": "186",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 11 plus 72?\nAnswer:",
+      "expected_answer": "83",
+      "model_answer": "103",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 76 plus 6?\nAnswer:",
+      "expected_answer": "82",
+      "model_answer": "82",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 85 plus 70?\nAnswer:",
+      "expected_answer": "155",
+      "model_answer": "155",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 97 plus 91?\nAnswer:",
+      "expected_answer": "188",
+      "model_answer": "188",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 17 plus 27?\nAnswer:",
+      "expected_answer": "44",
+      "model_answer": "44",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 35 plus 49?\nAnswer:",
+      "expected_answer": "84",
+      "model_answer": "84",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 96 plus 80?\nAnswer:",
+      "expected_answer": "176",
+      "model_answer": "176",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 73 plus 69?\nAnswer:",
+      "expected_answer": "142",
+      "model_answer": "142",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 57 plus 90?\nAnswer:",
+      "expected_answer": "147",
+      "model_answer": "450",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 8 plus 78?\nAnswer:",
+      "expected_answer": "86",
+      "model_answer": "66",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 62 plus 34?\nAnswer:",
+      "expected_answer": "96",
+      "model_answer": "106",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 58 plus 77?\nAnswer:",
+      "expected_answer": "135",
+      "model_answer": "135",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 12 plus 13?\nAnswer:",
+      "expected_answer": "25",
+      "model_answer": "25",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 63 plus 28?\nAnswer:",
+      "expected_answer": "91",
+      "model_answer": "101",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 32 plus 42?\nAnswer:",
+      "expected_answer": "74",
+      "model_answer": "74",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 73 plus 84?\nAnswer:",
+      "expected_answer": "157",
+      "model_answer": "159",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 20 plus 16?\nAnswer:",
+      "expected_answer": "36",
+      "model_answer": "36",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 94 plus 51?\nAnswer:",
+      "expected_answer": "145",
+      "model_answer": "145",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 45 plus 63?\nAnswer:",
+      "expected_answer": "108",
+      "model_answer": "118",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 15 plus 37?\nAnswer:",
+      "expected_answer": "52",
+      "model_answer": "50",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 22 plus 9?\nAnswer:",
+      "expected_answer": "31",
+      "model_answer": "31",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 56 plus 58?\nAnswer:",
+      "expected_answer": "114",
+      "model_answer": "114",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 70 plus 52?\nAnswer:",
+      "expected_answer": "122",
+      "model_answer": "122",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 46 plus 59?\nAnswer:",
+      "expected_answer": "105",
+      "model_answer": "105",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 41 plus 9?\nAnswer:",
+      "expected_answer": "50",
+      "model_answer": "59",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 5 plus 76?\nAnswer:",
+      "expected_answer": "81",
+      "model_answer": "420",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 2 plus 11?\nAnswer:",
+      "expected_answer": "13",
+      "model_answer": "21",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 85 plus 62?\nAnswer:",
+      "expected_answer": "147",
+      "model_answer": "147",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 5 plus 39?\nAnswer:",
+      "expected_answer": "44",
+      "model_answer": "19",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 13 plus 12?\nAnswer:",
+      "expected_answer": "25",
+      "model_answer": "25",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 2 plus 56?\nAnswer:",
+      "expected_answer": "58",
+      "model_answer": "121",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 43 plus 40?\nAnswer:",
+      "expected_answer": "83",
+      "model_answer": "440",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 52 plus 98?\nAnswer:",
+      "expected_answer": "150",
+      "model_answer": "448",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 83 plus 34?\nAnswer:",
+      "expected_answer": "117",
+      "model_answer": "117",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 51 plus 32?\nAnswer:",
+      "expected_answer": "83",
+      "model_answer": "83",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 76 plus 33?\nAnswer:",
+      "expected_answer": "109",
+      "model_answer": "109",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 37 plus 92?\nAnswer:",
+      "expected_answer": "129",
+      "model_answer": "224",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 95 plus 35?\nAnswer:",
+      "expected_answer": "130",
+      "model_answer": "120",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 44 plus 86?\nAnswer:",
+      "expected_answer": "130",
+      "model_answer": "222",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 80 plus 27?\nAnswer:",
+      "expected_answer": "107",
+      "model_answer": "117",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 62 plus 71?\nAnswer:",
+      "expected_answer": "133",
+      "model_answer": "133",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 65 plus 26?\nAnswer:",
+      "expected_answer": "91",
+      "model_answer": "101",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 56 plus 56?\nAnswer:",
+      "expected_answer": "112",
+      "model_answer": "112",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 23 plus 79?\nAnswer:",
+      "expected_answer": "102",
+      "model_answer": "102",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 30 plus 15?\nAnswer:",
+      "expected_answer": "45",
+      "model_answer": "45",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 78 plus 28?\nAnswer:",
+      "expected_answer": "106",
+      "model_answer": "106",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 63 plus 15?\nAnswer:",
+      "expected_answer": "78",
+      "model_answer": "88",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 29 plus 28?\nAnswer:",
+      "expected_answer": "57",
+      "model_answer": "57",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 13 plus 96?\nAnswer:",
+      "expected_answer": "109",
+      "model_answer": "130",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 79 plus 40?\nAnswer:",
+      "expected_answer": "119",
+      "model_answer": "119",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 92 plus 54?\nAnswer:",
+      "expected_answer": "146",
+      "model_answer": "146",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 20 plus 69?\nAnswer:",
+      "expected_answer": "89",
+      "model_answer": "109",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 72 plus 66?\nAnswer:",
+      "expected_answer": "138",
+      "model_answer": "148",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 53 plus 10?\nAnswer:",
+      "expected_answer": "63",
+      "model_answer": "63",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 6 plus 4?\nAnswer:",
+      "expected_answer": "10",
+      "model_answer": "12",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 58 plus 14?\nAnswer:",
+      "expected_answer": "72",
+      "model_answer": "72",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 87 plus 57?\nAnswer:",
+      "expected_answer": "144",
+      "model_answer": "144",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 26 plus 59?\nAnswer:",
+      "expected_answer": "85",
+      "model_answer": "85",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 78 plus 13?\nAnswer:",
+      "expected_answer": "91",
+      "model_answer": "101",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 10 plus 57?\nAnswer:",
+      "expected_answer": "67",
+      "model_answer": "100",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 39 plus 47?\nAnswer:",
+      "expected_answer": "86",
+      "model_answer": "86",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 76 plus 55?\nAnswer:",
+      "expected_answer": "131",
+      "model_answer": "131",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 36 plus 57?\nAnswer:",
+      "expected_answer": "93",
+      "model_answer": "113",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 47 plus 83?\nAnswer:",
+      "expected_answer": "130",
+      "model_answer": "231",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 81 plus 65?\nAnswer:",
+      "expected_answer": "146",
+      "model_answer": "146",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 36 plus 15?\nAnswer:",
+      "expected_answer": "51",
+      "model_answer": "51",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 99 plus 20?\nAnswer:",
+      "expected_answer": "119",
+      "model_answer": "119",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 48 plus 36?\nAnswer:",
+      "expected_answer": "84",
+      "model_answer": "84",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 18 plus 75?\nAnswer:",
+      "expected_answer": "93",
+      "model_answer": "191",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 6 plus 59?\nAnswer:",
+      "expected_answer": "65",
+      "model_answer": "35",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 84 plus 3?\nAnswer:",
+      "expected_answer": "87",
+      "model_answer": "87",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 88 plus 78?\nAnswer:",
+      "expected_answer": "166",
+      "model_answer": "166",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 25 plus 22?\nAnswer:",
+      "expected_answer": "47",
+      "model_answer": "57",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 44 plus 81?\nAnswer:",
+      "expected_answer": "125",
+      "model_answer": "123",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 90 plus 91?\nAnswer:",
+      "expected_answer": "181",
+      "model_answer": "181",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 70 plus 45?\nAnswer:",
+      "expected_answer": "115",
+      "model_answer": "115",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 37 plus 66?\nAnswer:",
+      "expected_answer": "103",
+      "model_answer": "103",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 59 plus 56?\nAnswer:",
+      "expected_answer": "115",
+      "model_answer": "123",
+      "question_type": null,
+      "correct": false
+    }
+  ],
+  "type_statistics": {
+    "null": {
+      "total": 200,
+      "correct": 109,
+      "incorrect": 91,
+      "accuracy": 0.545
+    }
+  }
+}

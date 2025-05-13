@@ -1,0 +1,401 @@
+question,expected_answer,model_answer,question_type,correct
+"Question: What is 586 minus 164?
+Answer:",422,422,,True
+"Question: What is 279 minus 481?
+Answer:",-202,-102,,False
+"Question: What is 308 minus 283?
+Answer:",25,25,,True
+"Question: What is 905 minus 582?
+Answer:",323,423,,False
+"Question: What is 557 minus 71?
+Answer:",486,486,,True
+"Question: What is 621 minus 739?
+Answer:",-118,-118,,True
+"Question: What is 818 minus 53?
+Answer:",765,765,,True
+"Question: What is 668 minus 920?
+Answer:",-252,-252,,True
+"Question: What is 124 minus 780?
+Answer:",-656,-656,,True
+"Question: What is 236 minus 52?
+Answer:",184,184,,True
+"Question: What is 543 minus 692?
+Answer:",-149,-149,,True
+"Question: What is 10 minus 831?
+Answer:",-821,-821,,True
+"Question: What is 801 minus 589?
+Answer:",212,212,,True
+"Question: What is 421 minus 235?
+Answer:",186,186,,True
+"Question: What is 565 minus 235?
+Answer:",330,330,,True
+"Question: What is 150 minus 804?
+Answer:",-654,-654,,True
+"Question: What is 124 minus 513?
+Answer:",-389,491,,False
+"Question: What is 602 minus 76?
+Answer:",526,526,,True
+"Question: What is 729 minus 438?
+Answer:",291,291,,True
+"Question: What is 993 minus 988?
+Answer:",5,5,,True
+"Question: What is 637 minus 347?
+Answer:",290,290,,True
+"Question: What is 345 minus 707?
+Answer:",-362,-362,,True
+"Question: What is 392 minus 182?
+Answer:",210,210,,True
+"Question: What is 836 minus 383?
+Answer:",453,453,,True
+"Question: What is 435 minus 537?
+Answer:",-102,-102,,True
+"Question: What is 948 minus 649?
+Answer:",299,299,,True
+"Question: What is 734 minus 597?
+Answer:",137,237,,False
+"Question: What is 928 minus 682?
+Answer:",246,246,,True
+"Question: What is 299 minus 85?
+Answer:",214,214,,True
+"Question: What is 18 minus 167?
+Answer:",-149,-149,,True
+"Question: What is 589 minus 117?
+Answer:",472,472,,True
+"Question: What is 805 minus 879?
+Answer:",-74,-74,,True
+"Question: What is 78 minus 2?
+Answer:",76,76,,True
+"Question: What is 669 minus 88?
+Answer:",581,581,,True
+"Question: What is 247 minus 270?
+Answer:",-23,-23,,True
+"Question: What is 984 minus 833?
+Answer:",151,151,,True
+"Question: What is 736 minus 588?
+Answer:",148,248,,False
+"Question: What is 981 minus 392?
+Answer:",589,589,,True
+"Question: What is 724 minus 724?
+Answer:",0,0,,True
+"Question: What is 983 minus 489?
+Answer:",494,494,,True
+"Question: What is 256 minus 574?
+Answer:",-318,-318,,True
+"Question: What is 657 minus 951?
+Answer:",-294,-294,,True
+"Question: What is 653 minus 893?
+Answer:",-240,-240,,True
+"Question: What is 300 minus 717?
+Answer:",-417,-417,,True
+"Question: What is 177 minus 71?
+Answer:",106,106,,True
+"Question: What is 987 minus 314?
+Answer:",673,673,,True
+"Question: What is 811 minus 249?
+Answer:",562,562,,True
+"Question: What is 124 minus 720?
+Answer:",-596,-696,,False
+"Question: What is 184 minus 718?
+Answer:",-534,-534,,True
+"Question: What is 114 minus 377?
+Answer:",-263,-263,,True
+"Question: What is 945 minus 66?
+Answer:",879,879,,True
+"Question: What is 348 minus 750?
+Answer:",-402,-402,,True
+"Question: What is 284 minus 990?
+Answer:",-706,-706,,True
+"Question: What is 40 minus 312?
+Answer:",-272,-272,,True
+"Question: What is 245 minus 932?
+Answer:",-687,-687,,True
+"Question: What is 705 minus 959?
+Answer:",-254,-254,,True
+"Question: What is 92 minus 944?
+Answer:",-852,-852,,True
+"Question: What is 764 minus 462?
+Answer:",302,302,,True
+"Question: What is 236 minus 670?
+Answer:",-434,-434,,True
+"Question: What is 386 minus 902?
+Answer:",-516,-516,,True
+"Question: What is 641 minus 109?
+Answer:",532,532,,True
+"Question: What is 379 minus 383?
+Answer:",-4,-4,,True
+"Question: What is 872 minus 393?
+Answer:",479,489,,False
+"Question: What is 368 minus 951?
+Answer:",-583,-583,,True
+"Question: What is 777 minus 918?
+Answer:",-141,-141,,True
+"Question: What is 506 minus 745?
+Answer:",-239,-239,,True
+"Question: What is 524 minus 229?
+Answer:",295,395,,False
+"Question: What is 859 minus 536?
+Answer:",323,323,,True
+"Question: What is 586 minus 181?
+Answer:",405,405,,True
+"Question: What is 452 minus 78?
+Answer:",374,374,,True
+"Question: What is 862 minus 620?
+Answer:",242,242,,True
+"Question: What is 209 minus 661?
+Answer:",-452,-452,,True
+"Question: What is 154 minus 874?
+Answer:",-720,-720,,True
+"Question: What is 635 minus 809?
+Answer:",-174,-174,,True
+"Question: What is 162 minus 836?
+Answer:",-674,-674,,True
+"Question: What is 162 minus 392?
+Answer:",-230,-230,,True
+"Question: What is 383 minus 696?
+Answer:",-313,-313,,True
+"Question: What is 229 minus 656?
+Answer:",-427,-427,,True
+"Question: What is 735 minus 39?
+Answer:",696,686,,False
+"Question: What is 374 minus 543?
+Answer:",-169,-169,,True
+"Question: What is 236 minus 342?
+Answer:",-106,-106,,True
+"Question: What is 529 minus 812?
+Answer:",-283,-283,,True
+"Question: What is 683 minus 15?
+Answer:",668,668,,True
+"Question: What is 338 minus 281?
+Answer:",57,57,,True
+"Question: What is 895 minus 946?
+Answer:",-51,-51,,True
+"Question: What is 723 minus 22?
+Answer:",701,701,,True
+"Question: What is 38 minus 488?
+Answer:",-450,-450,,True
+"Question: What is 53 minus 30?
+Answer:",23,23,,True
+"Question: What is 802 minus 707?
+Answer:",95,105,,False
+"Question: What is 4 minus 286?
+Answer:",-282,-282,,True
+"Question: What is 50 minus 926?
+Answer:",-876,-876,,True
+"Question: What is 704 minus 217?
+Answer:",487,487,,True
+"Question: What is 817 minus 46?
+Answer:",771,771,,True
+"Question: What is 736 minus 929?
+Answer:",-193,-193,,True
+"Question: What is 893 minus 797?
+Answer:",96,96,,True
+"Question: What is 168 minus 358?
+Answer:",-190,-290,,False
+"Question: What is 317 minus 95?
+Answer:",222,222,,True
+"Question: What is 236 minus 859?
+Answer:",-623,-623,,True
+"Question: What is 36 minus 695?
+Answer:",-659,-669,,False
+"Question: What is 551 minus 435?
+Answer:",116,116,,True
+"Question: What is 695 minus 794?
+Answer:",-99,-99,,True
+"Question: What is 491 minus 994?
+Answer:",-503,-403,,False
+"Question: What is 761 minus 701?
+Answer:",60,60,,True
+"Question: What is 62 minus 715?
+Answer:",-653,-653,,True
+"Question: What is 337 minus 706?
+Answer:",-369,-369,,True
+"Question: What is 946 minus 336?
+Answer:",610,490,,False
+"Question: What is 936 minus 926?
+Answer:",10,10,,True
+"Question: What is 461 minus 966?
+Answer:",-505,-505,,True
+"Question: What is 979 minus 506?
+Answer:",473,473,,True
+"Question: What is 998 minus 990?
+Answer:",8,8,,True
+"Question: What is 197 minus 812?
+Answer:",-615,-615,,True
+"Question: What is 974 minus 7?
+Answer:",967,967,,True
+"Question: What is 766 minus 32?
+Answer:",734,734,,True
+"Question: What is 939 minus 88?
+Answer:",851,851,,True
+"Question: What is 21 minus 990?
+Answer:",-969,-969,,True
+"Question: What is 694 minus 228?
+Answer:",466,466,,True
+"Question: What is 582 minus 662?
+Answer:",-80,-80,,True
+"Question: What is 681 minus 282?
+Answer:",399,399,,True
+"Question: What is 794 minus 686?
+Answer:",108,108,,True
+"Question: What is 307 minus 351?
+Answer:",-44,-44,,True
+"Question: What is 277 minus 286?
+Answer:",-9,-19,,False
+"Question: What is 317 minus 994?
+Answer:",-677,-677,,True
+"Question: What is 417 minus 503?
+Answer:",-86,-86,,True
+"Question: What is 878 minus 203?
+Answer:",675,675,,True
+"Question: What is 104 minus 152?
+Answer:",-48,-48,,True
+"Question: What is 982 minus 36?
+Answer:",946,946,,True
+"Question: What is 245 minus 874?
+Answer:",-629,-629,,True
+"Question: What is 504 minus 424?
+Answer:",80,180,,False
+"Question: What is 917 minus 67?
+Answer:",850,850,,True
+"Question: What is 700 minus 826?
+Answer:",-126,-126,,True
+"Question: What is 636 minus 363?
+Answer:",273,273,,True
+"Question: What is 740 minus 762?
+Answer:",-22,-22,,True
+"Question: What is 232 minus 374?
+Answer:",-142,-142,,True
+"Question: What is 246 minus 318?
+Answer:",-72,-72,,True
+"Question: What is 662 minus 76?
+Answer:",586,586,,True
+"Question: What is 137 minus 550?
+Answer:",-413,413,,False
+"Question: What is 249 minus 960?
+Answer:",-711,-711,,True
+"Question: What is 125 minus 367?
+Answer:",-242,-242,,True
+"Question: What is 381 minus 650?
+Answer:",-269,-269,,True
+"Question: What is 310 minus 493?
+Answer:",-183,-383,,False
+"Question: What is 37 minus 185?
+Answer:",-148,158,,False
+"Question: What is 330 minus 535?
+Answer:",-205,-205,,True
+"Question: What is 533 minus 79?
+Answer:",454,454,,True
+"Question: What is 953 minus 928?
+Answer:",25,25,,True
+"Question: What is 734 minus 392?
+Answer:",342,-342,,False
+"Question: What is 673 minus 421?
+Answer:",252,252,,True
+"Question: What is 451 minus 518?
+Answer:",-67,-67,,True
+"Question: What is 984 minus 57?
+Answer:",927,927,,True
+"Question: What is 363 minus 667?
+Answer:",-304,-304,,True
+"Question: What is 349 minus 554?
+Answer:",-205,-205,,True
+"Question: What is 258 minus 608?
+Answer:",-350,-350,,True
+"Question: What is 270 minus 990?
+Answer:",-720,-720,,True
+"Question: What is 522 minus 881?
+Answer:",-359,-359,,True
+"Question: What is 193 minus 942?
+Answer:",-749,-749,,True
+"Question: What is 978 minus 558?
+Answer:",420,420,,True
+"Question: What is 702 minus 546?
+Answer:",156,156,,True
+"Question: What is 233 minus 921?
+Answer:",-688,-688,,True
+"Question: What is 9 minus 37?
+Answer:",-28,38,,False
+"Question: What is 985 minus 408?
+Answer:",577,577,,True
+"Question: What is 439 minus 903?
+Answer:",-464,-464,,True
+"Question: What is 252 minus 611?
+Answer:",-359,-359,,True
+"Question: What is 780 minus 661?
+Answer:",119,119,,True
+"Question: What is 343 minus 525?
+Answer:",-182,-182,,True
+"Question: What is 436 minus 600?
+Answer:",-164,-164,,True
+"Question: What is 761 minus 691?
+Answer:",70,170,,False
+"Question: What is 95 minus 994?
+Answer:",-899,-909,,False
+"Question: What is 439 minus 52?
+Answer:",387,387,,True
+"Question: What is 763 minus 574?
+Answer:",189,189,,True
+"Question: What is 887 minus 429?
+Answer:",458,458,,True
+"Question: What is 395 minus 832?
+Answer:",-437,-437,,True
+"Question: What is 496 minus 728?
+Answer:",-232,-232,,True
+"Question: What is 733 minus 693?
+Answer:",40,120,,False
+"Question: What is 177 minus 142?
+Answer:",35,35,,True
+"Question: What is 193 minus 669?
+Answer:",-476,-476,,True
+"Question: What is 568 minus 904?
+Answer:",-336,-336,,True
+"Question: What is 664 minus 884?
+Answer:",-220,-220,,True
+"Question: What is 440 minus 635?
+Answer:",-195,-295,,False
+"Question: What is 841 minus 99?
+Answer:",742,742,,True
+"Question: What is 154 minus 530?
+Answer:",-376,-376,,True
+"Question: What is 766 minus 537?
+Answer:",229,229,,True
+"Question: What is 466 minus 94?
+Answer:",372,372,,True
+"Question: What is 702 minus 982?
+Answer:",-280,-280,,True
+"Question: What is 859 minus 588?
+Answer:",271,271,,True
+"Question: What is 39 minus 293?
+Answer:",-254,-254,,True
+"Question: What is 233 minus 429?
+Answer:",-196,-196,,True
+"Question: What is 925 minus 896?
+Answer:",29,29,,True
+"Question: What is 761 minus 212?
+Answer:",549,549,,True
+"Question: What is 139 minus 561?
+Answer:",-422,422,,False
+"Question: What is 728 minus 533?
+Answer:",195,195,,True
+"Question: What is 934 minus 734?
+Answer:",200,200,,True
+"Question: What is 826 minus 930?
+Answer:",-104,-104,,True
+"Question: What is 918 minus 241?
+Answer:",677,877,,False
+"Question: What is 164 minus 830?
+Answer:",-666,-666,,True
+"Question: What is 875 minus 657?
+Answer:",218,218,,True
+"Question: What is 550 minus 510?
+Answer:",40,40,,True
+"Question: What is 523 minus 258?
+Answer:",265,-265,,False
+"Question: What is 512 minus 712?
+Answer:",-200,400,,False
+"Question: What is 845 minus 776?
+Answer:",69,69,,True
+"Question: What is 521 minus 237?
+Answer:",284,-284,,False
+"Question: What is 146 minus 910?
+Answer:",-764,864,,False

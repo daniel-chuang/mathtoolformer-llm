@@ -1,0 +1,1420 @@
+{
+  "timestamp": "20250501_140507",
+  "model_name": "HuggingFaceTB/SmolLM2-135M",
+  "dataset_name": "arithmetic_arithmetic_3ds",
+  "aggregated_metrics": {
+    "accuracy": 0.005,
+    "correct": 1,
+    "total": 200
+  },
+  "question_results": [
+    {
+      "question": "Question: What is 586 minus 164?\nAnswer:",
+      "expected_answer": "422",
+      "model_answer": "102",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 279 minus 481?\nAnswer:",
+      "expected_answer": "-202",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 308 minus 283?\nAnswer:",
+      "expected_answer": "25",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 905 minus 582?\nAnswer:",
+      "expected_answer": "323",
+      "model_answer": "582",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 557 minus 71?\nAnswer:",
+      "expected_answer": "486",
+      "model_answer": "557",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 621 minus 739?\nAnswer:",
+      "expected_answer": "-118",
+      "model_answer": "621",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 818 minus 53?\nAnswer:",
+      "expected_answer": "765",
+      "model_answer": "109",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 668 minus 920?\nAnswer:",
+      "expected_answer": "-252",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 124 minus 780?\nAnswer:",
+      "expected_answer": "-656",
+      "model_answer": "78",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 236 minus 52?\nAnswer:",
+      "expected_answer": "184",
+      "model_answer": "52",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 543 minus 692?\nAnswer:",
+      "expected_answer": "-149",
+      "model_answer": "69",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 10 minus 831?\nAnswer:",
+      "expected_answer": "-821",
+      "model_answer": "100",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 801 minus 589?\nAnswer:",
+      "expected_answer": "212",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 421 minus 235?\nAnswer:",
+      "expected_answer": "186",
+      "model_answer": "235",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 565 minus 235?\nAnswer:",
+      "expected_answer": "330",
+      "model_answer": "235",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 150 minus 804?\nAnswer:",
+      "expected_answer": "-654",
+      "model_answer": "150",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 124 minus 513?\nAnswer:",
+      "expected_answer": "-389",
+      "model_answer": "124",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 602 minus 76?\nAnswer:",
+      "expected_answer": "526",
+      "model_answer": "108",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 729 minus 438?\nAnswer:",
+      "expected_answer": "291",
+      "model_answer": "297",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 993 minus 988?\nAnswer:",
+      "expected_answer": "5",
+      "model_answer": "98",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 637 minus 347?\nAnswer:",
+      "expected_answer": "290",
+      "model_answer": "109",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 345 minus 707?\nAnswer:",
+      "expected_answer": "-362",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 392 minus 182?\nAnswer:",
+      "expected_answer": "210",
+      "model_answer": "182",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 836 minus 383?\nAnswer:",
+      "expected_answer": "453",
+      "model_answer": "11",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 435 minus 537?\nAnswer:",
+      "expected_answer": "-102",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 948 minus 649?\nAnswer:",
+      "expected_answer": "299",
+      "model_answer": "129",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 734 minus 597?\nAnswer:",
+      "expected_answer": "137",
+      "model_answer": "129",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 928 minus 682?\nAnswer:",
+      "expected_answer": "246",
+      "model_answer": "120",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 299 minus 85?\nAnswer:",
+      "expected_answer": "214",
+      "model_answer": "101",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 18 minus 167?\nAnswer:",
+      "expected_answer": "-149",
+      "model_answer": "18",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 589 minus 117?\nAnswer:",
+      "expected_answer": "472",
+      "model_answer": "117",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 805 minus 879?\nAnswer:",
+      "expected_answer": "-74",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 78 minus 2?\nAnswer:",
+      "expected_answer": "76",
+      "model_answer": "77",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 669 minus 88?\nAnswer:",
+      "expected_answer": "581",
+      "model_answer": "107",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 247 minus 270?\nAnswer:",
+      "expected_answer": "-23",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 984 minus 833?\nAnswer:",
+      "expected_answer": "151",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 736 minus 588?\nAnswer:",
+      "expected_answer": "148",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 981 minus 392?\nAnswer:",
+      "expected_answer": "589",
+      "model_answer": "392",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 724 minus 724?\nAnswer:",
+      "expected_answer": "0",
+      "model_answer": "0",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 983 minus 489?\nAnswer:",
+      "expected_answer": "494",
+      "model_answer": "489",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 256 minus 574?\nAnswer:",
+      "expected_answer": "-318",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 657 minus 951?\nAnswer:",
+      "expected_answer": "-294",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 653 minus 893?\nAnswer:",
+      "expected_answer": "-240",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 300 minus 717?\nAnswer:",
+      "expected_answer": "-417",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 177 minus 71?\nAnswer:",
+      "expected_answer": "106",
+      "model_answer": "71",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 987 minus 314?\nAnswer:",
+      "expected_answer": "673",
+      "model_answer": "314",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 811 minus 249?\nAnswer:",
+      "expected_answer": "562",
+      "model_answer": "109",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 124 minus 720?\nAnswer:",
+      "expected_answer": "-596",
+      "model_answer": "124",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 184 minus 718?\nAnswer:",
+      "expected_answer": "-534",
+      "model_answer": "718",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 114 minus 377?\nAnswer:",
+      "expected_answer": "-263",
+      "model_answer": "377",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 945 minus 66?\nAnswer:",
+      "expected_answer": "879",
+      "model_answer": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 348 minus 750?\nAnswer:",
+      "expected_answer": "-402",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 284 minus 990?\nAnswer:",
+      "expected_answer": "-706",
+      "model_answer": "12",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 40 minus 312?\nAnswer:",
+      "expected_answer": "-272",
+      "model_answer": "10",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 245 minus 932?\nAnswer:",
+      "expected_answer": "-687",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 705 minus 959?\nAnswer:",
+      "expected_answer": "-254",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 92 minus 944?\nAnswer:",
+      "expected_answer": "-852",
+      "model_answer": "92",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 764 minus 462?\nAnswer:",
+      "expected_answer": "302",
+      "model_answer": "298",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 236 minus 670?\nAnswer:",
+      "expected_answer": "-434",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 386 minus 902?\nAnswer:",
+      "expected_answer": "-516",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 641 minus 109?\nAnswer:",
+      "expected_answer": "532",
+      "model_answer": "109",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 379 minus 383?\nAnswer:",
+      "expected_answer": "-4",
+      "model_answer": "101",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 872 minus 393?\nAnswer:",
+      "expected_answer": "479",
+      "model_answer": "393",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 368 minus 951?\nAnswer:",
+      "expected_answer": "-583",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 777 minus 918?\nAnswer:",
+      "expected_answer": "-141",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 506 minus 745?\nAnswer:",
+      "expected_answer": "-239",
+      "model_answer": "5",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 524 minus 229?\nAnswer:",
+      "expected_answer": "295",
+      "model_answer": "229",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 859 minus 536?\nAnswer:",
+      "expected_answer": "323",
+      "model_answer": "53",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 586 minus 181?\nAnswer:",
+      "expected_answer": "405",
+      "model_answer": "181",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 452 minus 78?\nAnswer:",
+      "expected_answer": "374",
+      "model_answer": "109",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 862 minus 620?\nAnswer:",
+      "expected_answer": "242",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 209 minus 661?\nAnswer:",
+      "expected_answer": "-452",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 154 minus 874?\nAnswer:",
+      "expected_answer": "-720",
+      "model_answer": "874",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 635 minus 809?\nAnswer:",
+      "expected_answer": "-174",
+      "model_answer": "100",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 162 minus 836?\nAnswer:",
+      "expected_answer": "-674",
+      "model_answer": "836",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 162 minus 392?\nAnswer:",
+      "expected_answer": "-230",
+      "model_answer": "162",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 383 minus 696?\nAnswer:",
+      "expected_answer": "-313",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 229 minus 656?\nAnswer:",
+      "expected_answer": "-427",
+      "model_answer": "102",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 735 minus 39?\nAnswer:",
+      "expected_answer": "696",
+      "model_answer": "39",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 374 minus 543?\nAnswer:",
+      "expected_answer": "-169",
+      "model_answer": "2000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 236 minus 342?\nAnswer:",
+      "expected_answer": "-106",
+      "model_answer": "10",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 529 minus 812?\nAnswer:",
+      "expected_answer": "-283",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 683 minus 15?\nAnswer:",
+      "expected_answer": "668",
+      "model_answer": "51",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 338 minus 281?\nAnswer:",
+      "expected_answer": "57",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 895 minus 946?\nAnswer:",
+      "expected_answer": "-51",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 723 minus 22?\nAnswer:",
+      "expected_answer": "701",
+      "model_answer": "44",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 38 minus 488?\nAnswer:",
+      "expected_answer": "-450",
+      "model_answer": "38",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 53 minus 30?\nAnswer:",
+      "expected_answer": "23",
+      "model_answer": "10",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 802 minus 707?\nAnswer:",
+      "expected_answer": "95",
+      "model_answer": "707",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 4 minus 286?\nAnswer:",
+      "expected_answer": "-282",
+      "model_answer": "10",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 50 minus 926?\nAnswer:",
+      "expected_answer": "-876",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 704 minus 217?\nAnswer:",
+      "expected_answer": "487",
+      "model_answer": "70",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 817 minus 46?\nAnswer:",
+      "expected_answer": "771",
+      "model_answer": "20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 736 minus 929?\nAnswer:",
+      "expected_answer": "-193",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 893 minus 797?\nAnswer:",
+      "expected_answer": "96",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 168 minus 358?\nAnswer:",
+      "expected_answer": "-190",
+      "model_answer": "358",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 317 minus 95?\nAnswer:",
+      "expected_answer": "222",
+      "model_answer": "95",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 236 minus 859?\nAnswer:",
+      "expected_answer": "-623",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 36 minus 695?\nAnswer:",
+      "expected_answer": "-659",
+      "model_answer": "695",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 551 minus 435?\nAnswer:",
+      "expected_answer": "116",
+      "model_answer": "435",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 695 minus 794?\nAnswer:",
+      "expected_answer": "-99",
+      "model_answer": "794",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 491 minus 994?\nAnswer:",
+      "expected_answer": "-503",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 761 minus 701?\nAnswer:",
+      "expected_answer": "60",
+      "model_answer": "701",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 62 minus 715?\nAnswer:",
+      "expected_answer": "-653",
+      "model_answer": "105",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 337 minus 706?\nAnswer:",
+      "expected_answer": "-369",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 946 minus 336?\nAnswer:",
+      "expected_answer": "610",
+      "model_answer": "946",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 936 minus 926?\nAnswer:",
+      "expected_answer": "10",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 461 minus 966?\nAnswer:",
+      "expected_answer": "-505",
+      "model_answer": "966",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 979 minus 506?\nAnswer:",
+      "expected_answer": "473",
+      "model_answer": "5",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 998 minus 990?\nAnswer:",
+      "expected_answer": "8",
+      "model_answer": "990",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 197 minus 812?\nAnswer:",
+      "expected_answer": "-615",
+      "model_answer": "197",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 974 minus 7?\nAnswer:",
+      "expected_answer": "967",
+      "model_answer": "973",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 766 minus 32?\nAnswer:",
+      "expected_answer": "734",
+      "model_answer": "49",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 939 minus 88?\nAnswer:",
+      "expected_answer": "851",
+      "model_answer": "88",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 21 minus 990?\nAnswer:",
+      "expected_answer": "-969",
+      "model_answer": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 694 minus 228?\nAnswer:",
+      "expected_answer": "466",
+      "model_answer": "109",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 582 minus 662?\nAnswer:",
+      "expected_answer": "-80",
+      "model_answer": "111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 681 minus 282?\nAnswer:",
+      "expected_answer": "399",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 794 minus 686?\nAnswer:",
+      "expected_answer": "108",
+      "model_answer": "142",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 307 minus 351?\nAnswer:",
+      "expected_answer": "-44",
+      "model_answer": "351",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 277 minus 286?\nAnswer:",
+      "expected_answer": "-9",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 317 minus 994?\nAnswer:",
+      "expected_answer": "-677",
+      "model_answer": "994",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 417 minus 503?\nAnswer:",
+      "expected_answer": "-86",
+      "model_answer": "503",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 878 minus 203?\nAnswer:",
+      "expected_answer": "675",
+      "model_answer": "878",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 104 minus 152?\nAnswer:",
+      "expected_answer": "-48",
+      "model_answer": "104",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 982 minus 36?\nAnswer:",
+      "expected_answer": "946",
+      "model_answer": "129",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 245 minus 874?\nAnswer:",
+      "expected_answer": "-629",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 504 minus 424?\nAnswer:",
+      "expected_answer": "80",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 917 minus 67?\nAnswer:",
+      "expected_answer": "850",
+      "model_answer": "-109",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 700 minus 826?\nAnswer:",
+      "expected_answer": "-126",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 636 minus 363?\nAnswer:",
+      "expected_answer": "273",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 740 minus 762?\nAnswer:",
+      "expected_answer": "-22",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 232 minus 374?\nAnswer:",
+      "expected_answer": "-142",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 246 minus 318?\nAnswer:",
+      "expected_answer": "-72",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 662 minus 76?\nAnswer:",
+      "expected_answer": "586",
+      "model_answer": "662",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 137 minus 550?\nAnswer:",
+      "expected_answer": "-413",
+      "model_answer": "137",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 249 minus 960?\nAnswer:",
+      "expected_answer": "-711",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 125 minus 367?\nAnswer:",
+      "expected_answer": "-242",
+      "model_answer": "125",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 381 minus 650?\nAnswer:",
+      "expected_answer": "-269",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 310 minus 493?\nAnswer:",
+      "expected_answer": "-183",
+      "model_answer": "493",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 37 minus 185?\nAnswer:",
+      "expected_answer": "-148",
+      "model_answer": "185",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 330 minus 535?\nAnswer:",
+      "expected_answer": "-205",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 533 minus 79?\nAnswer:",
+      "expected_answer": "454",
+      "model_answer": "4",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 953 minus 928?\nAnswer:",
+      "expected_answer": "25",
+      "model_answer": "928",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 734 minus 392?\nAnswer:",
+      "expected_answer": "342",
+      "model_answer": "392",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 673 minus 421?\nAnswer:",
+      "expected_answer": "252",
+      "model_answer": "67",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 451 minus 518?\nAnswer:",
+      "expected_answer": "-67",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 984 minus 57?\nAnswer:",
+      "expected_answer": "927",
+      "model_answer": "57",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 363 minus 667?\nAnswer:",
+      "expected_answer": "-304",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 349 minus 554?\nAnswer:",
+      "expected_answer": "-205",
+      "model_answer": "109",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 258 minus 608?\nAnswer:",
+      "expected_answer": "-350",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 270 minus 990?\nAnswer:",
+      "expected_answer": "-720",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 522 minus 881?\nAnswer:",
+      "expected_answer": "-359",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 193 minus 942?\nAnswer:",
+      "expected_answer": "-749",
+      "model_answer": "193",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 978 minus 558?\nAnswer:",
+      "expected_answer": "420",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 702 minus 546?\nAnswer:",
+      "expected_answer": "156",
+      "model_answer": "702",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 233 minus 921?\nAnswer:",
+      "expected_answer": "-688",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9 minus 37?\nAnswer:",
+      "expected_answer": "-28",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 985 minus 408?\nAnswer:",
+      "expected_answer": "577",
+      "model_answer": "408",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 439 minus 903?\nAnswer:",
+      "expected_answer": "-464",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 252 minus 611?\nAnswer:",
+      "expected_answer": "-359",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 780 minus 661?\nAnswer:",
+      "expected_answer": "119",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 343 minus 525?\nAnswer:",
+      "expected_answer": "-182",
+      "model_answer": "102",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 436 minus 600?\nAnswer:",
+      "expected_answer": "-164",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 761 minus 691?\nAnswer:",
+      "expected_answer": "70",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 95 minus 994?\nAnswer:",
+      "expected_answer": "-899",
+      "model_answer": "994",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 439 minus 52?\nAnswer:",
+      "expected_answer": "387",
+      "model_answer": "439",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 763 minus 574?\nAnswer:",
+      "expected_answer": "189",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 887 minus 429?\nAnswer:",
+      "expected_answer": "458",
+      "model_answer": "429",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 395 minus 832?\nAnswer:",
+      "expected_answer": "-437",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 496 minus 728?\nAnswer:",
+      "expected_answer": "-232",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 733 minus 693?\nAnswer:",
+      "expected_answer": "40",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 177 minus 142?\nAnswer:",
+      "expected_answer": "35",
+      "model_answer": "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 193 minus 669?\nAnswer:",
+      "expected_answer": "-476",
+      "model_answer": "193",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 568 minus 904?\nAnswer:",
+      "expected_answer": "-336",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 664 minus 884?\nAnswer:",
+      "expected_answer": "-220",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 440 minus 635?\nAnswer:",
+      "expected_answer": "-195",
+      "model_answer": "1025",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 841 minus 99?\nAnswer:",
+      "expected_answer": "742",
+      "model_answer": "9",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 154 minus 530?\nAnswer:",
+      "expected_answer": "-376",
+      "model_answer": "154",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 766 minus 537?\nAnswer:",
+      "expected_answer": "229",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 466 minus 94?\nAnswer:",
+      "expected_answer": "372",
+      "model_answer": "5",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 702 minus 982?\nAnswer:",
+      "expected_answer": "-280",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 859 minus 588?\nAnswer:",
+      "expected_answer": "271",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 39 minus 293?\nAnswer:",
+      "expected_answer": "-254",
+      "model_answer": "293",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 233 minus 429?\nAnswer:",
+      "expected_answer": "-196",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 925 minus 896?\nAnswer:",
+      "expected_answer": "29",
+      "model_answer": "12",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 761 minus 212?\nAnswer:",
+      "expected_answer": "549",
+      "model_answer": "761",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 139 minus 561?\nAnswer:",
+      "expected_answer": "-422",
+      "model_answer": "561",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 728 minus 533?\nAnswer:",
+      "expected_answer": "195",
+      "model_answer": "109",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 934 minus 734?\nAnswer:",
+      "expected_answer": "200",
+      "model_answer": "934",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 826 minus 930?\nAnswer:",
+      "expected_answer": "-104",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 918 minus 241?\nAnswer:",
+      "expected_answer": "677",
+      "model_answer": "109",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 164 minus 830?\nAnswer:",
+      "expected_answer": "-666",
+      "model_answer": "164",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 875 minus 657?\nAnswer:",
+      "expected_answer": "218",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 550 minus 510?\nAnswer:",
+      "expected_answer": "40",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 523 minus 258?\nAnswer:",
+      "expected_answer": "265",
+      "model_answer": "258",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 512 minus 712?\nAnswer:",
+      "expected_answer": "-200",
+      "model_answer": "1",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 845 minus 776?\nAnswer:",
+      "expected_answer": "69",
+      "model_answer": "776",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 521 minus 237?\nAnswer:",
+      "expected_answer": "284",
+      "model_answer": "109",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 146 minus 910?\nAnswer:",
+      "expected_answer": "-764",
+      "model_answer": "146",
+      "question_type": null,
+      "correct": false
+    }
+  ],
+  "type_statistics": {
+    "null": {
+      "total": 200,
+      "correct": 1,
+      "incorrect": 199,
+      "accuracy": 0.005
+    }
+  }
+}

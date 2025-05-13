@@ -1,0 +1,401 @@
+question,expected_answer,model_answer,question_type,correct
+"Question: What is (4 - 2) + 7?
+Answer:",9,1,,False
+"Question: What is (1 + 8) - 8?
+Answer:",1,1,,True
+"Question: What is (4 - 3) - 4?
+Answer:",-3,1,,False
+"Question: What is (1 + 2) - 7?
+Answer:",-4,1,,False
+"Question: What is (1 * 3) - 6?
+Answer:",-3,3,,False
+"Question: What is (3 + 7) * 2?
+Answer:",20,21,,False
+"Question: What is (8 * 5) - 9?
+Answer:",31,3,,False
+"Question: What is (4 + 7) * 6?
+Answer:",66,50,,False
+"Question: What is (9 - 7) * 1?
+Answer:",2,1,,False
+"Question: What is (4 * 8) * 8?
+Answer:",256,128,,False
+"Question: What is (7 - 5) * 1?
+Answer:",2,2,,True
+"Question: What is (8 * 9) - 6?
+Answer:",66,41,,False
+"Question: What is (6 * 3) - 3?
+Answer:",15,15,,True
+"Question: What is (9 * 5) - 8?
+Answer:",37,3,,False
+"Question: What is (7 + 1) * 4?
+Answer:",32,23,,False
+"Question: What is (7 * 1) * 1?
+Answer:",7,14,,False
+"Question: What is (3 + 9) * 3?
+Answer:",36,30,,False
+"Question: What is (3 * 5) - 6?
+Answer:",9,2,,False
+"Question: What is (5 - 3) - 9?
+Answer:",-7,2,,False
+"Question: What is (8 * 9) + 5?
+Answer:",77,53,,False
+"Question: What is (4 + 6) * 2?
+Answer:",20,30,,False
+"Question: What is (8 * 3) * 3?
+Answer:",72,42,,False
+"Question: What is (9 + 8) + 7?
+Answer:",24,26,,False
+"Question: What is (6 - 7) * 3?
+Answer:",-3,1,,False
+"Question: What is (7 - 2) - 8?
+Answer:",-3,1,,False
+"Question: What is (3 + 7) + 9?
+Answer:",19,20,,False
+"Question: What is (5 * 1) - 8?
+Answer:",-3,3,,False
+"Question: What is (5 + 2) - 2?
+Answer:",5,3,,False
+"Question: What is (5 * 5) + 4?
+Answer:",29,33,,False
+"Question: What is (8 - 1) * 3?
+Answer:",21,8,,False
+"Question: What is (8 * 4) + 8?
+Answer:",40,30,,False
+"Question: What is (5 - 5) - 2?
+Answer:",-2,1,,False
+"Question: What is (7 * 5) - 4?
+Answer:",31,23,,False
+"Question: What is (6 + 1) - 7?
+Answer:",0,1,,False
+"Question: What is (1 * 5) + 9?
+Answer:",14,14,,True
+"Question: What is (4 * 7) * 9?
+Answer:",252,102,,False
+"Question: What is (5 + 2) * 5?
+Answer:",35,35,,True
+"Question: What is (5 * 7) * 4?
+Answer:",140,10,,False
+"Question: What is (6 - 5) + 7?
+Answer:",8,2,,False
+"Question: What is (3 - 6) * 3?
+Answer:",-9,1,,False
+"Question: What is (4 - 5) * 4?
+Answer:",-4,1,,False
+"Question: What is (9 + 4) - 3?
+Answer:",10,5,,False
+"Question: What is (7 + 4) + 7?
+Answer:",18,20,,False
+"Question: What is (5 * 7) * 1?
+Answer:",35,40,,False
+"Question: What is (7 - 5) + 5?
+Answer:",7,2,,False
+"Question: What is (1 * 4) * 8?
+Answer:",32,32,,True
+"Question: What is (7 * 1) - 3?
+Answer:",4,4,,True
+"Question: What is (9 + 7) - 8?
+Answer:",8,2,,False
+"Question: What is (2 + 7) + 7?
+Answer:",16,14,,False
+"Question: What is (9 * 6) - 5?
+Answer:",49,33,,False
+"Question: What is (5 + 8) - 1?
+Answer:",12,1,,False
+"Question: What is (7 - 6) + 6?
+Answer:",7,1,,False
+"Question: What is (1 * 1) * 4?
+Answer:",4,4,,True
+"Question: What is (7 * 1) * 3?
+Answer:",21,21,,True
+"Question: What is (5 * 3) + 8?
+Answer:",23,23,,True
+"Question: What is (4 - 5) * 3?
+Answer:",-3,1,,False
+"Question: What is (8 - 9) - 4?
+Answer:",-5,3,,False
+"Question: What is (1 - 7) * 8?
+Answer:",-48,1,,False
+"Question: What is (2 - 4) + 6?
+Answer:",4,2,,False
+"Question: What is (4 - 9) * 2?
+Answer:",-10,1,,False
+"Question: What is (4 - 1) - 2?
+Answer:",1,3,,False
+"Question: What is (4 * 8) - 9?
+Answer:",23,33,,False
+"Question: What is (7 - 9) - 1?
+Answer:",-3,2,,False
+"Question: What is (3 + 1) - 5?
+Answer:",-1,1,,False
+"Question: What is (4 + 1) * 6?
+Answer:",30,23,,False
+"Question: What is (7 * 4) + 8?
+Answer:",36,31,,False
+"Question: What is (5 - 3) * 5?
+Answer:",10,2,,False
+"Question: What is (5 - 9) * 4?
+Answer:",-16,1,,False
+"Question: What is (9 * 4) - 2?
+Answer:",34,33,,False
+"Question: What is (8 + 8) * 8?
+Answer:",128,120,,False
+"Question: What is (6 * 9) + 2?
+Answer:",56,43,,False
+"Question: What is (9 - 8) - 9?
+Answer:",-8,1,,False
+"Question: What is (6 + 9) * 3?
+Answer:",45,45,,True
+"Question: What is (3 * 4) * 6?
+Answer:",72,48,,False
+"Question: What is (9 - 9) * 6?
+Answer:",0,1,,False
+"Question: What is (9 - 1) * 3?
+Answer:",24,2,,False
+"Question: What is (5 + 3) - 6?
+Answer:",2,2,,True
+"Question: What is (4 + 7) + 9?
+Answer:",20,22,,False
+"Question: What is (9 * 2) * 1?
+Answer:",18,24,,False
+"Question: What is (7 + 1) + 3?
+Answer:",11,10,,False
+"Question: What is (6 * 1) * 4?
+Answer:",24,36,,False
+"Question: What is (8 * 8) - 5?
+Answer:",59,43,,False
+"Question: What is (8 + 1) + 4?
+Answer:",13,13,,True
+"Question: What is (8 + 5) * 5?
+Answer:",65,45,,False
+"Question: What is (4 * 3) - 8?
+Answer:",4,11,,False
+"Question: What is (1 + 9) + 3?
+Answer:",13,12,,False
+"Question: What is (8 + 2) - 8?
+Answer:",2,1,,False
+"Question: What is (8 * 7) - 8?
+Answer:",48,35,,False
+"Question: What is (4 - 7) * 2?
+Answer:",-6,1,,False
+"Question: What is (1 + 9) - 6?
+Answer:",4,2,,False
+"Question: What is (9 + 4) - 9?
+Answer:",4,5,,False
+"Question: What is (1 + 6) + 6?
+Answer:",13,13,,True
+"Question: What is (3 * 5) + 8?
+Answer:",23,23,,True
+"Question: What is (4 * 6) - 9?
+Answer:",15,21,,False
+"Question: What is (8 + 1) + 6?
+Answer:",15,15,,True
+"Question: What is (2 + 6) + 7?
+Answer:",15,13,,False
+"Question: What is (9 * 7) * 9?
+Answer:",567,105,,False
+"Question: What is (2 * 5) + 6?
+Answer:",16,23,,False
+"Question: What is (5 - 3) * 9?
+Answer:",18,1,,False
+"Question: What is (2 - 7) - 4?
+Answer:",-9,1,,False
+"Question: What is (5 - 1) * 9?
+Answer:",36,2,,False
+"Question: What is (9 - 8) + 5?
+Answer:",6,1,,False
+"Question: What is (7 - 7) - 9?
+Answer:",-9,1,,False
+"Question: What is (8 + 8) + 3?
+Answer:",19,21,,False
+"Question: What is (4 * 9) * 8?
+Answer:",288,104,,False
+"Question: What is (2 * 8) - 5?
+Answer:",11,13,,False
+"Question: What is (7 + 6) + 4?
+Answer:",17,23,,False
+"Question: What is (5 * 3) + 7?
+Answer:",22,22,,True
+"Question: What is (9 - 6) + 7?
+Answer:",10,1,,False
+"Question: What is (8 * 8) - 8?
+Answer:",56,40,,False
+"Question: What is (8 + 9) * 1?
+Answer:",17,43,,False
+"Question: What is (6 + 2) * 2?
+Answer:",16,14,,False
+"Question: What is (5 - 8) * 3?
+Answer:",-9,1,,False
+"Question: What is (1 - 2) - 1?
+Answer:",-2,1,,False
+"Question: What is (5 * 9) + 2?
+Answer:",47,43,,False
+"Question: What is (2 * 9) - 1?
+Answer:",17,0,,False
+"Question: What is (9 * 7) + 7?
+Answer:",70,55,,False
+"Question: What is (7 - 4) + 4?
+Answer:",7,3,,False
+"Question: What is (7 + 9) + 6?
+Answer:",22,24,,False
+"Question: What is (8 + 9) + 8?
+Answer:",25,25,,True
+"Question: What is (3 - 5) - 9?
+Answer:",-11,2,,False
+"Question: What is (2 + 5) * 1?
+Answer:",7,13,,False
+"Question: What is (3 + 8) + 7?
+Answer:",18,20,,False
+"Question: What is (4 * 7) * 4?
+Answer:",112,108,,False
+"Question: What is (4 - 9) * 6?
+Answer:",-30,1,,False
+"Question: What is (7 + 4) - 3?
+Answer:",8,3,,False
+"Question: What is (4 * 5) * 1?
+Answer:",20,30,,False
+"Question: What is (6 * 3) * 1?
+Answer:",18,33,,False
+"Question: What is (6 * 5) * 3?
+Answer:",90,15,,False
+"Question: What is (3 * 4) + 9?
+Answer:",21,23,,False
+"Question: What is (8 - 2) - 1?
+Answer:",5,1,,False
+"Question: What is (4 + 9) * 1?
+Answer:",13,33,,False
+"Question: What is (6 * 5) - 2?
+Answer:",28,23,,False
+"Question: What is (1 * 9) + 6?
+Answer:",15,25,,False
+"Question: What is (7 - 2) * 8?
+Answer:",40,10,,False
+"Question: What is (1 * 4) + 1?
+Answer:",5,0,,False
+"Question: What is (8 + 7) * 7?
+Answer:",105,70,,False
+"Question: What is (6 - 4) - 6?
+Answer:",-4,2,,False
+"Question: What is (3 - 3) + 7?
+Answer:",7,0,,False
+"Question: What is (9 * 1) - 2?
+Answer:",7,7,,True
+"Question: What is (8 + 6) + 4?
+Answer:",18,20,,False
+"Question: What is (8 - 1) + 6?
+Answer:",13,13,,True
+"Question: What is (6 + 3) - 8?
+Answer:",1,1,,True
+"Question: What is (6 * 7) - 2?
+Answer:",40,33,,False
+"Question: What is (2 - 1) + 4?
+Answer:",5,3,,False
+"Question: What is (7 * 5) + 6?
+Answer:",41,33,,False
+"Question: What is (4 * 7) * 7?
+Answer:",196,108,,False
+"Question: What is (1 * 5) * 7?
+Answer:",35,35,,True
+"Question: What is (9 + 9) * 2?
+Answer:",36,42,,False
+"Question: What is (7 + 1) + 5?
+Answer:",13,12,,False
+"Question: What is (3 - 1) - 9?
+Answer:",-7,2,,False
+"Question: What is (5 - 6) - 2?
+Answer:",-3,1,,False
+"Question: What is (8 - 1) * 4?
+Answer:",28,2,,False
+"Question: What is (3 - 8) + 6?
+Answer:",1,1,,True
+"Question: What is (9 - 3) + 7?
+Answer:",13,4,,False
+"Question: What is (8 - 9) - 1?
+Answer:",-2,3,,False
+"Question: What is (7 - 6) * 7?
+Answer:",7,1,,False
+"Question: What is (5 * 2) * 7?
+Answer:",70,42,,False
+"Question: What is (4 * 1) - 8?
+Answer:",-4,2,,False
+"Question: What is (8 + 8) + 8?
+Answer:",24,30,,False
+"Question: What is (7 * 8) - 1?
+Answer:",55,53,,False
+"Question: What is (1 * 6) - 5?
+Answer:",1,3,,False
+"Question: What is (6 - 4) * 8?
+Answer:",16,2,,False
+"Question: What is (1 * 6) * 3?
+Answer:",18,18,,True
+"Question: What is (3 - 2) - 9?
+Answer:",-8,1,,False
+"Question: What is (3 + 6) - 1?
+Answer:",8,3,,False
+"Question: What is (9 * 3) * 9?
+Answer:",243,105,,False
+"Question: What is (6 - 7) * 5?
+Answer:",-5,1,,False
+"Question: What is (6 - 5) + 9?
+Answer:",10,2,,False
+"Question: What is (6 * 5) + 7?
+Answer:",37,33,,False
+"Question: What is (3 * 8) - 1?
+Answer:",23,23,,True
+"Question: What is (9 * 9) - 3?
+Answer:",78,42,,False
+"Question: What is (3 * 6) + 2?
+Answer:",20,21,,False
+"Question: What is (2 - 2) - 9?
+Answer:",-9,1,,False
+"Question: What is (9 + 9) * 4?
+Answer:",72,42,,False
+"Question: What is (4 * 4) * 4?
+Answer:",64,32,,False
+"Question: What is (9 - 2) * 9?
+Answer:",63,1,,False
+"Question: What is (2 * 2) * 7?
+Answer:",28,34,,False
+"Question: What is (1 * 6) - 7?
+Answer:",-1,1,,False
+"Question: What is (5 - 4) * 8?
+Answer:",8,1,,False
+"Question: What is (5 * 2) - 1?
+Answer:",9,13,,False
+"Question: What is (1 + 6) + 8?
+Answer:",15,15,,True
+"Question: What is (9 - 4) + 9?
+Answer:",14,1,,False
+"Question: What is (9 + 5) - 6?
+Answer:",8,4,,False
+"Question: What is (5 - 4) * 3?
+Answer:",3,1,,False
+"Question: What is (7 * 5) + 3?
+Answer:",38,30,,False
+"Question: What is (7 * 2) * 5?
+Answer:",70,50,,False
+"Question: What is (5 * 1) * 8?
+Answer:",40,40,,True
+"Question: What is (7 * 2) * 4?
+Answer:",56,40,,False
+"Question: What is (1 + 7) + 4?
+Answer:",12,13,,False
+"Question: What is (2 + 6) + 4?
+Answer:",12,10,,False
+"Question: What is (4 + 8) + 2?
+Answer:",14,20,,False
+"Question: What is (8 * 9) * 9?
+Answer:",648,72,,False
+"Question: What is (7 + 1) + 8?
+Answer:",16,16,,True
+"Question: What is (4 + 2) + 2?
+Answer:",8,10,,False
+"Question: What is (7 - 4) * 2?
+Answer:",6,1,,False
+"Question: What is (4 - 2) + 8?
+Answer:",10,1,,False
+"Question: What is (3 * 5) - 8?
+Answer:",7,2,,False
+"Question: What is (1 - 5) - 3?
+Answer:",-7,2,,False
+"Question: What is (9 - 5) * 1?
+Answer:",4,4,,True

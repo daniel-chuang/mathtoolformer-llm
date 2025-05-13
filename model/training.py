@@ -1,109 +1,67 @@
 # Import necessary libraries
-from transformers import Trainer, TrainingArguments
-from transformers import DataCollatorForLanguageModeling
+from trl import SFTTrainer
+from transformers import TrainingArguments
+from transformers import TrainerCallback
 from datetime import datetime
 import os
 import json
 from utils.wandb_callback import WandbToolformerCallback
-from peft import LoraConfig, get_peft_model, TaskType
+from peft import LoraConfig, TaskType
 import wandb
 from transformers import EarlyStoppingCallback
 from utils.tool_usage_callback import ToolUsageMonitor
 import numpy as np
 import re
 
-def preprocess_for_training(examples, tokenizer, max_length=256):
-    """Tokenize the examples for training with system prompts"""
-    # Add system prompts to the input
-    system_prompt = "When solving arithmetic problems, use the calculator tool by writing <tool:calculator>expression</tool>."
-    
-    # Combine system prompt with questions
-    input_texts = [f"{system_prompt}\n{q}" for q in examples["question"]]
-    
-    # Tokenize with the system prompt included
-    result = tokenizer(
-        input_texts,
-        truncation=True,
-        max_length=max_length,
-        padding='max_length',
-    )
-    
-    # Rest of your function remains the same
-    completion_encodings = tokenizer(
-        examples["final_answer"],
-        truncation=True,
-        max_length=max_length,
-        padding='max_length',
-    )
-    
-    result["labels"] = completion_encodings["input_ids"]
-    return result
 
-def compute_toolformer_metrics(eval_preds, tokenizer):
-    """Compute metrics specifically for tracking tool usage in Toolformer models"""
-    logits, labels = eval_preds
+def format_messages_for_sft(examples):
+    """Format examples for SFTTrainer using chat template"""
+    system_prompt = """You are an AI assistant that can use tools to solve problems. When you encounter mathematical calculations, use the <tool:calculator> format to perform the calculation. For example, if asked "What is 2+3?", respond with:
+
+<tool:calculator>2+3</tool>
+
+Then provide the answer. Use tools only when necessary for calculations that require precision."""
     
-    # Get predicted tokens (most likely token at each position)
-    predictions = np.argmax(logits, axis=-1)
+    # Format each example as a chat conversation
+    formatted_texts = []
+    print(f"Formatting {len(examples)} examples for SFTTrainer")
+    print(type(examples))
+    print(f"Available keys: {list(examples.keys())}")
+    for question, answer in zip(examples["question"], examples["final_answer"]):
+        messages = [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": question},
+            {"role": "assistant", "content": answer}
+        ]
+        formatted_texts.append(messages)
     
-    # Basic metrics dict
-    metrics = {}
+    return {"messages": formatted_texts}
+
+def convert_to_sft_format(dataset, tokenizer):
+    """Convert dataset to the format expected by SFTTrainer"""
+    # Apply the formatting function
+    formatted_dataset = dataset.map(format_messages_for_sft, batched=True)
     
-    # 1. Tool Usage Detection Metrics
-    tool_start_id = tokenizer.convert_tokens_to_ids("<tool:calculator>")
-    tool_end_id = tokenizer.convert_tokens_to_ids("</tool>")
+    # Apply chat template
+    def apply_template(example):
+        formatted = tokenizer.apply_chat_template(
+            example["messages"],
+            tokenize=False,
+            add_generation_prompt=False
+        )
+        return {"text": formatted}
     
-    # Count tool usage in predictions and labels
-    pred_tool_starts = sum([np.sum(pred == tool_start_id) for pred in predictions])
-    label_tool_starts = sum([np.sum(label == tool_start_id) for label in labels if -100 not in label])
-    
-    metrics["tool_usage_rate"] = float(pred_tool_starts / max(1, len(predictions)))
-    metrics["expected_tool_rate"] = float(label_tool_starts / max(1, len(labels)))
-    metrics["tool_usage_recall"] = float(pred_tool_starts / max(1, label_tool_starts))
-    
-    # 2. Text-based analysis for more detailed metrics
-    # Decode a sample of sequences for text-based analysis
-    sample_size = min(32, len(predictions))  # Analyze up to 32 examples
-    
-    valid_tools = 0
-    total_tools = 0
-    syntax_correct = 0
-    
-    tool_pattern = r'<tool:calculator>([^<]+)</tool>'
-    
-    for i in range(sample_size):
-        # Skip padding in prediction
-        valid_indices = predictions[i] != tokenizer.pad_token_id
-        pred_text = tokenizer.decode(predictions[i][valid_indices])
-        
-        # Find all tool usages
-        matches = re.finditer(tool_pattern, pred_text)
-        
-        for match in matches:
-            total_tools += 1
-            tool_content = match.group(1).strip()
-            
-            # Check if tool content contains a math expression
-            if any(op in tool_content for op in ['+', '-', '*', '/', '(', ')']) and not tool_content.isalpha():
-                valid_tools += 1
-            
-            # Check if tool syntax is correct (opening and closing tags properly paired)
-            if "<tool:calculator>" in pred_text and "</tool>" in pred_text:
-                syntax_correct += 1
-    
-    if total_tools > 0:
-        metrics["valid_tool_content"] = float(valid_tools / total_tools)
-        metrics["tool_syntax_correctness"] = float(syntax_correct / total_tools)
-    else:
-        metrics["valid_tool_content"] = 0.0
-        metrics["tool_syntax_correctness"] = 0.0
-    
-    metrics["total_tool_uses"] = total_tools
-    
-    return metrics
+    sft_dataset = formatted_dataset.map(apply_template)
+    return sft_dataset
+
+def compute_sft_metrics(eval_preds):
+    """Simplified metrics computation for SFTTrainer"""
+    # Note: SFTTrainer handles most metrics automatically
+    # We can add custom metrics here if needed
+    return {}
 
 def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="toolformer_model", num_epochs=3, previous_metadata=None):
-    """Fine-tune the model on prepared datasets
+    """Fine-tune the model on prepared datasets using SFTTrainer
     
     Args:
         model: Prepared model
@@ -119,15 +77,22 @@ def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="
     """
     print(f"Model Type: {model.config.model_type}")
     print(f"Tokenizer Type: {type(tokenizer).__name__}")
-    print(tokenizer.decode(train_dataset[0]["input_ids"]))
-    print(tokenizer.decode(train_dataset[0]["labels"]))
-    print(tokenizer.decode(eval_dataset[0]["input_ids"]))
-    print(tokenizer.decode(eval_dataset[0]["labels"]))
+    
+    # Convert datasets to SFT format
+    sft_train_dataset = convert_to_sft_format(train_dataset, tokenizer)
+    sft_eval_dataset = convert_to_sft_format(eval_dataset, tokenizer) if eval_dataset else None
+    
+    # Print samples for debugging
+    print("=== Sample Training Data ===")
+    print(sft_train_dataset[0]["text"])
+    if sft_eval_dataset:
+        print("=== Sample Eval Data ===")
+        print(sft_eval_dataset[0]["text"])
 
     # Enable gradient checkpointing for memory efficiency
     model.gradient_checkpointing_enable()
     
-    # Configure and Apply LoRA
+    # Configure LoRA
     lora_config = LoraConfig(
         task_type=TaskType.CAUSAL_LM,
         r=64,
@@ -135,7 +100,6 @@ def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="
         lora_dropout=0.05,
         target_modules=["q_proj", "k_proj", "v_proj", "o_proj"]
     )
-    model = get_peft_model(model, lora_config)
 
     # Define training arguments
     training_args = TrainingArguments(
@@ -151,17 +115,17 @@ def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="
         report_to="wandb",
         logging_steps=2,
         save_strategy="epoch",
-        eval_strategy="epoch",
+        eval_strategy="epoch" if eval_dataset else "no",
         fp16=True,
         load_best_model_at_end=True if eval_dataset else False,
-        resume_from_checkpoint=True,
+        # remove_unused_columns=False,  # Important for SFTTrainer
         label_names=["labels"],
         dataloader_num_workers=4,
         gradient_checkpointing=True,
         optim="adamw_torch"
     )
     
-    # WANDB: Create a consolidated config dictionary from the actual objects
+    # WANDB: Create a consolidated config dictionary
     config = {
         # General configuration
         "output_dir": output_dir,
@@ -176,7 +140,7 @@ def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="
             "target_modules": lora_config.target_modules
         },
         
-        # Extract training configuration from the training_args object
+        # Extract training configuration
         "training": {
             "per_device_batch_size": training_args.per_device_train_batch_size,
             "gradient_accumulation_steps": training_args.gradient_accumulation_steps,
@@ -200,45 +164,36 @@ def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="
         }
     }
     
-    # Initialize wandb with the extracted configuration
+    # Initialize wandb
     wandb.init(
         project="toolformer",
         config=config,
         name=f"toolformer_training_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
     )
-        
-    # Data collator for language modeling
-    data_collator = DataCollatorForLanguageModeling(
-        tokenizer=tokenizer,
-        mlm=False  # We're not using masked language modeling
-    )
-
-    # Callbacks
-    callbacks = [
-        EarlyStoppingCallback(early_stopping_patience=3),
-        ToolUsageMonitor(
-            tokenizer=tokenizer,
-            check_steps=training_args.logging_steps,
-        ),
-        WandbToolformerCallback(
-            tokenizer=tokenizer,
-            eval_dataset=eval_dataset,
-            log_freq=training_args.logging_steps,
-            sample_size=5,  # Number of examples to track
-            log_lora_params=True,
-            log_attention=True
-        )
-    ]
     
-    # Initialize trainer with callbacks
-    trainer = Trainer(
+    # Custom callbacks for SFTTrainer
+    callbacks = [
+        EarlyStoppingCallback(early_stopping_patience=3) if eval_dataset else None,
+        # Note: Tool usage monitoring callback would need to be adapted for SFTTrainer
+        # since it handles data differently
+    ]
+    # Remove None values
+    callbacks = [cb for cb in callbacks if cb is not None]
+    
+    # Initialize SFTTrainer
+    trainer = SFTTrainer(
         model=model,
         args=training_args,
-        train_dataset=train_dataset,
-        eval_dataset=eval_dataset,
-        data_collator=data_collator,
+        train_dataset=sft_train_dataset,
+        eval_dataset=sft_eval_dataset,
+        tokenizer=tokenizer,
+        peft_config=lora_config,  # Pass LoRA config directly
+        max_seq_length=1024,  # Adjust as needed
+        dataset_text_field="text",  # Column with formatted text
+        packing=False,  # Important for maintaining conversation structure
         callbacks=callbacks,
-        compute_metrics=lambda eval_preds: compute_toolformer_metrics(eval_preds, tokenizer)
+        # formatting_func=None,  # We've already formatted the data
+        # compute_metrics=lambda eval_preds: compute_sft_metrics(eval_preds),
     )
     
     # Record training start time
@@ -255,7 +210,7 @@ def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="
     trainer.save_model(output_dir)
     tokenizer.save_pretrained(output_dir)
     
-    # Create or update metadata
+    # Create or update metadata (same as before)
     if previous_metadata is None:
         previous_metadata = {
             "base_model": getattr(model.config, "model_name_or_path", "unknown"),
@@ -267,7 +222,7 @@ def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="
     # Calculate total epochs
     total_epochs = previous_metadata.get("total_epochs", 0) + num_epochs
     
-    # Create training session info with the extracted configuration
+    # Create training session info
     training_session = {
         "date": datetime.now().isoformat(),
         "epochs": num_epochs,
@@ -278,7 +233,7 @@ def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="
             "train_size": len(train_dataset),
             "eval_size": len(eval_dataset) if eval_dataset else 0
         },
-        "config": config  # Use the extracted config for metadata
+        "config": config
     }
     
     # Add evaluation metrics if available
@@ -301,7 +256,6 @@ def train_model(model, tokenizer, train_dataset, eval_dataset=None, output_dir="
     with open(metadata_path, "w") as f:
         json.dump(metadata, f, indent=2)
     
-    # Final metrics are logged by the WandbToolformerCallback
     wandb.finish()
 
     return model, tokenizer, metadata
