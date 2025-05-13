@@ -1,0 +1,1420 @@
+{
+  "timestamp": "20250501_134745",
+  "model_name": "HuggingFaceTB/SmolLM2-135M",
+  "dataset_name": "arithmetic_arithmetic_2dm",
+  "aggregated_metrics": {
+    "accuracy": 0.075,
+    "correct": 15,
+    "total": 200
+  },
+  "question_results": [
+    {
+      "question": "Question: What is 36 times 2?\nAnswer:",
+      "expected_answer": "72",
+      "model_answer": "36",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 77 times 62?\nAnswer:",
+      "expected_answer": "4774",
+      "model_answer": "62",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 18 times 34?\nAnswer:",
+      "expected_answer": "612",
+      "model_answer": "608",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 33 times 87?\nAnswer:",
+      "expected_answer": "2871",
+      "model_answer": "2121",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 79 times 77?\nAnswer:",
+      "expected_answer": "6083",
+      "model_answer": "45628",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 97 times 30?\nAnswer:",
+      "expected_answer": "2910",
+      "model_answer": "30000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 81 times 93?\nAnswer:",
+      "expected_answer": "7533",
+      "model_answer": "93",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 78 times 7?\nAnswer:",
+      "expected_answer": "546",
+      "model_answer": "7",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 45 times 10?\nAnswer:",
+      "expected_answer": "450",
+      "model_answer": "450",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 18 times 62?\nAnswer:",
+      "expected_answer": "1116",
+      "model_answer": "1128",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 63 times 24?\nAnswer:",
+      "expected_answer": "1512",
+      "model_answer": "121600",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 59 times 31?\nAnswer:",
+      "expected_answer": "1829",
+      "model_answer": "1999",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 31 times 79?\nAnswer:",
+      "expected_answer": "2449",
+      "model_answer": "1879",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 28 times 63?\nAnswer:",
+      "expected_answer": "1764",
+      "model_answer": "1568",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 7 times 82?\nAnswer:",
+      "expected_answer": "574",
+      "model_answer": "5682",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 8 times 32?\nAnswer:",
+      "expected_answer": "256",
+      "model_answer": "240",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 86 times 33?\nAnswer:",
+      "expected_answer": "2838",
+      "model_answer": "33086",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 64 times 25?\nAnswer:",
+      "expected_answer": "1600",
+      "model_answer": "1224",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 33 times 53?\nAnswer:",
+      "expected_answer": "1749",
+      "model_answer": "300",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 56 times 31?\nAnswer:",
+      "expected_answer": "1736",
+      "model_answer": "18285",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 31 times 34?\nAnswer:",
+      "expected_answer": "1054",
+      "model_answer": "1214",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 4 times 95?\nAnswer:",
+      "expected_answer": "380",
+      "model_answer": "395",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 86 times 24?\nAnswer:",
+      "expected_answer": "2064",
+      "model_answer": "21688",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 19 times 9?\nAnswer:",
+      "expected_answer": "171",
+      "model_answer": "199",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 68 times 77?\nAnswer:",
+      "expected_answer": "5236",
+      "model_answer": "3456",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 39 times 75?\nAnswer:",
+      "expected_answer": "2925",
+      "model_answer": "2895",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 54 times 77?\nAnswer:",
+      "expected_answer": "4158",
+      "model_answer": "32140",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 34 times 32?\nAnswer:",
+      "expected_answer": "1088",
+      "model_answer": "1280",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 94 times 84?\nAnswer:",
+      "expected_answer": "7896",
+      "model_answer": "7280",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 38 times 97?\nAnswer:",
+      "expected_answer": "3686",
+      "model_answer": "2898",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 82 times 25?\nAnswer:",
+      "expected_answer": "2050",
+      "model_answer": "2080",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 77 times 23?\nAnswer:",
+      "expected_answer": "1771",
+      "model_answer": "072",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 20 times 9?\nAnswer:",
+      "expected_answer": "180",
+      "model_answer": "180",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 86 times 38?\nAnswer:",
+      "expected_answer": "3268",
+      "model_answer": "4320",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 42 times 18?\nAnswer:",
+      "expected_answer": "756",
+      "model_answer": "648",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 67 times 77?\nAnswer:",
+      "expected_answer": "5159",
+      "model_answer": "4256",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 18 times 52?\nAnswer:",
+      "expected_answer": "936",
+      "model_answer": "1000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 4 times 24?\nAnswer:",
+      "expected_answer": "96",
+      "model_answer": "160",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 88 times 30?\nAnswer:",
+      "expected_answer": "2640",
+      "model_answer": "30000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 86 times 27?\nAnswer:",
+      "expected_answer": "2322",
+      "model_answer": "408",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 70 times 71?\nAnswer:",
+      "expected_answer": "4970",
+      "model_answer": "4900",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 31 times 83?\nAnswer:",
+      "expected_answer": "2573",
+      "model_answer": "216000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 50 times 78?\nAnswer:",
+      "expected_answer": "3900",
+      "model_answer": "3250",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 59 times 22?\nAnswer:",
+      "expected_answer": "1298",
+      "model_answer": "100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 77 times 71?\nAnswer:",
+      "expected_answer": "5467",
+      "model_answer": "77777777",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 19 times 83?\nAnswer:",
+      "expected_answer": "1577",
+      "model_answer": "83",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 79 times 29?\nAnswer:",
+      "expected_answer": "2291",
+      "model_answer": "809",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 4 times 47?\nAnswer:",
+      "expected_answer": "188",
+      "model_answer": "4",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 2 times 35?\nAnswer:",
+      "expected_answer": "70",
+      "model_answer": "75",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 91 times 90?\nAnswer:",
+      "expected_answer": "8190",
+      "model_answer": "8100",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 30 times 35?\nAnswer:",
+      "expected_answer": "1050",
+      "model_answer": "1000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 78 times 45?\nAnswer:",
+      "expected_answer": "3510",
+      "model_answer": "2880",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 38 times 23?\nAnswer:",
+      "expected_answer": "874",
+      "model_answer": "1024",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 71 times 97?\nAnswer:",
+      "expected_answer": "6887",
+      "model_answer": "0",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 20 times 61?\nAnswer:",
+      "expected_answer": "1220",
+      "model_answer": "1200",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 67 times 81?\nAnswer:",
+      "expected_answer": "5427",
+      "model_answer": "44360",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 36 times 27?\nAnswer:",
+      "expected_answer": "972",
+      "model_answer": "1000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 37 times 38?\nAnswer:",
+      "expected_answer": "1406",
+      "model_answer": "1596",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 88 times 24?\nAnswer:",
+      "expected_answer": "2112",
+      "model_answer": "2160",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 22 times 47?\nAnswer:",
+      "expected_answer": "1034",
+      "model_answer": "1000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 5 times 63?\nAnswer:",
+      "expected_answer": "315",
+      "model_answer": "325",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 32 times 7?\nAnswer:",
+      "expected_answer": "224",
+      "model_answer": "212",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 10 times 42?\nAnswer:",
+      "expected_answer": "420",
+      "model_answer": "42",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 27 times 81?\nAnswer:",
+      "expected_answer": "2187",
+      "model_answer": "81",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 78 times 35?\nAnswer:",
+      "expected_answer": "2730",
+      "model_answer": "2100",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 87 times 81?\nAnswer:",
+      "expected_answer": "7047",
+      "model_answer": "7281",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 61 times 14?\nAnswer:",
+      "expected_answer": "854",
+      "model_answer": "844",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 66 times 52?\nAnswer:",
+      "expected_answer": "3432",
+      "model_answer": "332000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 17 times 69?\nAnswer:",
+      "expected_answer": "1173",
+      "model_answer": "1117",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 81 times 77?\nAnswer:",
+      "expected_answer": "6237",
+      "model_answer": "77",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 8 times 29?\nAnswer:",
+      "expected_answer": "232",
+      "model_answer": "216",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 81 times 30?\nAnswer:",
+      "expected_answer": "2430",
+      "model_answer": "30",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 89 times 5?\nAnswer:",
+      "expected_answer": "445",
+      "model_answer": "565",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 42 times 33?\nAnswer:",
+      "expected_answer": "1386",
+      "model_answer": "1264",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 81 times 70?\nAnswer:",
+      "expected_answer": "5670",
+      "model_answer": "7",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 5 times 86?\nAnswer:",
+      "expected_answer": "430",
+      "model_answer": "456",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 40 times 35?\nAnswer:",
+      "expected_answer": "1400",
+      "model_answer": "1250",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 72 times 18?\nAnswer:",
+      "expected_answer": "1296",
+      "model_answer": "1048",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 1 times 12?\nAnswer:",
+      "expected_answer": "12",
+      "model_answer": "12",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 83 times 65?\nAnswer:",
+      "expected_answer": "5395",
+      "model_answer": "65",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 8 times 15?\nAnswer:",
+      "expected_answer": "120",
+      "model_answer": "115",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 28 times 17?\nAnswer:",
+      "expected_answer": "476",
+      "model_answer": "456",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 18 times 12?\nAnswer:",
+      "expected_answer": "216",
+      "model_answer": "240",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 99 times 57?\nAnswer:",
+      "expected_answer": "5643",
+      "model_answer": "57099",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 64 times 21?\nAnswer:",
+      "expected_answer": "1344",
+      "model_answer": "1280",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 46 times 31?\nAnswer:",
+      "expected_answer": "1426",
+      "model_answer": "31",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 53 times 98?\nAnswer:",
+      "expected_answer": "5194",
+      "model_answer": "5300",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 17 times 37?\nAnswer:",
+      "expected_answer": "629",
+      "model_answer": "625",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 34 times 30?\nAnswer:",
+      "expected_answer": "1020",
+      "model_answer": "1000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 48 times 19?\nAnswer:",
+      "expected_answer": "912",
+      "model_answer": "8192",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 0 times 6?\nAnswer:",
+      "expected_answer": "0",
+      "model_answer": "0",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 57 times 9?\nAnswer:",
+      "expected_answer": "513",
+      "model_answer": "570",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 8 times 85?\nAnswer:",
+      "expected_answer": "680",
+      "model_answer": "725",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 44 times 46?\nAnswer:",
+      "expected_answer": "2024",
+      "model_answer": "2128",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 90 times 38?\nAnswer:",
+      "expected_answer": "3420",
+      "model_answer": "362880",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 6 times 91?\nAnswer:",
+      "expected_answer": "546",
+      "model_answer": "5491",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 45 times 70?\nAnswer:",
+      "expected_answer": "3150",
+      "model_answer": "2250",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 44 times 6?\nAnswer:",
+      "expected_answer": "264",
+      "model_answer": "216",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 63 times 43?\nAnswer:",
+      "expected_answer": "2709",
+      "model_answer": "2120",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 86 times 60?\nAnswer:",
+      "expected_answer": "5160",
+      "model_answer": "548000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 5 times 19?\nAnswer:",
+      "expected_answer": "95",
+      "model_answer": "99",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 39 times 77?\nAnswer:",
+      "expected_answer": "3003",
+      "model_answer": "2899",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 78 times 92?\nAnswer:",
+      "expected_answer": "7176",
+      "model_answer": "7800",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 61 times 10?\nAnswer:",
+      "expected_answer": "610",
+      "model_answer": "610",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 12 times 26?\nAnswer:",
+      "expected_answer": "312",
+      "model_answer": "26",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 77 times 21?\nAnswer:",
+      "expected_answer": "1617",
+      "model_answer": "21077",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 53 times 71?\nAnswer:",
+      "expected_answer": "3763",
+      "model_answer": "920",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 27 times 92?\nAnswer:",
+      "expected_answer": "2484",
+      "model_answer": "3692",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 22 times 57?\nAnswer:",
+      "expected_answer": "1254",
+      "model_answer": "12557",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 69 times 57?\nAnswer:",
+      "expected_answer": "3933",
+      "model_answer": "57",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 64 times 96?\nAnswer:",
+      "expected_answer": "6144",
+      "model_answer": "492000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 25 times 23?\nAnswer:",
+      "expected_answer": "575",
+      "model_answer": "663",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 42 times 14?\nAnswer:",
+      "expected_answer": "588",
+      "model_answer": "568",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 90 times 7?\nAnswer:",
+      "expected_answer": "630",
+      "model_answer": "630",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 7 times 50?\nAnswer:",
+      "expected_answer": "350",
+      "model_answer": "350",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 40 times 12?\nAnswer:",
+      "expected_answer": "480",
+      "model_answer": "400",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 50 times 2?\nAnswer:",
+      "expected_answer": "100",
+      "model_answer": "100",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 49 times 22?\nAnswer:",
+      "expected_answer": "1078",
+      "model_answer": "49",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 9 times 79?\nAnswer:",
+      "expected_answer": "711",
+      "model_answer": "639",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 13 times 15?\nAnswer:",
+      "expected_answer": "195",
+      "model_answer": "180",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 57 times 18?\nAnswer:",
+      "expected_answer": "1026",
+      "model_answer": "9142857",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 2 times 29?\nAnswer:",
+      "expected_answer": "58",
+      "model_answer": "59",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 15 times 37?\nAnswer:",
+      "expected_answer": "555",
+      "model_answer": "545",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 32 times 56?\nAnswer:",
+      "expected_answer": "1792",
+      "model_answer": "1520",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 5 times 49?\nAnswer:",
+      "expected_answer": "245",
+      "model_answer": "214",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 31 times 63?\nAnswer:",
+      "expected_answer": "1953",
+      "model_answer": "1836",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 85 times 33?\nAnswer:",
+      "expected_answer": "2805",
+      "model_answer": "2520",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 0 times 45?\nAnswer:",
+      "expected_answer": "0",
+      "model_answer": "0",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 96 times 57?\nAnswer:",
+      "expected_answer": "5472",
+      "model_answer": "5280",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 86 times 37?\nAnswer:",
+      "expected_answer": "3182",
+      "model_answer": "2588",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 49 times 48?\nAnswer:",
+      "expected_answer": "2352",
+      "model_answer": "48",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 75 times 86?\nAnswer:",
+      "expected_answer": "6450",
+      "model_answer": "500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 63 times 79?\nAnswer:",
+      "expected_answer": "4977",
+      "model_answer": "42890",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 95 times 47?\nAnswer:",
+      "expected_answer": "4465",
+      "model_answer": "4700",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 49 times 81?\nAnswer:",
+      "expected_answer": "3969",
+      "model_answer": "256000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 20 times 81?\nAnswer:",
+      "expected_answer": "1620",
+      "model_answer": "800",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 62 times 16?\nAnswer:",
+      "expected_answer": "992",
+      "model_answer": "1080",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 95 times 54?\nAnswer:",
+      "expected_answer": "5130",
+      "model_answer": "5400",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 65 times 66?\nAnswer:",
+      "expected_answer": "4290",
+      "model_answer": "33360",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 35 times 31?\nAnswer:",
+      "expected_answer": "1085",
+      "model_answer": "1000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 38 times 59?\nAnswer:",
+      "expected_answer": "2242",
+      "model_answer": "1898",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 12 times 91?\nAnswer:",
+      "expected_answer": "1092",
+      "model_answer": "1200",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 89 times 27?\nAnswer:",
+      "expected_answer": "2403",
+      "model_answer": "498",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 30 times 1?\nAnswer:",
+      "expected_answer": "30",
+      "model_answer": "30",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 55 times 53?\nAnswer:",
+      "expected_answer": "2915",
+      "model_answer": "3",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 37 times 24?\nAnswer:",
+      "expected_answer": "888",
+      "model_answer": "1080",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 69 times 78?\nAnswer:",
+      "expected_answer": "5382",
+      "model_answer": "44960",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 97 times 52?\nAnswer:",
+      "expected_answer": "5044",
+      "model_answer": "53",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 97 times 47?\nAnswer:",
+      "expected_answer": "4559",
+      "model_answer": "3947",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 96 times 82?\nAnswer:",
+      "expected_answer": "7872",
+      "model_answer": "82082",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 15 times 79?\nAnswer:",
+      "expected_answer": "1185",
+      "model_answer": "1115",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 51 times 83?\nAnswer:",
+      "expected_answer": "4233",
+      "model_answer": "000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 85 times 25?\nAnswer:",
+      "expected_answer": "2125",
+      "model_answer": "1900",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 93 times 76?\nAnswer:",
+      "expected_answer": "7068",
+      "model_answer": "7280",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 82 times 85?\nAnswer:",
+      "expected_answer": "6970",
+      "model_answer": "7200",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 49 times 95?\nAnswer:",
+      "expected_answer": "4655",
+      "model_answer": "4900",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 23 times 63?\nAnswer:",
+      "expected_answer": "1449",
+      "model_answer": "420",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 2 times 59?\nAnswer:",
+      "expected_answer": "118",
+      "model_answer": "125",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 51 times 11?\nAnswer:",
+      "expected_answer": "561",
+      "model_answer": "5101",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 24 times 5?\nAnswer:",
+      "expected_answer": "120",
+      "model_answer": "100",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 89 times 3?\nAnswer:",
+      "expected_answer": "267",
+      "model_answer": "369",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 74 times 73?\nAnswer:",
+      "expected_answer": "5402",
+      "model_answer": "4120",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 72 times 71?\nAnswer:",
+      "expected_answer": "5112",
+      "model_answer": "4982",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 76 times 79?\nAnswer:",
+      "expected_answer": "6004",
+      "model_answer": "000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 59 times 27?\nAnswer:",
+      "expected_answer": "1593",
+      "model_answer": "18925",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 41 times 72?\nAnswer:",
+      "expected_answer": "2952",
+      "model_answer": "2160",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 44 times 96?\nAnswer:",
+      "expected_answer": "4224",
+      "model_answer": "256000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 98 times 67?\nAnswer:",
+      "expected_answer": "6566",
+      "model_answer": "5988",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 92 times 31?\nAnswer:",
+      "expected_answer": "2852",
+      "model_answer": "2982",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 86 times 96?\nAnswer:",
+      "expected_answer": "8256",
+      "model_answer": "6",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 91 times 80?\nAnswer:",
+      "expected_answer": "7280",
+      "model_answer": "7200",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 51 times 22?\nAnswer:",
+      "expected_answer": "1122",
+      "model_answer": "1000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 56 times 0?\nAnswer:",
+      "expected_answer": "0",
+      "model_answer": "0",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 76 times 97?\nAnswer:",
+      "expected_answer": "7372",
+      "model_answer": "625600",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 12 times 7?\nAnswer:",
+      "expected_answer": "84",
+      "model_answer": "88",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 78 times 42?\nAnswer:",
+      "expected_answer": "3276",
+      "model_answer": "288000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 88 times 29?\nAnswer:",
+      "expected_answer": "2552",
+      "model_answer": "648",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 81 times 17?\nAnswer:",
+      "expected_answer": "1377",
+      "model_answer": "024",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 20 times 19?\nAnswer:",
+      "expected_answer": "380",
+      "model_answer": "300",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 34 times 94?\nAnswer:",
+      "expected_answer": "3196",
+      "model_answer": "2880",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 85 times 19?\nAnswer:",
+      "expected_answer": "1615",
+      "model_answer": "850",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 93 times 27?\nAnswer:",
+      "expected_answer": "2511",
+      "model_answer": "2689",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 51 times 38?\nAnswer:",
+      "expected_answer": "1938",
+      "model_answer": "212000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 4 times 51?\nAnswer:",
+      "expected_answer": "204",
+      "model_answer": "2051",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 72 times 6?\nAnswer:",
+      "expected_answer": "432",
+      "model_answer": "400",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 67 times 8?\nAnswer:",
+      "expected_answer": "536",
+      "model_answer": "342",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 71 times 16?\nAnswer:",
+      "expected_answer": "1136",
+      "model_answer": "1080",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 6 times 2?\nAnswer:",
+      "expected_answer": "12",
+      "model_answer": "12",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 54 times 41?\nAnswer:",
+      "expected_answer": "2214",
+      "model_answer": "41",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 45 times 49?\nAnswer:",
+      "expected_answer": "2205",
+      "model_answer": "225",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 58 times 84?\nAnswer:",
+      "expected_answer": "4872",
+      "model_answer": "384000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 54 times 1?\nAnswer:",
+      "expected_answer": "54",
+      "model_answer": "54",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 86 times 22?\nAnswer:",
+      "expected_answer": "1892",
+      "model_answer": "21688",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 62 times 5?\nAnswer:",
+      "expected_answer": "310",
+      "model_answer": "5",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 2 times 9?\nAnswer:",
+      "expected_answer": "18",
+      "model_answer": "18",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 10 times 32?\nAnswer:",
+      "expected_answer": "320",
+      "model_answer": "320",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 67 times 67?\nAnswer:",
+      "expected_answer": "4489",
+      "model_answer": "39467",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 33 times 11?\nAnswer:",
+      "expected_answer": "363",
+      "model_answer": "331",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 34 times 89?\nAnswer:",
+      "expected_answer": "3026",
+      "model_answer": "2",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 59 times 88?\nAnswer:",
+      "expected_answer": "5192",
+      "model_answer": "59",
+      "question_type": null,
+      "correct": false
+    }
+  ],
+  "type_statistics": {
+    "null": {
+      "total": 200,
+      "correct": 15,
+      "incorrect": 185,
+      "accuracy": 0.075
+    }
+  }
+}

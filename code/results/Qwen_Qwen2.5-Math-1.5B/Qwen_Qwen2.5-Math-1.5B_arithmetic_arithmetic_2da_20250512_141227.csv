@@ -1,0 +1,401 @@
+question,expected_answer,model_answer,question_type,correct
+"Question: What is 67 plus 88?
+Answer:",155,145,,False
+"Question: What is 38 plus 98?
+Answer:",136,126,,False
+"Question: What is 82 plus 64?
+Answer:",146,14,,False
+"Question: What is 12 plus 63?
+Answer:",75,75,,True
+"Question: What is 60 plus 44?
+Answer:",104,104,,True
+"Question: What is 17 plus 99?
+Answer:",116,17,,False
+"Question: What is 54 plus 57?
+Answer:",111,101,,False
+"Question: What is 3 plus 27?
+Answer:",30,20,,False
+"Question: What is 61 plus 94?
+Answer:",155,155,,True
+"Question: What is 14 plus 30?
+Answer:",44,44,,True
+"Question: What is 45 plus 40?
+Answer:",85,85,,True
+"Question: What is 6 plus 39?
+Answer:",45,45,,True
+"Question: What is 55 plus 7?
+Answer:",62,62,,True
+"Question: What is 21 plus 74?
+Answer:",95,95,,True
+"Question: What is 17 plus 48?
+Answer:",65,65,,True
+"Question: What is 64 plus 29?
+Answer:",93,93,,True
+"Question: What is 65 plus 63?
+Answer:",128,34,,False
+"Question: What is 50 plus 6?
+Answer:",56,56,,True
+"Question: What is 5 plus 34?
+Answer:",39,39,,True
+"Question: What is 31 plus 94?
+Answer:",125,125,,True
+"Question: What is 98 plus 50?
+Answer:",148,148,,True
+"Question: What is 17 plus 71?
+Answer:",88,88,,True
+"Question: What is 27 plus 94?
+Answer:",121,163,,False
+"Question: What is 66 plus 99?
+Answer:",165,165,,True
+"Question: What is 36 plus 25?
+Answer:",61,61,,True
+"Question: What is 45 plus 10?
+Answer:",55,55,,True
+"Question: What is 54 plus 77?
+Answer:",131,121,,False
+"Question: What is 86 plus 40?
+Answer:",126,126,,True
+"Question: What is 91 plus 31?
+Answer:",122,122,,True
+"Question: What is 71 plus 49?
+Answer:",120,120,,True
+"Question: What is 10 plus 95?
+Answer:",105,105,,True
+"Question: What is 31 plus 38?
+Answer:",69,59,,False
+"Question: What is 84 plus 98?
+Answer:",182,182,,True
+"Question: What is 79 plus 2?
+Answer:",81,81,,True
+"Question: What is 70 plus 33?
+Answer:",103,103,,True
+"Question: What is 4 plus 36?
+Answer:",40,39,,False
+"Question: What is 46 plus 14?
+Answer:",60,60,,True
+"Question: What is 10 plus 69?
+Answer:",79,79,,True
+"Question: What is 40 plus 91?
+Answer:",131,131,,True
+"Question: What is 65 plus 59?
+Answer:",124,154,,False
+"Question: What is 85 plus 80?
+Answer:",165,165,,True
+"Question: What is 21 plus 32?
+Answer:",53,53,,True
+"Question: What is 54 plus 23?
+Answer:",77,77,,True
+"Question: What is 47 plus 43?
+Answer:",90,90,,True
+"Question: What is 56 plus 90?
+Answer:",146,146,,True
+"Question: What is 9 plus 17?
+Answer:",26,26,,True
+"Question: What is 53 plus 56?
+Answer:",109,109,,True
+"Question: What is 47 plus 62?
+Answer:",109,119,,False
+"Question: What is 58 plus 23?
+Answer:",81,81,,True
+"Question: What is 70 plus 85?
+Answer:",155,135,,False
+"Question: What is 90 plus 2?
+Answer:",92,92,,True
+"Question: What is 55 plus 60?
+Answer:",115,115,,True
+"Question: What is 34 plus 36?
+Answer:",70,50,,False
+"Question: What is 66 plus 81?
+Answer:",147,137,,False
+"Question: What is 66 plus 85?
+Answer:",151,131,,False
+"Question: What is 97 plus 55?
+Answer:",152,152,,True
+"Question: What is 83 plus 60?
+Answer:",143,143,,True
+"Question: What is 2 plus 6?
+Answer:",8,8,,True
+"Question: What is 95 plus 96?
+Answer:",191,161,,False
+"Question: What is 41 plus 15?
+Answer:",56,56,,True
+"Question: What is 53 plus 65?
+Answer:",118,108,,False
+"Question: What is 36 plus 37?
+Answer:",73,53,,False
+"Question: What is 62 plus 44?
+Answer:",106,106,,True
+"Question: What is 35 plus 40?
+Answer:",75,75,,True
+"Question: What is 69 plus 12?
+Answer:",81,81,,True
+"Question: What is 81 plus 39?
+Answer:",120,120,,True
+"Question: What is 96 plus 30?
+Answer:",126,126,,True
+"Question: What is 57 plus 56?
+Answer:",113,123,,False
+"Question: What is 67 plus 75?
+Answer:",142,132,,False
+"Question: What is 44 plus 17?
+Answer:",61,61,,True
+"Question: What is 75 plus 37?
+Answer:",112,132,,False
+"Question: What is 23 plus 69?
+Answer:",92,102,,False
+"Question: What is 85 plus 16?
+Answer:",101,34,,False
+"Question: What is 7 plus 1?
+Answer:",8,8,,True
+"Question: What is 33 plus 85?
+Answer:",118,44,,False
+"Question: What is 53 plus 48?
+Answer:",101,121,,False
+"Question: What is 20 plus 0?
+Answer:",20,20,,True
+"Question: What is 0 plus 6?
+Answer:",6,6,,True
+"Question: What is 95 plus 53?
+Answer:",148,44,,False
+"Question: What is 93 plus 27?
+Answer:",120,120,,True
+"Question: What is 29 plus 48?
+Answer:",77,77,,True
+"Question: What is 75 plus 62?
+Answer:",137,13,,False
+"Question: What is 24 plus 1?
+Answer:",25,28,,False
+"Question: What is 71 plus 72?
+Answer:",143,18,,False
+"Question: What is 29 plus 64?
+Answer:",93,93,,True
+"Question: What is 69 plus 54?
+Answer:",123,113,,False
+"Question: What is 94 plus 8?
+Answer:",102,17,,False
+"Question: What is 61 plus 11?
+Answer:",72,72,,True
+"Question: What is 98 plus 13?
+Answer:",111,121,,False
+"Question: What is 88 plus 87?
+Answer:",175,165,,False
+"Question: What is 92 plus 57?
+Answer:",149,44,,False
+"Question: What is 41 plus 93?
+Answer:",134,144,,False
+"Question: What is 69 plus 86?
+Answer:",155,145,,False
+"Question: What is 13 plus 10?
+Answer:",23,23,,True
+"Question: What is 4 plus 98?
+Answer:",102,10,,False
+"Question: What is 90 plus 54?
+Answer:",144,144,,True
+"Question: What is 77 plus 59?
+Answer:",136,174,,False
+"Question: What is 6 plus 31?
+Answer:",37,37,,True
+"Question: What is 97 plus 0?
+Answer:",97,97,,True
+"Question: What is 2 plus 31?
+Answer:",33,32,,False
+"Question: What is 43 plus 97?
+Answer:",140,130,,False
+"Question: What is 85 plus 73?
+Answer:",158,44,,False
+"Question: What is 23 plus 39?
+Answer:",62,62,,True
+"Question: What is 14 plus 4?
+Answer:",18,20,,False
+"Question: What is 89 plus 28?
+Answer:",117,127,,False
+"Question: What is 31 plus 23?
+Answer:",54,54,,True
+"Question: What is 45 plus 15?
+Answer:",60,60,,True
+"Question: What is 79 plus 12?
+Answer:",91,91,,True
+"Question: What is 54 plus 16?
+Answer:",70,70,,True
+"Question: What is 7 plus 92?
+Answer:",99,10,,False
+"Question: What is 63 plus 8?
+Answer:",71,71,,True
+"Question: What is 57 plus 67?
+Answer:",124,134,,False
+"Question: What is 57 plus 96?
+Answer:",153,133,,False
+"Question: What is 93 plus 58?
+Answer:",151,151,,True
+"Question: What is 75 plus 52?
+Answer:",127,127,,True
+"Question: What is 17 plus 80?
+Answer:",97,97,,True
+"Question: What is 77 plus 92?
+Answer:",169,169,,True
+"Question: What is 9 plus 92?
+Answer:",101,101,,True
+"Question: What is 24 plus 70?
+Answer:",94,94,,True
+"Question: What is 41 plus 31?
+Answer:",72,72,,True
+"Question: What is 88 plus 82?
+Answer:",170,160,,False
+"Question: What is 97 plus 89?
+Answer:",186,186,,True
+"Question: What is 11 plus 72?
+Answer:",83,83,,True
+"Question: What is 76 plus 6?
+Answer:",82,82,,True
+"Question: What is 85 plus 70?
+Answer:",155,155,,True
+"Question: What is 97 plus 91?
+Answer:",188,44,,False
+"Question: What is 17 plus 27?
+Answer:",44,44,,True
+"Question: What is 35 plus 49?
+Answer:",84,84,,True
+"Question: What is 96 plus 80?
+Answer:",176,176,,True
+"Question: What is 73 plus 69?
+Answer:",142,132,,False
+"Question: What is 57 plus 90?
+Answer:",147,147,,True
+"Question: What is 8 plus 78?
+Answer:",86,87,,False
+"Question: What is 62 plus 34?
+Answer:",96,96,,True
+"Question: What is 58 plus 77?
+Answer:",135,135,,True
+"Question: What is 12 plus 13?
+Answer:",25,25,,True
+"Question: What is 63 plus 28?
+Answer:",91,91,,True
+"Question: What is 32 plus 42?
+Answer:",74,74,,True
+"Question: What is 73 plus 84?
+Answer:",157,127,,False
+"Question: What is 20 plus 16?
+Answer:",36,36,,True
+"Question: What is 94 plus 51?
+Answer:",145,14,,False
+"Question: What is 45 plus 63?
+Answer:",108,100,,False
+"Question: What is 15 plus 37?
+Answer:",52,52,,True
+"Question: What is 22 plus 9?
+Answer:",31,31,,True
+"Question: What is 56 plus 58?
+Answer:",114,13,,False
+"Question: What is 70 plus 52?
+Answer:",122,132,,False
+"Question: What is 46 plus 59?
+Answer:",105,105,,True
+"Question: What is 41 plus 9?
+Answer:",50,50,,True
+"Question: What is 5 plus 76?
+Answer:",81,81,,True
+"Question: What is 2 plus 11?
+Answer:",13,13,,True
+"Question: What is 85 plus 62?
+Answer:",147,14,,False
+"Question: What is 5 plus 39?
+Answer:",44,44,,True
+"Question: What is 13 plus 12?
+Answer:",25,25,,True
+"Question: What is 2 plus 56?
+Answer:",58,57,,False
+"Question: What is 43 plus 40?
+Answer:",83,83,,True
+"Question: What is 52 plus 98?
+Answer:",150,140,,False
+"Question: What is 83 plus 34?
+Answer:",117,117,,True
+"Question: What is 51 plus 32?
+Answer:",83,83,,True
+"Question: What is 76 plus 33?
+Answer:",109,109,,True
+"Question: What is 37 plus 92?
+Answer:",129,129,,True
+"Question: What is 95 plus 35?
+Answer:",130,130,,True
+"Question: What is 44 plus 86?
+Answer:",130,120,,False
+"Question: What is 80 plus 27?
+Answer:",107,107,,True
+"Question: What is 62 plus 71?
+Answer:",133,13,,False
+"Question: What is 65 plus 26?
+Answer:",91,91,,True
+"Question: What is 56 plus 56?
+Answer:",112,112,,True
+"Question: What is 23 plus 79?
+Answer:",102,112,,False
+"Question: What is 30 plus 15?
+Answer:",45,45,,True
+"Question: What is 78 plus 28?
+Answer:",106,166,,False
+"Question: What is 63 plus 15?
+Answer:",78,78,,True
+"Question: What is 29 plus 28?
+Answer:",57,57,,True
+"Question: What is 13 plus 96?
+Answer:",109,34,,False
+"Question: What is 79 plus 40?
+Answer:",119,129,,False
+"Question: What is 92 plus 54?
+Answer:",146,146,,True
+"Question: What is 20 plus 69?
+Answer:",89,99,,False
+"Question: What is 72 plus 66?
+Answer:",138,138,,True
+"Question: What is 53 plus 10?
+Answer:",63,63,,True
+"Question: What is 6 plus 4?
+Answer:",10,10,,True
+"Question: What is 58 plus 14?
+Answer:",72,72,,True
+"Question: What is 87 plus 57?
+Answer:",144,144,,True
+"Question: What is 26 plus 59?
+Answer:",85,105,,False
+"Question: What is 78 plus 13?
+Answer:",91,91,,True
+"Question: What is 10 plus 57?
+Answer:",67,67,,True
+"Question: What is 39 plus 47?
+Answer:",86,86,,True
+"Question: What is 76 plus 55?
+Answer:",131,121,,False
+"Question: What is 36 plus 57?
+Answer:",93,93,,True
+"Question: What is 47 plus 83?
+Answer:",130,120,,False
+"Question: What is 81 plus 65?
+Answer:",146,146,,True
+"Question: What is 36 plus 15?
+Answer:",51,51,,True
+"Question: What is 99 plus 20?
+Answer:",119,109,,False
+"Question: What is 48 plus 36?
+Answer:",84,84,,True
+"Question: What is 18 plus 75?
+Answer:",93,93,,True
+"Question: What is 6 plus 59?
+Answer:",65,6,,False
+"Question: What is 84 plus 3?
+Answer:",87,91,,False
+"Question: What is 88 plus 78?
+Answer:",166,166,,True
+"Question: What is 25 plus 22?
+Answer:",47,47,,True
+"Question: What is 44 plus 81?
+Answer:",125,125,,True
+"Question: What is 90 plus 91?
+Answer:",181,181,,True
+"Question: What is 70 plus 45?
+Answer:",115,115,,True
+"Question: What is 37 plus 66?
+Answer:",103,103,,True
+"Question: What is 59 plus 56?
+Answer:",115,105,,False

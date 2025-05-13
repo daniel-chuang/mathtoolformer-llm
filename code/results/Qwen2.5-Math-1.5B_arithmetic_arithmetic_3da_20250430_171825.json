@@ -1,0 +1,1420 @@
+{
+  "timestamp": "20250430_171825",
+  "model_name": "Qwen2.5-Math-1.5B",
+  "dataset_name": "arithmetic_arithmetic_3da",
+  "aggregated_metrics": {
+    "accuracy": 0.92,
+    "correct": 184,
+    "total": 200
+  },
+  "question_results": [
+    {
+      "question": "Question: What is 980 plus 683?\nAnswer:",
+      "expected_answer": "1663",
+      "model_answer": "1663",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 664 plus 778?\nAnswer:",
+      "expected_answer": "1442",
+      "model_answer": "1442",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 697 plus 475?\nAnswer:",
+      "expected_answer": "1172",
+      "model_answer": "1172",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 355 plus 967?\nAnswer:",
+      "expected_answer": "1322",
+      "model_answer": "1322",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 966 plus 159?\nAnswer:",
+      "expected_answer": "1125",
+      "model_answer": "1125",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 964 plus 404?\nAnswer:",
+      "expected_answer": "1368",
+      "model_answer": "1368",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 696 plus 860?\nAnswer:",
+      "expected_answer": "1556",
+      "model_answer": "1556",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 814 plus 795?\nAnswer:",
+      "expected_answer": "1609",
+      "model_answer": "1609",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 402 plus 348?\nAnswer:",
+      "expected_answer": "750",
+      "model_answer": "750",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 832 plus 735?\nAnswer:",
+      "expected_answer": "1567",
+      "model_answer": "1567",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 868 plus 160?\nAnswer:",
+      "expected_answer": "1028",
+      "model_answer": "1028",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 547 plus 221?\nAnswer:",
+      "expected_answer": "768",
+      "model_answer": "768",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 582 plus 720?\nAnswer:",
+      "expected_answer": "1302",
+      "model_answer": "1302",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 976 plus 199?\nAnswer:",
+      "expected_answer": "1175",
+      "model_answer": "1175",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 655 plus 305?\nAnswer:",
+      "expected_answer": "960",
+      "model_answer": "960",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 257 plus 763?\nAnswer:",
+      "expected_answer": "1020",
+      "model_answer": "1020",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 531 plus 494?\nAnswer:",
+      "expected_answer": "1025",
+      "model_answer": "1025",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 419 plus 568?\nAnswer:",
+      "expected_answer": "987",
+      "model_answer": "987",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 800 plus 605?\nAnswer:",
+      "expected_answer": "1405",
+      "model_answer": "1405",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 989 plus 526?\nAnswer:",
+      "expected_answer": "1515",
+      "model_answer": "1515",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 834 plus 181?\nAnswer:",
+      "expected_answer": "1015",
+      "model_answer": "1015",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 517 plus 298?\nAnswer:",
+      "expected_answer": "815",
+      "model_answer": "815",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 430 plus 822?\nAnswer:",
+      "expected_answer": "1252",
+      "model_answer": "1252",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 467 plus 376?\nAnswer:",
+      "expected_answer": "843",
+      "model_answer": "843",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 963 plus 799?\nAnswer:",
+      "expected_answer": "1762",
+      "model_answer": "1762",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 756 plus 615?\nAnswer:",
+      "expected_answer": "1371",
+      "model_answer": "1371",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 160 plus 41?\nAnswer:",
+      "expected_answer": "201",
+      "model_answer": "201",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 71 plus 42?\nAnswer:",
+      "expected_answer": "113",
+      "model_answer": "113",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 400 plus 375?\nAnswer:",
+      "expected_answer": "775",
+      "model_answer": "775",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 582 plus 730?\nAnswer:",
+      "expected_answer": "1312",
+      "model_answer": "1312",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 72 plus 287?\nAnswer:",
+      "expected_answer": "359",
+      "model_answer": "369",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 694 plus 978?\nAnswer:",
+      "expected_answer": "1672",
+      "model_answer": "1672",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 530 plus 863?\nAnswer:",
+      "expected_answer": "1393",
+      "model_answer": "1393",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 205 plus 535?\nAnswer:",
+      "expected_answer": "740",
+      "model_answer": "740",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 689 plus 718?\nAnswer:",
+      "expected_answer": "1407",
+      "model_answer": "1407",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 617 plus 590?\nAnswer:",
+      "expected_answer": "1207",
+      "model_answer": "1207",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 427 plus 391?\nAnswer:",
+      "expected_answer": "818",
+      "model_answer": "818",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 621 plus 142?\nAnswer:",
+      "expected_answer": "763",
+      "model_answer": "763",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 936 plus 139?\nAnswer:",
+      "expected_answer": "1075",
+      "model_answer": "1075",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 146 plus 570?\nAnswer:",
+      "expected_answer": "716",
+      "model_answer": "716",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 641 plus 719?\nAnswer:",
+      "expected_answer": "1360",
+      "model_answer": "1360",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 218 plus 413?\nAnswer:",
+      "expected_answer": "631",
+      "model_answer": "631",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 421 plus 985?\nAnswer:",
+      "expected_answer": "1406",
+      "model_answer": "1406",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 323 plus 865?\nAnswer:",
+      "expected_answer": "1188",
+      "model_answer": "1188",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 344 plus 669?\nAnswer:",
+      "expected_answer": "1013",
+      "model_answer": "1013",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 894 plus 978?\nAnswer:",
+      "expected_answer": "1872",
+      "model_answer": "1872",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 778 plus 133?\nAnswer:",
+      "expected_answer": "911",
+      "model_answer": "911",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 716 plus 116?\nAnswer:",
+      "expected_answer": "832",
+      "model_answer": "832",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 674 plus 3?\nAnswer:",
+      "expected_answer": "677",
+      "model_answer": "677",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 907 plus 254?\nAnswer:",
+      "expected_answer": "1161",
+      "model_answer": "1161",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 424 plus 212?\nAnswer:",
+      "expected_answer": "636",
+      "model_answer": "636",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 401 plus 114?\nAnswer:",
+      "expected_answer": "515",
+      "model_answer": "515",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 893 plus 821?\nAnswer:",
+      "expected_answer": "1714",
+      "model_answer": "1714",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 564 plus 845?\nAnswer:",
+      "expected_answer": "1409",
+      "model_answer": "1409",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 336 plus 754?\nAnswer:",
+      "expected_answer": "1090",
+      "model_answer": "1190",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 590 plus 269?\nAnswer:",
+      "expected_answer": "859",
+      "model_answer": "859",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 42 plus 536?\nAnswer:",
+      "expected_answer": "578",
+      "model_answer": "588",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 933 plus 838?\nAnswer:",
+      "expected_answer": "1771",
+      "model_answer": "1771",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 16 plus 532?\nAnswer:",
+      "expected_answer": "548",
+      "model_answer": "548",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 255 plus 492?\nAnswer:",
+      "expected_answer": "747",
+      "model_answer": "747",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 99 plus 891?\nAnswer:",
+      "expected_answer": "990",
+      "model_answer": "990",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 961 plus 161?\nAnswer:",
+      "expected_answer": "1122",
+      "model_answer": "1122",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 829 plus 798?\nAnswer:",
+      "expected_answer": "1627",
+      "model_answer": "1627",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 396 plus 806?\nAnswer:",
+      "expected_answer": "1202",
+      "model_answer": "1202",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 340 plus 22?\nAnswer:",
+      "expected_answer": "362",
+      "model_answer": "362",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 27 plus 209?\nAnswer:",
+      "expected_answer": "236",
+      "model_answer": "236",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 893 plus 82?\nAnswer:",
+      "expected_answer": "975",
+      "model_answer": "975",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 107 plus 271?\nAnswer:",
+      "expected_answer": "378",
+      "model_answer": "378",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 458 plus 570?\nAnswer:",
+      "expected_answer": "1028",
+      "model_answer": "1028",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 53 plus 821?\nAnswer:",
+      "expected_answer": "874",
+      "model_answer": "874",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 386 plus 685?\nAnswer:",
+      "expected_answer": "1071",
+      "model_answer": "1071",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 422 plus 867?\nAnswer:",
+      "expected_answer": "1289",
+      "model_answer": "1289",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 250 plus 339?\nAnswer:",
+      "expected_answer": "589",
+      "model_answer": "589",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 238 plus 721?\nAnswer:",
+      "expected_answer": "959",
+      "model_answer": "959",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 183 plus 8?\nAnswer:",
+      "expected_answer": "191",
+      "model_answer": "181",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 831 plus 822?\nAnswer:",
+      "expected_answer": "1653",
+      "model_answer": "1653",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 227 plus 760?\nAnswer:",
+      "expected_answer": "987",
+      "model_answer": "987",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 417 plus 722?\nAnswer:",
+      "expected_answer": "1139",
+      "model_answer": "1149",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 452 plus 395?\nAnswer:",
+      "expected_answer": "847",
+      "model_answer": "847",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 458 plus 457?\nAnswer:",
+      "expected_answer": "915",
+      "model_answer": "915",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 12 plus 855?\nAnswer:",
+      "expected_answer": "867",
+      "model_answer": "867",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 162 plus 72?\nAnswer:",
+      "expected_answer": "234",
+      "model_answer": "234",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 844 plus 402?\nAnswer:",
+      "expected_answer": "1246",
+      "model_answer": "1246",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 470 plus 196?\nAnswer:",
+      "expected_answer": "666",
+      "model_answer": "666",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 421 plus 479?\nAnswer:",
+      "expected_answer": "900",
+      "model_answer": "900",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 590 plus 978?\nAnswer:",
+      "expected_answer": "1568",
+      "model_answer": "1568",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 202 plus 857?\nAnswer:",
+      "expected_answer": "1059",
+      "model_answer": "1059",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 380 plus 465?\nAnswer:",
+      "expected_answer": "845",
+      "model_answer": "845",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 978 plus 37?\nAnswer:",
+      "expected_answer": "1015",
+      "model_answer": "1015",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 777 plus 504?\nAnswer:",
+      "expected_answer": "1281",
+      "model_answer": "1281",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 709 plus 580?\nAnswer:",
+      "expected_answer": "1289",
+      "model_answer": "1289",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 869 plus 848?\nAnswer:",
+      "expected_answer": "1717",
+      "model_answer": "1717",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 222 plus 293?\nAnswer:",
+      "expected_answer": "515",
+      "model_answer": "515",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 112 plus 813?\nAnswer:",
+      "expected_answer": "925",
+      "model_answer": "925",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 622 plus 196?\nAnswer:",
+      "expected_answer": "818",
+      "model_answer": "818",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 904 plus 426?\nAnswer:",
+      "expected_answer": "1330",
+      "model_answer": "1330",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 935 plus 185?\nAnswer:",
+      "expected_answer": "1120",
+      "model_answer": "1120",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 630 plus 109?\nAnswer:",
+      "expected_answer": "739",
+      "model_answer": "739",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 137 plus 685?\nAnswer:",
+      "expected_answer": "822",
+      "model_answer": "822",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 958 plus 516?\nAnswer:",
+      "expected_answer": "1474",
+      "model_answer": "1474",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 126 plus 639?\nAnswer:",
+      "expected_answer": "765",
+      "model_answer": "765",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 401 plus 312?\nAnswer:",
+      "expected_answer": "713",
+      "model_answer": "713",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 474 plus 962?\nAnswer:",
+      "expected_answer": "1436",
+      "model_answer": "1436",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 259 plus 777?\nAnswer:",
+      "expected_answer": "1036",
+      "model_answer": "1036",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 681 plus 204?\nAnswer:",
+      "expected_answer": "885",
+      "model_answer": "885",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 646 plus 836?\nAnswer:",
+      "expected_answer": "1482",
+      "model_answer": "1482",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 53 plus 246?\nAnswer:",
+      "expected_answer": "299",
+      "model_answer": "299",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 136 plus 899?\nAnswer:",
+      "expected_answer": "1035",
+      "model_answer": "935",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 432 plus 827?\nAnswer:",
+      "expected_answer": "1259",
+      "model_answer": "1269",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 70 plus 280?\nAnswer:",
+      "expected_answer": "350",
+      "model_answer": "350",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 948 plus 474?\nAnswer:",
+      "expected_answer": "1422",
+      "model_answer": "1422",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 25 plus 821?\nAnswer:",
+      "expected_answer": "846",
+      "model_answer": "846",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 48 plus 662?\nAnswer:",
+      "expected_answer": "710",
+      "model_answer": "700",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 462 plus 925?\nAnswer:",
+      "expected_answer": "1387",
+      "model_answer": "1387",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 509 plus 92?\nAnswer:",
+      "expected_answer": "601",
+      "model_answer": "601",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 900 plus 131?\nAnswer:",
+      "expected_answer": "1031",
+      "model_answer": "1031",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 394 plus 744?\nAnswer:",
+      "expected_answer": "1138",
+      "model_answer": "1138",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 195 plus 437?\nAnswer:",
+      "expected_answer": "632",
+      "model_answer": "632",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 143 plus 473?\nAnswer:",
+      "expected_answer": "616",
+      "model_answer": "616",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 517 plus 325?\nAnswer:",
+      "expected_answer": "842",
+      "model_answer": "842",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 972 plus 63?\nAnswer:",
+      "expected_answer": "1035",
+      "model_answer": "1035",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 297 plus 634?\nAnswer:",
+      "expected_answer": "931",
+      "model_answer": "931",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 369 plus 331?\nAnswer:",
+      "expected_answer": "700",
+      "model_answer": "690",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 184 plus 445?\nAnswer:",
+      "expected_answer": "629",
+      "model_answer": "629",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 802 plus 303?\nAnswer:",
+      "expected_answer": "1105",
+      "model_answer": "1105",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 225 plus 237?\nAnswer:",
+      "expected_answer": "462",
+      "model_answer": "462",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 232 plus 122?\nAnswer:",
+      "expected_answer": "354",
+      "model_answer": "354",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 460 plus 678?\nAnswer:",
+      "expected_answer": "1138",
+      "model_answer": "1138",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 671 plus 22?\nAnswer:",
+      "expected_answer": "693",
+      "model_answer": "693",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 262 plus 602?\nAnswer:",
+      "expected_answer": "864",
+      "model_answer": "864",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 800 plus 35?\nAnswer:",
+      "expected_answer": "835",
+      "model_answer": "835",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 324 plus 78?\nAnswer:",
+      "expected_answer": "402",
+      "model_answer": "402",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 741 plus 884?\nAnswer:",
+      "expected_answer": "1625",
+      "model_answer": "1625",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 467 plus 483?\nAnswer:",
+      "expected_answer": "950",
+      "model_answer": "950",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 937 plus 949?\nAnswer:",
+      "expected_answer": "1886",
+      "model_answer": "1886",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 796 plus 32?\nAnswer:",
+      "expected_answer": "828",
+      "model_answer": "828",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 582 plus 49?\nAnswer:",
+      "expected_answer": "631",
+      "model_answer": "631",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 243 plus 305?\nAnswer:",
+      "expected_answer": "548",
+      "model_answer": "548",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 809 plus 93?\nAnswer:",
+      "expected_answer": "902",
+      "model_answer": "902",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 68 plus 104?\nAnswer:",
+      "expected_answer": "172",
+      "model_answer": "172",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 581 plus 795?\nAnswer:",
+      "expected_answer": "1376",
+      "model_answer": "1376",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 464 plus 132?\nAnswer:",
+      "expected_answer": "596",
+      "model_answer": "606",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 592 plus 899?\nAnswer:",
+      "expected_answer": "1491",
+      "model_answer": "1491",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 646 plus 41?\nAnswer:",
+      "expected_answer": "687",
+      "model_answer": "687",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 215 plus 270?\nAnswer:",
+      "expected_answer": "485",
+      "model_answer": "485",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 326 plus 971?\nAnswer:",
+      "expected_answer": "1297",
+      "model_answer": "1397",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 395 plus 557?\nAnswer:",
+      "expected_answer": "952",
+      "model_answer": "952",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 84 plus 24?\nAnswer:",
+      "expected_answer": "108",
+      "model_answer": "108",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 200 plus 406?\nAnswer:",
+      "expected_answer": "606",
+      "model_answer": "606",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 131 plus 138?\nAnswer:",
+      "expected_answer": "269",
+      "model_answer": "269",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 141 plus 355?\nAnswer:",
+      "expected_answer": "496",
+      "model_answer": "496",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 291 plus 715?\nAnswer:",
+      "expected_answer": "1006",
+      "model_answer": "906",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 558 plus 408?\nAnswer:",
+      "expected_answer": "966",
+      "model_answer": "966",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 812 plus 185?\nAnswer:",
+      "expected_answer": "997",
+      "model_answer": "997",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 40 plus 811?\nAnswer:",
+      "expected_answer": "851",
+      "model_answer": "851",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 352 plus 445?\nAnswer:",
+      "expected_answer": "797",
+      "model_answer": "797",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 921 plus 826?\nAnswer:",
+      "expected_answer": "1747",
+      "model_answer": "1747",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 613 plus 759?\nAnswer:",
+      "expected_answer": "1372",
+      "model_answer": "1372",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 762 plus 315?\nAnswer:",
+      "expected_answer": "1077",
+      "model_answer": "1077",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 671 plus 550?\nAnswer:",
+      "expected_answer": "1221",
+      "model_answer": "1221",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 176 plus 148?\nAnswer:",
+      "expected_answer": "324",
+      "model_answer": "324",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 389 plus 492?\nAnswer:",
+      "expected_answer": "881",
+      "model_answer": "881",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 492 plus 494?\nAnswer:",
+      "expected_answer": "986",
+      "model_answer": "986",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 346 plus 614?\nAnswer:",
+      "expected_answer": "960",
+      "model_answer": "960",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 786 plus 454?\nAnswer:",
+      "expected_answer": "1240",
+      "model_answer": "1240",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 889 plus 147?\nAnswer:",
+      "expected_answer": "1036",
+      "model_answer": "1036",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 987 plus 394?\nAnswer:",
+      "expected_answer": "1381",
+      "model_answer": "1381",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 955 plus 517?\nAnswer:",
+      "expected_answer": "1472",
+      "model_answer": "1472",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 179 plus 314?\nAnswer:",
+      "expected_answer": "493",
+      "model_answer": "493",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 707 plus 139?\nAnswer:",
+      "expected_answer": "846",
+      "model_answer": "846",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 572 plus 47?\nAnswer:",
+      "expected_answer": "619",
+      "model_answer": "619",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 163 plus 181?\nAnswer:",
+      "expected_answer": "344",
+      "model_answer": "344",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 243 plus 483?\nAnswer:",
+      "expected_answer": "726",
+      "model_answer": "726",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 590 plus 359?\nAnswer:",
+      "expected_answer": "949",
+      "model_answer": "949",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 324 plus 896?\nAnswer:",
+      "expected_answer": "1220",
+      "model_answer": "1220",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 940 plus 22?\nAnswer:",
+      "expected_answer": "962",
+      "model_answer": "962",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 929 plus 919?\nAnswer:",
+      "expected_answer": "1848",
+      "model_answer": "1848",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 500 plus 561?\nAnswer:",
+      "expected_answer": "1061",
+      "model_answer": "1061",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 240 plus 624?\nAnswer:",
+      "expected_answer": "864",
+      "model_answer": "864",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 801 plus 624?\nAnswer:",
+      "expected_answer": "1425",
+      "model_answer": "1425",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 596 plus 720?\nAnswer:",
+      "expected_answer": "1316",
+      "model_answer": "1316",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 730 plus 272?\nAnswer:",
+      "expected_answer": "1002",
+      "model_answer": "1002",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 274 plus 227?\nAnswer:",
+      "expected_answer": "501",
+      "model_answer": "501",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 453 plus 227?\nAnswer:",
+      "expected_answer": "680",
+      "model_answer": "680",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 119 plus 326?\nAnswer:",
+      "expected_answer": "445",
+      "model_answer": "445",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 766 plus 494?\nAnswer:",
+      "expected_answer": "1260",
+      "model_answer": "1250",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 26 plus 836?\nAnswer:",
+      "expected_answer": "862",
+      "model_answer": "862",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 808 plus 405?\nAnswer:",
+      "expected_answer": "1213",
+      "model_answer": "1213",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 875 plus 920?\nAnswer:",
+      "expected_answer": "1795",
+      "model_answer": "1895",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 312 plus 422?\nAnswer:",
+      "expected_answer": "734",
+      "model_answer": "734",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 273 plus 798?\nAnswer:",
+      "expected_answer": "1071",
+      "model_answer": "1071",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 302 plus 621?\nAnswer:",
+      "expected_answer": "923",
+      "model_answer": "923",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 499 plus 38?\nAnswer:",
+      "expected_answer": "537",
+      "model_answer": "537",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 77 plus 3?\nAnswer:",
+      "expected_answer": "80",
+      "model_answer": "80",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 586 plus 106?\nAnswer:",
+      "expected_answer": "692",
+      "model_answer": "792",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 185 plus 532?\nAnswer:",
+      "expected_answer": "717",
+      "model_answer": "617",
+      "question_type": null,
+      "correct": false
+    },
+    {
+      "question": "Question: What is 422 plus 429?\nAnswer:",
+      "expected_answer": "851",
+      "model_answer": "851",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 963 plus 779?\nAnswer:",
+      "expected_answer": "1742",
+      "model_answer": "1742",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 306 plus 759?\nAnswer:",
+      "expected_answer": "1065",
+      "model_answer": "1065",
+      "question_type": null,
+      "correct": true
+    },
+    {
+      "question": "Question: What is 873 plus 919?\nAnswer:",
+      "expected_answer": "1792",
+      "model_answer": "1792",
+      "question_type": null,
+      "correct": true
+    }
+  ],
+  "type_statistics": {
+    "null": {
+      "total": 200,
+      "correct": 184,
+      "incorrect": 16,
+      "accuracy": 0.92
+    }
+  }
+}
