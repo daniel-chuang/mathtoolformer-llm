@@ -103,9 +103,9 @@ class ResultsLogger:
         csv_path = os.path.join(results_dir, f"{base_filename}.csv")
         stats_path = os.path.join(results_dir, f"{base_filename}_stats.csv")
         
-        if format in ["json", "all"]:
-            with open(json_path, "w") as f:
-                json.dump(self.results, f, indent=2)
+        # if format in ["json", "all"]:
+        #     with open(json_path, "w") as f:
+        #         json.dump(self.results, f, indent=2)
                 
         if format in ["csv", "all"]:
             # Save question results to CSV

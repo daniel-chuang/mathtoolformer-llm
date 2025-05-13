@@ -5,6 +5,7 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from model.setup import setup_model, save_model, load_model, load_tokenizer
 from utils.console import isYes, printc, inputc, print_section
+from model.training import preprocess_for_training, train_model
 from data.gsm8k import prepare_gsm8k_dataset
 from data.svamp import prepare_svamp_dataset
 from data.arithmetic import prepare_arithmetic_datasets
