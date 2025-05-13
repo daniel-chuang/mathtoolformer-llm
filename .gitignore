@@ -2,12 +2,12 @@
 .env
 
 # Checkpoints directory
-checkpoints/
-wandb/
-toolformer_model/
-toolformer_model_smol/
-toolformer_model_failed/
-.preprocessed/
+code/checkpoints/
+code/wandb/
+code/toolformer_model/
+code/toolformer_model_smol/
+code/toolformer_model_failed/
+code/.preprocessed/
 
 # Python cache files
 __pycache__/

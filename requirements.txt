@@ -16,3 +16,4 @@ dotenv
 huggingface_hub
 wandb
 ipykernel
+trl
